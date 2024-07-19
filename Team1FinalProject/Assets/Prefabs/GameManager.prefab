@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 3536687991959794122}
   - {fileID: 8868645080373443782}
+  - {fileID: 2825988829847394407}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5995506196870545908
@@ -233,3 +234,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundEffectsSource: {fileID: 2272277215621987450, guid: b7bb807162791634fa5757acd8bc38bb, type: 3}
+--- !u!1 &6666359257640489965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2825988829847394407}
+  - component: {fileID: 8635515988406624805}
+  m_Layer: 0
+  m_Name: NoteManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2825988829847394407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666359257640489965}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 408233360776562967}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8635515988406624805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666359257640489965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f0ce5c24d608e4fbdb68f1ee215153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _noteHitClip: {fileID: 8300000, guid: 6e70b6765a60e4f41a43ba66b4845535, type: 3}
+  _noteMissedClip: {fileID: 8300000, guid: 973edaf3dab51374ea68e4d6a7791144, type: 3}
+  _normalHitMessage: {fileID: 8822240806993973736, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
+  _goodHitMessage: {fileID: 2795249607756354496, guid: fc9bd7bee901b0d458753b7126deda20, type: 3}
+  _perfectHitMessage: {fileID: 2536167200581925912, guid: f9539a03c4d514e49b082683822cfd5f, type: 3}

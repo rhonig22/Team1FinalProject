@@ -10,7 +10,7 @@ public class BeatScroller : MonoBehaviour
 
     private void Start()
     {
-        _beatTempo = GameManager.Instance.BeatTempo / 60f;
+        _beatTempo = NoteManager.Instance.BeatTempo / 60f;
         ResetTransform();
     }
 
@@ -19,14 +19,13 @@ public class BeatScroller : MonoBehaviour
         if (HasStopped)
             return;
 
-        if (GameManager.Instance.IsBeatStarted)
+        if (NoteManager.Instance.IsBeatStarted)
         {
             transform.localScale -= new Vector3(_beatTempo * Time.fixedDeltaTime, _beatTempo * Time.fixedDeltaTime, 0f);
 
             if (transform.localScale.x <= 0)
             {
                 HasStopped = true;
-                GameManager.Instance.NoteMissed();
             }
         }
     }
