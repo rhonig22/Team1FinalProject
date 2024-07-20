@@ -24,6 +24,11 @@ public class MusicManager : MonoBehaviour
         _musicSource.Play();
     }
 
+    public void StopMusic()
+    {
+        _musicSource.Stop();
+    }
+
     public void ChangeMasterVolume(float volume)
     {
         _volume = volume;
