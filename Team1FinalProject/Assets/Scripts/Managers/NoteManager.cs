@@ -32,13 +32,17 @@ public class NoteManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Update()
+    public void StopBeats()
     {
-        if (!IsBeatStarted && Input.anyKeyDown)
-        {
-            MusicManager.Instance.StartMusic();
-            IsBeatStarted = true;
-        }
+        MusicManager.Instance.StopMusic();
+        IsBeatStarted = false;
+        Score = 0;
+    }
+
+    public void StartBeats()
+    {
+        MusicManager.Instance.StartMusic();
+        IsBeatStarted = true;
     }
 
     public void NoteHit(HitType type)
