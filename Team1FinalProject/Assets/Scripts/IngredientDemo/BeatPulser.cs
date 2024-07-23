@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeatScroller : MonoBehaviour
+public class BeatPulser : MonoBehaviour
 {
     private float _beatTempo;
     public bool HasStopped { get; private set; }
