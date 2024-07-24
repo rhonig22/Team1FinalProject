@@ -11,7 +11,7 @@ public class QteButtonController : MonoBehaviour
     [SerializeField] private string _button;
     [SerializeField] private Color _color;
     [SerializeField] private Color _pressedColor;
-    [SerializeField] private List<NoteObject> _notes;
+    [SerializeField] private List<RingNoteObject> _notes;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +53,7 @@ public class QteButtonController : MonoBehaviour
         }
     }
 
-    private void RemoveNote(NoteObject note)
+    private void RemoveNote(RingNoteObject note)
     {
         note.gameObject.SetActive(false);
         _notes.Remove(note);

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private readonly string _kitchenScene = "KitchenScene";
     private readonly string _settingsScene = "SettingsScene";
     private readonly string _demoScene = "DemoQTE";
+    private readonly string _demoSceneV2 = "DemoV2";
 
     private void Awake()
     {
@@ -33,6 +34,11 @@ public class GameManager : MonoBehaviour
     public void LoadDemo()
     {
         LoadScene(_demoScene);
+    }
+
+    public void LoadDemoV2()
+    {
+        LoadScene(_demoSceneV2);
     }
 
     public void LoadSettings()

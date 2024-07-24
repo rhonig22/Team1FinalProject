@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NoteObject : MonoBehaviour
+public class RingNoteObject : MonoBehaviour
 {
     private float _noteHitWidth = .4f;
     private float _goodNoteWidth = .2f;
