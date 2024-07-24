@@ -1,17 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class QteButtonController : MonoBehaviour
+public class RhythmController : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
-
-    [SerializeField] private string _button;
     [SerializeField] private Color _color;
     [SerializeField] private Color _pressedColor;
-    [SerializeField] private List<NoteObject> _notes;
+    [SerializeField] private List<NoteScrollObject> _notes;
 
     // Start is called before the first frame update
     void Start()
@@ -27,15 +23,16 @@ public class QteButtonController : MonoBehaviour
             RemoveNote(_notes[0]);
         }
 
-        if (Input.GetButtonDown(_button))
+        if (_notes.Count == 0 || !NoteManager.Instance.IsBeatStarted)
+        {
+            return;
+        }
+
+        var note = _notes[0];
+        if (Input.GetButtonDown(note.Button))
         {
             _spriteRenderer.color = _pressedColor;
-            if (_notes.Count == 0 || !NoteManager.Instance.IsBeatStarted)
-            {
-                return;
-            }
 
-            var note = _notes[0];
             if (note.CanBePressed)
             {
                 NoteManager.Instance.NoteHit(note.HitType);
@@ -47,13 +44,13 @@ public class QteButtonController : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp(_button))
+        if (Input.GetButtonUp(note.Button))
         {
             _spriteRenderer.color = _color;
         }
     }
 
-    private void RemoveNote(NoteObject note)
+    private void RemoveNote(NoteScrollObject note)
     {
         note.gameObject.SetActive(false);
         _notes.Remove(note);

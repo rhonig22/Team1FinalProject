@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NoteObject : MonoBehaviour
+public class NoteScrollObject : MonoBehaviour
 {
     private float _noteHitWidth = .4f;
     private float _goodNoteWidth = .2f;
     private float _perfectNoteWidth = .1f;
     private float _noteSize = 1f;
     public bool CanBePressed { get; private set; } = false;
+    public string Button { get; private set; } = "XButton";
     public HitType HitType { get; private set; } = HitType.Upcoming;
 
     // Update is called once per frame
