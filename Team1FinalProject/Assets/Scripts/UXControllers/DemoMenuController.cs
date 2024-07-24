@@ -14,6 +14,7 @@ public class DemoMenuController : MonoBehaviour
             if (_timeRemaining <= 0)
             {
                 _menuPopup.SetActive(true);
+                NoteManager.Instance.StopBeats();
             }
             else
             {
@@ -31,6 +32,6 @@ public class DemoMenuController : MonoBehaviour
     public void RestartClicked()
     {
         NoteManager.Instance.StopBeats();
-        GameManager.Instance.LoadDemo();
+        GameManager.Instance.LoadDemoV2();
     }
 }

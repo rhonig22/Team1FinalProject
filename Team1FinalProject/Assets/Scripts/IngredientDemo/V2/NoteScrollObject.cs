@@ -4,38 +4,44 @@ using UnityEngine;
 
 public class NoteScrollObject : MonoBehaviour
 {
-    private float _noteHitWidth = .4f;
-    private float _goodNoteWidth = .2f;
-    private float _perfectNoteWidth = .1f;
-    private float _noteSize = 1f;
+    [SerializeField] private string _buttonName = "XButton";
+    private readonly float _noteHitHeight = .4f;
+    private readonly float _goodNoteHeight = .2f;
+    private readonly float _perfectNoteHeight = .1f;
+    private float _rhythmControllerLocation = 0f;
     public bool CanBePressed { get; private set; } = false;
-    public string Button { get; private set; } = "XButton";
     public HitType HitType { get; private set; } = HitType.Upcoming;
+
+    private void Start()
+    {
+        _rhythmControllerLocation = GameObject.FindGameObjectWithTag("RhythmController").transform.position.y;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        float currentSize = transform.localScale.x;
-        float upperBound = _noteSize + _noteHitWidth;
-        float lowerBound = _noteSize - _noteHitWidth;
-        if (currentSize >= lowerBound &&
-            currentSize <= upperBound)
+        if (HitType == HitType.Missed)
+            return;
+
+        float currentCenter = transform.position.y;
+        if (currentCenter >= _rhythmControllerLocation - _noteHitHeight &&
+            currentCenter <= _rhythmControllerLocation + _noteHitHeight)
         {
             CanBePressed = true;
             HitType = HitType.Normal;
-            if (currentSize >= _noteSize - _goodNoteWidth &&
-                currentSize <= _noteSize + _goodNoteWidth)
+            if (currentCenter >= _rhythmControllerLocation - _goodNoteHeight &&
+                currentCenter <= _rhythmControllerLocation + _goodNoteHeight)
             {
                 HitType = HitType.Good;
             }
 
-            if (currentSize >= _noteSize - _perfectNoteWidth &&
-                currentSize <= _noteSize + _perfectNoteWidth)
+            if (currentCenter >= _rhythmControllerLocation - _perfectNoteHeight &&
+                currentCenter <= _rhythmControllerLocation + _perfectNoteHeight)
             {
                 HitType = HitType.Perfect;
             }
         }
-        else if (currentSize < lowerBound)
+        else if (currentCenter < _rhythmControllerLocation - _noteHitHeight)
         {
             CanBePressed = false;
             HitType = HitType.Missed;
@@ -45,4 +51,6 @@ public class NoteScrollObject : MonoBehaviour
             CanBePressed = false;
         }
     }
+
+    public string GetButton() { return _buttonName; }
 }

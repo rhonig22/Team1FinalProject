@@ -7,7 +7,7 @@ public class RhythmController : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     [SerializeField] private Color _color;
     [SerializeField] private Color _pressedColor;
-    [SerializeField] private List<NoteScrollObject> _notes;
+    [SerializeField] private LaneScroller _laneScroller;
 
     // Start is called before the first frame update
     void Start()
@@ -18,25 +18,20 @@ public class RhythmController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_notes.Count > 0 && _notes[0].HitType == HitType.Missed)
-        {
-            RemoveNote(_notes[0]);
-        }
-
-        if (_notes.Count == 0 || !NoteManager.Instance.IsBeatStarted)
+        if (!_laneScroller.HasNotes() || !NoteManager.Instance.IsBeatStarted)
         {
             return;
         }
 
-        var note = _notes[0];
-        if (Input.GetButtonDown(note.Button))
+        var note = _laneScroller.GetNextNote();
+        if (Input.GetButtonDown(note.GetButton()))
         {
             _spriteRenderer.color = _pressedColor;
 
             if (note.CanBePressed)
             {
                 NoteManager.Instance.NoteHit(note.HitType);
-                RemoveNote(note);
+                _laneScroller.RemoveNote(note);
             }
             else
             {
@@ -44,15 +39,9 @@ public class RhythmController : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp(note.Button))
+        if (Input.GetButtonUp(note.GetButton()))
         {
             _spriteRenderer.color = _color;
         }
-    }
-
-    private void RemoveNote(NoteScrollObject note)
-    {
-        note.gameObject.SetActive(false);
-        _notes.Remove(note);
     }
 }
