@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class QteButtonController : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
 
-    [SerializeField] private KeyCode _key;
+    [SerializeField] private string _button;
     [SerializeField] private Color _color;
     [SerializeField] private Color _pressedColor;
     [SerializeField] private List<NoteObject> _notes;
@@ -20,20 +22,40 @@ public class QteButtonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(_key))
+        if (_notes.Count > 0 && _notes[0].HitType == HitType.Missed)
+        {
+            RemoveNote(_notes[0]);
+        }
+
+        if (Input.GetButtonDown(_button))
         {
             _spriteRenderer.color = _pressedColor;
-            if (_notes.Count > 0 && _notes[0].CanBePressed) {
-                var note = _notes[0];
-                note.gameObject.SetActive(false);
-                _notes.RemoveAt(0);
-                GameManager.Instance.NoteHit(note.HitType);
+            if (_notes.Count == 0 || !NoteManager.Instance.IsBeatStarted)
+            {
+                return;
+            }
+
+            var note = _notes[0];
+            if (note.CanBePressed)
+            {
+                NoteManager.Instance.NoteHit(note.HitType);
+                RemoveNote(note);
+            }
+            else
+            {
+                NoteManager.Instance.NoteMissed();
             }
         }
 
-        if (Input.GetKeyUp(_key))
+        if (Input.GetButtonUp(_button))
         {
             _spriteRenderer.color = _color;
         }
+    }
+
+    private void RemoveNote(NoteObject note)
+    {
+        note.gameObject.SetActive(false);
+        _notes.Remove(note);
     }
 }

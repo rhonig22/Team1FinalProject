@@ -9,6 +9,6 @@ public class ScoreUXController : MonoBehaviour
 
     private void Update()
     {
-        _scoreText.text = "Score: " + GameManager.Instance.Score.ToString();
+        _scoreText.text = "Score: " + NoteManager.Instance.Score.ToString();
     }
 }
