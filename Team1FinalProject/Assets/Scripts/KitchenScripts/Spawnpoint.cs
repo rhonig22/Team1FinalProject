@@ -9,13 +9,11 @@ public GameObject player;
 public Transform spawnPos;
 public void SpawnPlayer()
 
-{
-    //if (ifActive) = true;
-    {
-        //Destroy(gameObject.FindGameObjectWithTag("Player"));
-    }
+
+    
 
 {
+    Destroy(GameObject.FindGameObjectWithTag("Player"));
     Instantiate(player, spawnPos.position, spawnPos.rotation);
 }
 
@@ -23,5 +21,5 @@ public void SpawnPlayer()
 
 
 
-}
+
 }
