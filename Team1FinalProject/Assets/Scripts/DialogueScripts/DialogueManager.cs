@@ -4,25 +4,29 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 using JetBrains.Annotations;
+using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI speakerName, dialogue, navButtonText;
-    public Image speakerSprite;
+    public static DialogueManager Instance { get; private set; }
 
-    private int currentIndex;
-    private Conversation currentConvo;
-    private static DialogueManager instance;
-    private Coroutine typing;
+    [SerializeField] private GameObject _dialogBox;
+    [SerializeField] private TextMeshProUGUI _speakerName, _dialogue, _navButtonText;
+    [SerializeField] private Animator _anim;
+    [SerializeField] private Image _speakerSprite;
 
-    private Animator anim;
+    public UnityEvent DialogueFinished {  get; private set; } = new UnityEvent();
+
+    private int _currentIndex;
+    private Conversation _currentConvo;
+    private Coroutine _typing;
+
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
             //make the dialogue manager this one
-            instance = this;
-            anim = GetComponent<Animator>();
+            Instance = this;
         }
         else
         {
@@ -31,69 +35,71 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public static void StartConversation(Conversation convo)
+    private void EnableDialogBox(bool enable)
     {
-        instance.anim.SetBool("isOpen", true);
-        instance.currentIndex = 0;
-        instance.currentConvo = convo;
-        instance.speakerName.text = "";
-        instance.dialogue.text = "";
-        instance.navButtonText.text = ">";
-
-        instance.ReadNext();
-
+        _dialogBox.SetActive(enable);
+        _anim.SetBool("isOpen", enable);
     }
+
+    public void StartConversation(Conversation convo)
+    {
+        EnableDialogBox(true);
+        _currentIndex = 0;
+        _currentConvo = convo;
+        _speakerName.text = "";
+        _dialogue.text = "";
+        _navButtonText.text = ">";
+
+        ReadNext();
+    }
+
     public void ReadNext()
     {
-        if (currentIndex >= currentConvo.GetLength())
+        if (_currentIndex >= _currentConvo.GetLength())
         {
             //Debug.Log("currentIndex: " + currentIndex + " and currentConvo: " + currentConvo.GetLength());
-            navButtonText.text = "X";
+            _navButtonText.text = "X";
         }
-        if (currentIndex > currentConvo.GetLength())
+        if (_currentIndex > _currentConvo.GetLength())
         {
-            instance.anim.SetBool("isOpen", false);
+            EnableDialogBox(false);
+            DialogueFinished.Invoke();
+            DialogueFinished.RemoveAllListeners();
             return;
         }
         else
         {
-            speakerName.text = currentConvo.getLineByIndex(currentIndex).speaker.GetName();
+            _speakerName.text = _currentConvo.getLineByIndex(_currentIndex).speaker.GetName();
 
-            if (typing == null)
+            if (_typing == null)
             {
-                typing = instance.StartCoroutine(TypeText(currentConvo.getLineByIndex(currentIndex).dialogue));
+                _typing = StartCoroutine(TypeText(_currentConvo.getLineByIndex(_currentIndex).dialogue));
             }
             else
             {
-                instance.StopCoroutine(typing);
-                typing = null;
-                typing = instance.StartCoroutine(TypeText(currentConvo.getLineByIndex(currentIndex).dialogue));
+                StopCoroutine(_typing);
+                _typing = null;
+                _typing = StartCoroutine(TypeText(_currentConvo.getLineByIndex(_currentIndex).dialogue));
 
             }
             //dialogue.text = currentConvo.getLineByIndex(currentIndex).dialogue;
-            speakerSprite.sprite = currentConvo.getLineByIndex(currentIndex).speaker.getSprite();
-            currentIndex++;
+            _speakerSprite.sprite = _currentConvo.getLineByIndex(_currentIndex).speaker.getSprite();
+            _currentIndex++;
         }
        
     }
+
     private IEnumerator TypeText(string text)
     {
-        dialogue.text = "";
-        bool complete = false;
-        int index = 0;
+        _dialogue.text = "";
 
-        while (!complete)
+        for (int i = 0; i < text.Length; i++)
         {
-            dialogue.text += text[index];
+            _dialogue.text += text[i];
             yield return new WaitForSeconds(0.05f);
-
-            if(index == text.Length)
-            {
-                complete = true;
-            }
-            index++;
         }
-        typing = null;
+
+        _typing = null;
     }
 
 }
