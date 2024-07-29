@@ -14,9 +14,9 @@ public class MainMenuUXController : MonoBehaviour
         GameManager.Instance.LoadDemoV2();
     }
 
-    public void PlayKitchenClicked()
+    public void PlayStoryClicked()
     {
-        GameManager.Instance.LoadKitchen();
+        GameManager.Instance.LoadIntro();
     }
 
     public void SettingsClicked()
