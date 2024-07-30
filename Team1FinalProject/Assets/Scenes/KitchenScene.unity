@@ -205,9 +205,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 941012904}
+      - m_Target: {fileID: 941012905}
         m_TargetAssemblyTypeName: Spawnpoint, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: SpawnPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -592,6 +592,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable Circle
       objectReference: {fileID: 0}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactKey
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 765292816}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: generateNumber
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumberGenerator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8782735053888046851, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.08073818
@@ -658,6 +682,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 765292815}
     m_Modifications:
+    - target: {fileID: 6270420693689584545, guid: 727b8e67f273deb4589da73021a18105, type: 3}
+      propertyPath: spawnPos
+      value: 
+      objectReference: {fileID: 251734885}
     - target: {fileID: 7771495401258335761, guid: 727b8e67f273deb4589da73021a18105, type: 3}
       propertyPath: m_Name
       value: FlattopSpawn
@@ -712,6 +740,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8768241458308661037, guid: 727b8e67f273deb4589da73021a18105, type: 3}
   m_PrefabInstance: {fileID: 251734884}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &251734886 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6270420693689584545, guid: 727b8e67f273deb4589da73021a18105, type: 3}
+  m_PrefabInstance: {fileID: 251734884}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ecd27c9ae2c3b45b144cb24ea5ff83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &256922611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,6 +1912,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 429625927}
     m_Modifications:
+    - target: {fileID: 6270420693689584545, guid: 727b8e67f273deb4589da73021a18105, type: 3}
+      propertyPath: spawnPos
+      value: 
+      objectReference: {fileID: 941012903}
     - target: {fileID: 7771495401258335761, guid: 727b8e67f273deb4589da73021a18105, type: 3}
       propertyPath: m_Name
       value: SpawnPoint
@@ -1927,11 +1970,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8768241458308661037, guid: 727b8e67f273deb4589da73021a18105, type: 3}
   m_PrefabInstance: {fileID: 941012902}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &941012904 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7771495401258335761, guid: 727b8e67f273deb4589da73021a18105, type: 3}
+--- !u!114 &941012905 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6270420693689584545, guid: 727b8e67f273deb4589da73021a18105, type: 3}
   m_PrefabInstance: {fileID: 941012902}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ecd27c9ae2c3b45b144cb24ea5ff83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &946482014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,6 +2427,30 @@ PrefabInstance:
     - target: {fileID: 1378817336369083571, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
       propertyPath: m_Name
       value: Interactable Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactKey
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 429625928}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: generateNumber
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumberGenerator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640194138509441759, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8782735053888046851, guid: 626dcbff2e8a49d4c8cf4eedc689843b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3567,7 +3640,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548349816}
+      - m_Target: {fileID: 251734886}
         m_TargetAssemblyTypeName: Spawnpoint, Assembly-CSharp
         m_MethodName: SpawnPlayer
         m_Mode: 1
