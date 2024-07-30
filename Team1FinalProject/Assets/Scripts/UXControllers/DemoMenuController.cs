@@ -5,7 +5,7 @@ using UnityEngine;
 public class DemoMenuController : MonoBehaviour
 {
     [SerializeField] private GameObject _menuPopup;
-    private float _timeRemaining = 16f;
+    private float _timeRemaining = 30f;
 
     private void Update()
     {

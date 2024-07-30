@@ -5,11 +5,10 @@ using UnityEngine;
 //bool ifActive = false; 
 public class Spawnpoint : MonoBehaviour
 {
-    public GameObject player;
-    public Transform spawnPos;
+    [SerializeField] private GameObject _playerPrefab;
     public void SpawnPlayer()
     {
         Destroy(GameObject.FindGameObjectWithTag("Player"));
-        Instantiate(player, spawnPos.position, spawnPos.rotation);
+        Instantiate(_playerPrefab, transform.position, transform.rotation);
     }
 }

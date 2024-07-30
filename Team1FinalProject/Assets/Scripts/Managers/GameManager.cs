@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     private readonly string _demoScene = "DemoQTE";
     private readonly string _demoSceneV2 = "DemoV2";
     private readonly string _introStoryScene = "IntroStoryScene";
-    private readonly string _recipeScene = "RecipeScene";
+    private readonly string _recipeBookScene = "RecipeBookScene";
 
     private void Awake()
     {
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadRecipeBook()
     {
-        LoadScene(_recipeScene);
+        LoadScene(_recipeBookScene);
     }
 
     public void LoadTitleScreen()
