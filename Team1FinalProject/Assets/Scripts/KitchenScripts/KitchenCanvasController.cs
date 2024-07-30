@@ -10,7 +10,7 @@ public class KitchenCanvasController : MonoBehaviour
 
     private void Update()
     {
-        IsRhythmSection = LaneScroller.Instance.HasNotes();
-        kitchenDimmer.SetActive(LaneScroller.Instance.HasNotes());
+        IsRhythmSection = LaneScroller.Instance.HasUpcomingNotes();
+        kitchenDimmer.SetActive(LaneScroller.Instance.HasUpcomingNotes());
     }
 }

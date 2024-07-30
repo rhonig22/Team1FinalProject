@@ -59,6 +59,11 @@ public class LaneScroller : MonoBehaviour
 
     public bool HasNotes()
     {
+        return _notes.Count > 0;
+    }
+
+    public bool HasUpcomingNotes()
+    {
         return _notes.Count > 0 || _ingredientQueue.Count > 0;
     }
 
