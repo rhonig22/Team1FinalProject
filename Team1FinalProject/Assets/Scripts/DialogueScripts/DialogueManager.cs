@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
 
     [SerializeField] private GameObject _dialogBox;
-    [SerializeField] private TextMeshProUGUI _speakerName, _dialogue, _navButtonText;
+    [SerializeField] private TextMeshProUGUI _speakerName, _dialogue;
     [SerializeField] private Animator _anim;
     [SerializeField] private Image _speakerSprite;
 
@@ -48,18 +48,12 @@ public class DialogueManager : MonoBehaviour
         _currentConvo = convo;
         _speakerName.text = "";
         _dialogue.text = "";
-        _navButtonText.text = ">";
 
         ReadNext();
     }
 
     public void ReadNext()
     {
-        if (_currentIndex >= _currentConvo.GetLength())
-        {
-            //Debug.Log("currentIndex: " + currentIndex + " and currentConvo: " + currentConvo.GetLength());
-            _navButtonText.text = "X";
-        }
         if (_currentIndex > _currentConvo.GetLength())
         {
             EnableDialogBox(false);
