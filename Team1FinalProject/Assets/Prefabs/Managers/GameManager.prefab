@@ -194,7 +194,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9f13bf648eb43a942a3ac70f7333d501, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8b39b4cdc595f9a41abf2782c9c2626d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -588,6 +588,7 @@ MonoBehaviour:
   _normalHitMessage: {fileID: 8822240806993973736, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
   _goodHitMessage: {fileID: 2795249607756354496, guid: fc9bd7bee901b0d458753b7126deda20, type: 3}
   _perfectHitMessage: {fileID: 2536167200581925912, guid: f9539a03c4d514e49b082683822cfd5f, type: 3}
+  BeatTempo: 94
 --- !u!1001 &3956679693649959541
 PrefabInstance:
   m_ObjectHideFlags: 0

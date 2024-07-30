@@ -10,7 +10,7 @@ public class NoteManager : MonoBehaviour
     [SerializeField] private GameObject _normalHitMessage;
     [SerializeField] private GameObject _goodHitMessage;
     [SerializeField] private GameObject _perfectHitMessage;
-    public readonly float BeatTempo = 126;
+    [SerializeField] public float BeatTempo = 160;
     public readonly float NoteLoopSize = 31.5f;
     public readonly int NormalNotePoints = 100;
     public readonly int GoodNotePoints = 120;

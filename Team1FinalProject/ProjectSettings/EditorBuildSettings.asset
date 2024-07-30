@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroStoryScene.unity
     guid: 46ea9ec96d673724dbcb5a4b1f1c1bc2
   - enabled: 1
-    path: Assets/Scenes/RecipeScene.unity
+    path: Assets/Scenes/RecipeBookScene.unity
     guid: d71d2d2180b279048b283f1d893395d1
   m_configObjects: {}
