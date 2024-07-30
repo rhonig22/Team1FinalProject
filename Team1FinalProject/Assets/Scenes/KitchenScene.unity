@@ -253,7 +253,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 941012905}
+      - m_Target: {fileID: 941012904}
         m_TargetAssemblyTypeName: Spawnpoint, Assembly-CSharp
         m_MethodName: SpawnPlayer
         m_Mode: 1
