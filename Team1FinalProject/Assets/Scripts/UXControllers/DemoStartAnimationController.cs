@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DemoStartAnimationController : MonoBehaviour
 {
+    [SerializeField] private GameObject _onionPrefab;
     [SerializeField] private GameObject _three;
     [SerializeField] private GameObject _two;
     [SerializeField] private GameObject _one;
@@ -14,6 +15,9 @@ public class DemoStartAnimationController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < 10; i++)
+            LaneScroller.Instance.AddToIngredientQueue(_onionPrefab);
+
         StartAnimation();
     }
 

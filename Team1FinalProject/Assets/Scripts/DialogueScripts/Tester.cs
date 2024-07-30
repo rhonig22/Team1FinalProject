@@ -7,6 +7,6 @@ public class Tester : MonoBehaviour
     public Conversation convo;
     public void StartConvo()
     {
-        DialogueManager.StartConversation(convo);
+        DialogueManager.Instance.StartConversation(convo);
     }
 }

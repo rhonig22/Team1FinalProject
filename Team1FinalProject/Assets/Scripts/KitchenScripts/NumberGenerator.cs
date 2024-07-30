@@ -13,7 +13,4 @@ public class NumberGenerator : MonoBehaviour
             Debug.Log(Random.Range(0, 100));
         }
     }
-
-
-  
 }

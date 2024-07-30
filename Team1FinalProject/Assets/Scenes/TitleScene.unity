@@ -728,7 +728,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 178575027596254982, guid: 34b043fd05b35e34fb590c4ae6fc6496, type: 3}
       propertyPath: m_text
-      value: Kitchen
+      value: Story
       objectReference: {fileID: 0}
     - target: {fileID: 278743550665292613, guid: 34b043fd05b35e34fb590c4ae6fc6496, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -736,11 +736,11 @@ PrefabInstance:
       objectReference: {fileID: 730496619}
     - target: {fileID: 278743550665292613, guid: 34b043fd05b35e34fb590c4ae6fc6496, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayKitchenClicked
+      value: PlayStoryClicked
       objectReference: {fileID: 0}
     - target: {fileID: 2299350339499475645, guid: 34b043fd05b35e34fb590c4ae6fc6496, type: 3}
       propertyPath: m_Name
-      value: KitchenButton
+      value: StoryButton
       objectReference: {fileID: 0}
     - target: {fileID: 3452876528409010052, guid: 34b043fd05b35e34fb590c4ae6fc6496, type: 3}
       propertyPath: m_Pivot.x

@@ -5,47 +5,37 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
-    public bool isInRange;
-    public KeyCode interactKey;
-    public UnityEvent interactAction;
-    void Start()
-    {
-        
-    }
-
-    
+    private bool _isInRange;
+    [SerializeField] private string _interactKey;
+    [SerializeField] private UnityEvent _interactAction;
     void Update()
     {
-      if(isInRange)  
-      {
-        if(Input.GetKeyDown(interactKey))
+        if(_isInRange && !KitchenCanvasController.IsRhythmSection)  
         {
-            interactAction.Invoke();
+            if(Input.GetButtonDown(_interactKey))
+            {
+                _interactAction.Invoke();
+            }
         }
-      }
     }
 
-private void OnTriggerEnter2D(Collider2D collision)
-{
-    if(collision.gameObject.CompareTag("Player"))
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        isInRange = true;
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            _isInRange = true;
         
-        Debug.Log("Player now is in range");
+            Debug.Log("Player now is in range");
+        }
     }
-}
 
-private void OnTriggerExit2D(Collider2D collision)
-{
-if(collision.gameObject.CompareTag("Player"))
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        isInRange = false;
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            _isInRange = false;
         
-        Debug.Log("Player now is out of range");
+            Debug.Log("Player now is out of range");
+        }
     }
 }
-
-}
-
-
-
