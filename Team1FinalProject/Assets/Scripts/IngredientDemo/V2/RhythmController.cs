@@ -31,11 +31,13 @@ public class RhythmController : MonoBehaviour
             if (note.CanBePressed)
             {
                 NoteManager.Instance.NoteHit(note.HitType);
+                note.SetInactive();
                 _laneScroller.RemoveNote(note);
             }
             else
             {
                 NoteManager.Instance.NoteMissed();
+                note.SetMissed();
             }
         }
 

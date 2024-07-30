@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class NoteScrollObject : MonoBehaviour
 {
     [SerializeField] private string _buttonName = "XButton";
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Sprite _inactiveSprite;
+    [SerializeField] private Sprite _missedSprite;
+
     private readonly float _noteHitHeight = .4f;
     private readonly float _goodNoteHeight = .2f;
     private readonly float _perfectNoteHeight = .1f;
     private float _rhythmControllerLocation = 0f;
+    private bool _wasPressed = false;
     public bool CanBePressed { get; private set; } = false;
     public HitType HitType { get; private set; } = HitType.Upcoming;
 
@@ -45,11 +51,24 @@ public class NoteScrollObject : MonoBehaviour
         {
             CanBePressed = false;
             HitType = HitType.Missed;
+            SetMissed();
         }
         else
         {
             CanBePressed = false;
         }
+    }
+
+    public void SetInactive()
+    {
+        _spriteRenderer.sprite = _inactiveSprite;
+        _wasPressed = true;
+    }
+
+    public void SetMissed()
+    {
+        if (!_wasPressed)
+            _spriteRenderer.sprite = _missedSprite;
     }
 
     public string GetButton() { return _buttonName; }
