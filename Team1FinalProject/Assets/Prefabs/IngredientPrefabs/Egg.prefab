@@ -102,6 +102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AButton
       objectReference: {fileID: 0}
+    - target: {fileID: 882999211364872318, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
+      propertyPath: _noteClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 527469c2489a9d148b5446428dc027b4, type: 3}
     - target: {fileID: 7310177467960135483, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -175,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AButton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 882999211364872318, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
+      propertyPath: _noteClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 527469c2489a9d148b5446428dc027b4, type: 3}
     - target: {fileID: 7310177467960135483, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

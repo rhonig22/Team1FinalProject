@@ -9,10 +9,11 @@ public class LaneScroller : MonoBehaviour
     [SerializeField] private GameObject _emptyIngredientPrefab;
     [SerializeField] private GameObject _onionIngredientPrefab;
     private float _beatTempo;
-    private float _currentTop = 4f;
+    private float _currentTop = 4.5f;
     private int _measureCount = 0;
     private float _timeToNextMeasure = 0;
     private readonly float _measureSize = 4f;
+    private readonly float _secondsPerMinute = 60f;
     private List<NoteScrollObject> _notes = new List<NoteScrollObject>();
     private List<GameObject> _ingredientQueue = new List<GameObject>();
 
@@ -29,7 +30,7 @@ public class LaneScroller : MonoBehaviour
 
     private void Start()
     {
-        _beatTempo = NoteManager.Instance.BeatTempo / 60f;
+        _beatTempo = NoteManager.Instance.BeatTempo / _secondsPerMinute;
     }
 
     void Update()

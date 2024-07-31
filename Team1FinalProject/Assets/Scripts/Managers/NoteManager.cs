@@ -47,7 +47,6 @@ public class NoteManager : MonoBehaviour
 
     public void NoteHit(HitType type)
     {
-        SoundManager.Instance.PlaySound(_noteHitClip, Vector3.zero);
         NotesHit++;
         switch (type)
         {

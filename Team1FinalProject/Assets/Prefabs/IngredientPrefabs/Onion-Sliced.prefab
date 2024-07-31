@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XButton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 882999211364872318, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
+      propertyPath: _noteClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d84b0a30f9e650d4287ab45276d63a36, type: 3}
     - target: {fileID: 7310177467960135483, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -187,6 +191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XButton (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 882999211364872318, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
+      propertyPath: _noteClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d84b0a30f9e650d4287ab45276d63a36, type: 3}
     - target: {fileID: 7310177467960135483, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -260,6 +268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XButton
       objectReference: {fileID: 0}
+    - target: {fileID: 882999211364872318, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
+      propertyPath: _noteClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d84b0a30f9e650d4287ab45276d63a36, type: 3}
     - target: {fileID: 7310177467960135483, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

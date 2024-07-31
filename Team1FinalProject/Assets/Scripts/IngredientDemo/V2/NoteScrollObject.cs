@@ -9,6 +9,7 @@ public class NoteScrollObject : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Sprite _inactiveSprite;
     [SerializeField] private Sprite _missedSprite;
+    [SerializeField] private AudioClip _noteClip;
 
     private readonly float _noteHitHeight = .4f;
     private readonly float _goodNoteHeight = .2f;
@@ -57,6 +58,11 @@ public class NoteScrollObject : MonoBehaviour
         {
             CanBePressed = false;
         }
+    }
+
+    public void PlayNote()
+    {
+        SoundManager.Instance.PlaySound(_noteClip, transform.position);
     }
 
     public void SetInactive()
