@@ -6,12 +6,13 @@ public class IngredientObject : MonoBehaviour
 {
     public string IngredientName;
     public List<NoteScrollObject> Notes = new List<NoteScrollObject>();
-    private float _minYThreshold = -10f;
+    private readonly float _minYThreshold = -6f;
+    private readonly float _measureSize = 4f;
     [SerializeField] private int _measureCount = 1;
 
     private void Update()
     {
-        if (transform.position.y <= _minYThreshold)
+        if (transform.position.y <= _minYThreshold - _measureCount * _measureSize)
         {
             Destroy(gameObject);
         }

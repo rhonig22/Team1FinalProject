@@ -31,6 +31,7 @@ public class RhythmController : MonoBehaviour
             if (note.CanBePressed)
             {
                 NoteManager.Instance.NoteHit(note.HitType);
+                note.PlayNote();
                 note.SetInactive();
                 _laneScroller.RemoveNote(note);
             }
