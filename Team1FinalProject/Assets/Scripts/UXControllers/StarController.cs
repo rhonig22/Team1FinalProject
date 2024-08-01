@@ -32,7 +32,8 @@ public class StarController : MonoBehaviour
     private void Update()
     {
         int _currentScore = NoteManager.Instance.Score;
-        if (_currentScore >= _maxScore) {
+        if (_currentScore >= _maxScore)
+        {
             _starImage3.sprite = _fullStar;
         }
         else if (_currentScore >= _secondStar)
