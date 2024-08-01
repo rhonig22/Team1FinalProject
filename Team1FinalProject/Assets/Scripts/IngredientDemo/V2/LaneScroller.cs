@@ -9,7 +9,7 @@ public class LaneScroller : MonoBehaviour
     [SerializeField] private GameObject _emptyIngredientPrefab;
     [SerializeField] private GameObject _onionIngredientPrefab;
     private float _beatTempo;
-    private float _currentTop = 4.5f;
+    private float _currentTop = 3.5f;
     private int _measureCount = 0;
     private float _timeToNextMeasure = 0;
     private readonly float _measureSize = 4f;
