@@ -5,7 +5,6 @@ using UnityEngine;
 public class IngredientObject : MonoBehaviour
 {
     public string IngredientName;
-    public List<NoteScrollObject> Notes = new List<NoteScrollObject>();
     private readonly float _minYThreshold = -6f;
     private readonly float _measureSize = 4f;
     [SerializeField] private int _measureCount = 1;

@@ -7,8 +7,8 @@ public class LaneScroller : MonoBehaviour
     public static LaneScroller Instance;
 
     [SerializeField] private GameObject _emptyIngredientPrefab;
-    private float _beatTempo;
-    private float _currentTop = 3.5f;
+    private float _beatTempo = 0;
+    private float _currentTop = 4f;
     private int _measureCount = 0;
     private float _timeToNextMeasure = 0;
     private readonly float _measureSize = 4f;
@@ -27,11 +27,6 @@ public class LaneScroller : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        _beatTempo = NoteManager.Instance.BeatTempo / _secondsPerMinute;
-    }
-
     void Update()
     {
         if (_notes.Count > 0 && _notes[0].HitType == HitType.Missed)
@@ -42,6 +37,9 @@ public class LaneScroller : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (NoteManager.Instance.IsBeatStarted && _beatTempo == 0)
+            _beatTempo = NoteManager.Instance.BeatTempo / _secondsPerMinute;
+
         if (NoteManager.Instance.IsBeatStarted)
         {
             _timeToNextMeasure += _beatTempo * Time.fixedDeltaTime;
@@ -108,7 +106,6 @@ public class LaneScroller : MonoBehaviour
         var nextIngredientPrefab = PopIngredientQueue();
         var ingredient = Instantiate(nextIngredientPrefab, new Vector3(transform.position.x, transform.position.y + _currentTop, 0f), transform.rotation);
         ingredient.transform.parent = transform;
-        IngredientObject ingredientObj = ingredient.GetComponent<IngredientObject>();
-        _notes.AddRange(ingredientObj.Notes);
+        _notes.AddRange(ingredient.GetComponentsInChildren<NoteScrollObject>());
     }
 }
