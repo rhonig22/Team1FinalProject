@@ -10,7 +10,7 @@ public class NoteManager : MonoBehaviour
     [SerializeField] private GameObject _normalHitMessage;
     [SerializeField] private GameObject _goodHitMessage;
     [SerializeField] private GameObject _perfectHitMessage;
-    [SerializeField] public float BeatTempo = 160;
+    public float BeatTempo { get; private set; }
     public readonly float NoteLoopSize = 31.5f;
     public readonly int NormalNotePoints = 100;
     public readonly int GoodNotePoints = 120;
@@ -41,13 +41,16 @@ public class NoteManager : MonoBehaviour
 
     public void StartBeats()
     {
-        MusicManager.Instance.StartMusic();
+        BeatTempo = RecipeManager.Instance.GetBPM();
+        MusicManager.Instance.PlayMusicClip(RecipeManager.Instance.GetBackingTrack());
+        ResetScore();
         IsBeatStarted = true;
     }
 
     public void NoteHit(HitType type)
     {
         NotesHit++;
+        RecipeManager.Instance.IncrementIngredientSprite();
         switch (type)
         {
             case HitType.Normal:
@@ -78,6 +81,13 @@ public class NoteManager : MonoBehaviour
     {
         SoundManager.Instance.PlaySound(_noteMissedClip, Vector3.zero);
         NotesMissed++;
+    }
+
+    private void ResetScore()
+    {
+        Score = 0;
+        NotesHit = 0;
+        NotesMissed = 0;
     }
 }
 

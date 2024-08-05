@@ -8,6 +8,7 @@ public class RecipeManager : MonoBehaviour
     public bool RecipeCompleted { get; private set; } = false;
     private ScriptableRecipe _currentRecipe;
     private int _currentStepIndex;
+    private int _currentIngredientSpriteIndex = 0;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class RecipeManager : MonoBehaviour
     {
         _currentRecipe = recipe;
         _currentStepIndex = 0;
+        RecipeCompleted = false;
     }
 
     public int GetMaxScore()
@@ -36,8 +38,35 @@ public class RecipeManager : MonoBehaviour
         return _currentRecipe.GetStep(_currentStepIndex);
     }
 
+    public Sprite GetCurrentIngredientSprite()
+    {
+        var step = _currentRecipe.GetStep(_currentStepIndex);
+        return step.Ingredient.getSprite(_currentIngredientSpriteIndex);
+    }
+
+    public void IncrementIngredientSprite()
+    {
+        _currentIngredientSpriteIndex++;
+    }
+
+    public string GetRecipeName()
+    {
+        return _currentRecipe.GetName();
+    }
+
+    public int GetBPM()
+    {
+        return _currentRecipe.GetBPM();
+    }
+
+    public AudioClip GetBackingTrack()
+    {
+        return _currentRecipe.GetBackingTrack();
+    }
+
     public void IncrementStep() { 
         _currentStepIndex++;
+        _currentIngredientSpriteIndex = 0;
         if (_currentStepIndex >= _currentRecipe.GetStepCount())
             RecipeCompleted = true;
     }

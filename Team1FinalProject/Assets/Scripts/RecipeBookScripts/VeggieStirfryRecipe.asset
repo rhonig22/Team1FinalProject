@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c3d5c922faf5643ac0122d4a5c1466, type: 3}
+  m_Name: VeggieStirfryRecipe
+  m_EditorClassIdentifier: 
+  _recipeName: Veggie StirFry
+  _threeStarScore: 2500
+  _recipeSteps:
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: a2419d214d04dcd418a274d1c7e8ec74, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 45fdc8a078cd010418e5e473e27d574d, type: 2}
+  - Station: 1
+    Ingredient: {fileID: 11400000, guid: c5f0bf7dc8c77d042a1fefaff598e61d, type: 2}
+  _recipeSprite: {fileID: 0}
+  _backingTrack: {fileID: 8300000, guid: 33169b3feae21da41b9cc20ab172e1df, type: 3}
+  _bpm: 85

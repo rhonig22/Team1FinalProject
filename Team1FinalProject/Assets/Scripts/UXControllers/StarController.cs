@@ -35,10 +35,13 @@ public class StarController : MonoBehaviour
         int _currentScore = NoteManager.Instance.Score;
         if (_currentScore >= _maxScore)
         {
+            _starImage1.sprite = _fullStar;
+            _starImage2.sprite = _fullStar;
             _starImage3.sprite = _fullStar;
         }
         else if (_currentScore >= _secondStar)
         {
+            _starImage1.sprite = _fullStar;
             _starImage2.sprite = _fullStar;
             _starImage3.sprite = GetPartialStar(_currentScore - _secondStar);
         }
@@ -46,10 +49,13 @@ public class StarController : MonoBehaviour
         {
             _starImage1.sprite = _fullStar;
             _starImage2.sprite = GetPartialStar(_currentScore - _firstStar);
+            _starImage3.sprite = _emptyStar;
         }
         else
         {
             _starImage1.sprite = GetPartialStar(_currentScore);
+            _starImage2.sprite = _emptyStar;
+            _starImage3.sprite = _emptyStar;
         }
     }
 
@@ -58,10 +64,10 @@ public class StarController : MonoBehaviour
         if (score < _quarterStarValue)
             return _emptyStar;
         if (score < 2 * _quarterStarValue)
-            return _halfStar;
+            return _quarterStar;
         if (score < 3 * _quarterStarValue)
-            return _threeQuarterStar;
+            return _halfStar;
         
-        return _quarterStar;
+        return _threeQuarterStar;
     }
 }
