@@ -15,7 +15,7 @@ public class StarController : MonoBehaviour
     [SerializeField] Sprite _halfStar;
     [SerializeField] Sprite _threeQuarterStar;
     [SerializeField] Sprite _fullStar;
-    [SerializeField] private int _maxScore;
+    private int _maxScore;
 
     private int _currentScore;
     private int _firstStar;
@@ -24,6 +24,7 @@ public class StarController : MonoBehaviour
 
     private void Start()
     {
+        _maxScore = RecipeManager.Instance.GetMaxScore();
         _firstStar = _maxScore / 3;
         _secondStar = 2 * _maxScore / 3;
         _quarterStarValue = _maxScore / 12;

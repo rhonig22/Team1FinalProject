@@ -8,9 +8,4 @@ public class RecipeUXController : MonoBehaviour
     {
         GameManager.Instance.LoadTitleScreen();
     }
-
-    public void Recipe1Clicked()
-    {
-        GameManager.Instance.LoadKitchen();
-    }
 }
