@@ -7,7 +7,6 @@ public class LaneScroller : MonoBehaviour
     public static LaneScroller Instance;
 
     [SerializeField] private GameObject _emptyIngredientPrefab;
-    [SerializeField] private GameObject _onionIngredientPrefab;
     private float _beatTempo;
     private float _currentTop = 3.5f;
     private int _measureCount = 0;
@@ -78,7 +77,13 @@ public class LaneScroller : MonoBehaviour
 
     public void RemoveNote(NoteScrollObject note)
     {
+        var hasNotes = HasUpcomingNotes();
         _notes.Remove(note);
+
+        if (hasNotes && !HasUpcomingNotes())
+        {
+            RecipeManager.Instance.IncrementStep();
+        }
     }
 
     public void AddToIngredientQueue(GameObject ingredientPrefab)

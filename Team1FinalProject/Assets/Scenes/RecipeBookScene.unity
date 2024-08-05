@@ -567,6 +567,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 670679332}
     m_Modifications:
+    - target: {fileID: 405169514004196506, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
+      propertyPath: _recipe
+      value: 
+      objectReference: {fileID: 11400000, guid: 820e318699fe18c47b12d3f4bacff11f, type: 2}
     - target: {fileID: 2352726027222977741, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
       propertyPath: m_Name
       value: RecipeBookEggRecipe
@@ -1088,7 +1092,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 13, y: 13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1101,10 +1105,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 670679332}
     m_Modifications:
+    - target: {fileID: 405169514004196506, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
+      propertyPath: _recipe
+      value: 
+      objectReference: {fileID: 11400000, guid: 9db9b55aea6c81d4a90dc9140b50ef89, type: 2}
     - target: {fileID: 1762828608411124649, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 535618052}
+      objectReference: {fileID: 7961529560283273521}
+    - target: {fileID: 1762828608411124649, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecipeClicked
+      objectReference: {fileID: 0}
     - target: {fileID: 2352726027222977741, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
       propertyPath: m_Name
       value: RecipeBookMeatRecipe
@@ -1198,6 +1210,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
+--- !u!114 &7961529560283273521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 405169514004196506, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
+  m_PrefabInstance: {fileID: 7961529560283273520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b25e1fcf624e843a6c941ca34c6fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
