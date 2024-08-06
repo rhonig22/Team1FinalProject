@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XButton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 325119394969636372, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 882999211364872318, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
       propertyPath: _noteClip
       value: 
@@ -89,6 +93,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Onion-Sliced
       objectReference: {fileID: 0}
+    - target: {fileID: 316161610368572042, guid: fa88c5ce566e67349b2a2c21295120f7, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2430975822923163414, guid: fa88c5ce566e67349b2a2c21295120f7, type: 3}
       propertyPath: IngredientName
       value: Onion
@@ -157,6 +165,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7720095097141661369, guid: fa88c5ce566e67349b2a2c21295120f7, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1793245168901876442, guid: fa88c5ce566e67349b2a2c21295120f7, type: 3}
@@ -190,6 +202,10 @@ PrefabInstance:
     - target: {fileID: 325119394969636372, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
       propertyPath: m_Name
       value: XButton (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 325119394969636372, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 882999211364872318, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
       propertyPath: _noteClip
@@ -267,6 +283,10 @@ PrefabInstance:
     - target: {fileID: 325119394969636372, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
       propertyPath: m_Name
       value: XButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 325119394969636372, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 882999211364872318, guid: b6a7352dfd014b04f9c09a6ec4a3a076, type: 3}
       propertyPath: _noteClip

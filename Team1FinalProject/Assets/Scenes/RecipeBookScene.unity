@@ -558,7 +558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: -25}
+  m_AnchoredPosition: {x: -296, y: -25}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &913551531
@@ -1147,7 +1147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4629623721027255401, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
       propertyPath: m_text
-      value: Veggies
+      value: Veggie Stir Fry
       objectReference: {fileID: 0}
     - target: {fileID: 4921782245413044736, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
       propertyPath: m_Pivot.x
@@ -1211,11 +1211,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4921782245413044736, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 253.5
+      value: 224.9
       objectReference: {fileID: 0}
     - target: {fileID: 4921782245413044736, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -380
+      value: -388
       objectReference: {fileID: 0}
     - target: {fileID: 4921782245413044736, guid: 8f9b5715a171325428667b33f6e9a6ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
