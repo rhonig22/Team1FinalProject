@@ -19,7 +19,8 @@ public class NoteManager : MonoBehaviour
     public int Score { get; private set; } = 0;
     public int NotesHit { get; private set; } = 0;
     public int NotesMissed { get; private set; } = 0;
-    private Vector3 _messagePlacement = new Vector3(-2f, -3.5f, 1);
+    private Vector3 _messageOffset = new Vector3(-275f, 0, 1);
+    private Vector3 _messagePlacement = new Vector3(175f, 175f, 1);
 
     private void Awake()
     {
@@ -51,19 +52,21 @@ public class NoteManager : MonoBehaviour
     {
         NotesHit++;
         RecipeManager.Instance.IncrementIngredientSprite();
+
+        GameObject hitText = null;
         switch (type)
         {
             case HitType.Normal:
                 Score += NormalNotePoints;
-                Instantiate(_normalHitMessage, _messagePlacement, _normalHitMessage.transform.rotation);
+                hitText = Instantiate(_normalHitMessage, _normalHitMessage.transform.position, _normalHitMessage.transform.rotation);
                 break;
             case HitType.Good:
                 Score += GoodNotePoints;
-                Instantiate(_goodHitMessage, _messagePlacement, _goodHitMessage.transform.rotation);
+                hitText = Instantiate(_goodHitMessage, _goodHitMessage.transform.position, _goodHitMessage.transform.rotation);
                 break;
             case HitType.Perfect:
                 Score += PerfectNotePoints;
-                Instantiate(_perfectHitMessage, _messagePlacement, _perfectHitMessage.transform.rotation);
+                hitText = Instantiate(_perfectHitMessage, _perfectHitMessage.transform.position, _perfectHitMessage.transform.rotation);
                 break;
             case HitType.Missed:
             case HitType.Upcoming:
@@ -71,10 +74,15 @@ public class NoteManager : MonoBehaviour
                 break;
         }
 
-       // if (NotesHit % 2 == 0)
-       //     _messagePlacement.y *= -1;
-       // if (NotesHit % 2 == 1)
-       //     _messagePlacement.x *= -1;
+        if (hitText != null) {
+            var hitTextController = hitText.GetComponent<HitTextUXController>();
+            hitTextController.SetLocation(_messageOffset + _messagePlacement);
+        }
+
+       if (NotesHit % 2 == 0)
+           _messagePlacement.y *= -1;
+       if (NotesHit % 2 == 1)
+           _messagePlacement.x *= -1;
     }
 
     public void NoteMissed()
