@@ -19,7 +19,7 @@ public class NoteManager : MonoBehaviour
     public int Score { get; private set; } = 0;
     public int NotesHit { get; private set; } = 0;
     public int NotesMissed { get; private set; } = 0;
-    private Vector3 _messagePlacement = new Vector3(2, 2, 1);
+    private Vector3 _messagePlacement = new Vector3(-2f, -3.5f, 1);
 
     private void Awake()
     {
@@ -59,11 +59,11 @@ public class NoteManager : MonoBehaviour
                 break;
             case HitType.Good:
                 Score += GoodNotePoints;
-                Instantiate(_goodHitMessage, _messagePlacement, _normalHitMessage.transform.rotation);
+                Instantiate(_goodHitMessage, _messagePlacement, _goodHitMessage.transform.rotation);
                 break;
             case HitType.Perfect:
                 Score += PerfectNotePoints;
-                Instantiate(_perfectHitMessage, _messagePlacement, _normalHitMessage.transform.rotation);
+                Instantiate(_perfectHitMessage, _messagePlacement, _perfectHitMessage.transform.rotation);
                 break;
             case HitType.Missed:
             case HitType.Upcoming:
@@ -71,10 +71,10 @@ public class NoteManager : MonoBehaviour
                 break;
         }
 
-        if (NotesHit % 2 == 0)
-            _messagePlacement.y *= -1;
-        if (NotesHit % 2 == 1)
-            _messagePlacement.x *= -1;
+       // if (NotesHit % 2 == 0)
+       //     _messagePlacement.y *= -1;
+       // if (NotesHit % 2 == 1)
+       //     _messagePlacement.x *= -1;
     }
 
     public void NoteMissed()
