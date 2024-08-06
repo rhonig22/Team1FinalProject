@@ -1328,6 +1328,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Settings
       objectReference: {fileID: 0}
+    - target: {fileID: 278743550665292613, guid: 34b043fd05b35e34fb590c4ae6fc6496, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 730496619}
+    - target: {fileID: 278743550665292613, guid: 34b043fd05b35e34fb590c4ae6fc6496, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SettingsClicked
+      objectReference: {fileID: 0}
     - target: {fileID: 2299350339499475645, guid: 34b043fd05b35e34fb590c4ae6fc6496, type: 3}
       propertyPath: m_Name
       value: SettingsButton
