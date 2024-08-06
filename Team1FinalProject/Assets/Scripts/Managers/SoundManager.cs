@@ -33,4 +33,6 @@ public class SoundManager : MonoBehaviour
     {
         _volume = volume;
     }
+
+    public float GetCurrentVolume() { return _volume; }
 }
