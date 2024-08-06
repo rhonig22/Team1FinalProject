@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class MusicManager : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class MusicManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        _volume = SaveDataManager.Instance.GetPlayerData().MusicVolume * _maxVolume;
+        _musicSource.volume = _volume;
+    }
+
     public void StartMusic()
     {
         _musicSource.volume = _volume;
@@ -35,6 +42,9 @@ public class MusicManager : MonoBehaviour
     {
         _volume = volume * _maxVolume;
         _musicSource.volume = _volume;
+        var playerData = SaveDataManager.Instance.GetPlayerData();
+        playerData.MusicVolume = volume;
+        SaveDataManager.Instance.SetPlayerData(playerData);
     }
 
     public float GetCurrentVolume() { return _volume / _maxVolume; }
