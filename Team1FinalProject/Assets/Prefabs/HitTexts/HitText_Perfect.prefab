@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 144955450329136970, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4935522853550060186, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -64,6 +68,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 5757257596613898434, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6704303117538086535, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
       propertyPath: m_text
       value: Perfect!!!
@@ -72,6 +80,10 @@ PrefabInstance:
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
+    - target: {fileID: 6704303117538086535, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6704303117538086535, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
       propertyPath: m_fontColor.b
       value: 0.9513254
