@@ -30,7 +30,10 @@ public class RecipeManager : MonoBehaviour
 
     public int GetMaxScore()
     {
-        return _currentRecipe.GetMaxScore();
+        if (_currentRecipe != null)
+            return _currentRecipe.GetMaxScore();
+
+        return 0;
     }
 
     public RecipeStep GetNextStep()

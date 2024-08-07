@@ -54,14 +54,49 @@ public class SaveDataManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public RecipeData GetRecipeData()
+    public RecipeData GetAllRecipeData()
     {
         return _recipeData;
     }
 
-    public void SetRecipeData(RecipeData recipeData)
+    public RecipeEntry GetRecipeEntry(string recipeName)
     {
-        PlayerPrefs.SetString(_recipeDataKey, JsonUtility.ToJson(recipeData));
+        foreach (var recipe in _recipeData.RecipeList) {
+            if (recipe.Name == recipeName)
+            {
+                return recipe;
+            }
+        }
+
+        return null;
+    }
+
+    public void SetRecipeEntryData(RecipeEntry recipeEntry)
+    {
+        bool found = false;
+        foreach (var recipe in _recipeData.RecipeList)
+        {
+            if (recipe.Name == recipeEntry.Name)
+            {
+                recipe.Stars = recipeEntry.Stars;
+                recipe.HighScore = recipeEntry.HighScore;
+                recipe.Unlocked = recipeEntry.Unlocked;
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+        {
+            _recipeData.RecipeList.Add(recipeEntry);
+        }
+
+        SetRecipeData();
+    }
+
+    public void SetRecipeData()
+    {
+        PlayerPrefs.SetString(_recipeDataKey, JsonUtility.ToJson(_recipeData));
         PlayerPrefs.Save();
     }
 
@@ -76,13 +111,14 @@ public class SaveDataManager : MonoBehaviour
             PlayerName = ""
         };
         SetPlayerData(playerData);
+        _playerData = playerData;
     }
 
     public void InitializeRecipeData()
     {
         RecipeData recipeData = new RecipeData()
         {
-            RecipeList = new RecipeEntry[]
+            RecipeList = new List<RecipeEntry>()
             {
                 new RecipeEntry()
                 {
@@ -114,5 +150,7 @@ public class SaveDataManager : MonoBehaviour
                 }
             }
         };
+
+        _recipeData = recipeData;
     }
 }

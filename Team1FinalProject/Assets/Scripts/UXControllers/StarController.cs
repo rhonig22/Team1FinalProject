@@ -17,6 +17,7 @@ public class StarController : MonoBehaviour
     [SerializeField] Sprite _fullStar;
     private int _maxScore;
 
+    private int _currentStarCount = 0;
     private int _currentScore;
     private int _firstStar;
     private int _secondStar;
@@ -24,38 +25,63 @@ public class StarController : MonoBehaviour
 
     private void Start()
     {
-        _maxScore = RecipeManager.Instance.GetMaxScore();
+        SetMaxScore(RecipeManager.Instance.GetMaxScore());
+    }
+
+    private void Update()
+    {
+        if (NoteManager.Instance.IsBeatStarted)
+            SetScore(NoteManager.Instance.Score);
+    }
+
+    public void SetScore(int score)
+    {
+        _currentScore = score;
+        SetStars();
+    }
+
+    public int GetCurrentStarCount()
+    {
+        return _currentStarCount;
+    }
+
+    public void SetMaxScore(int score)
+    {
+        _maxScore = score;
         _firstStar = _maxScore / 3;
         _secondStar = 2 * _maxScore / 3;
         _quarterStarValue = _maxScore / 12;
     }
 
-    private void Update()
+    private void SetStars()
     {
-        int _currentScore = NoteManager.Instance.Score;
         if (_currentScore >= _maxScore)
         {
             _starImage1.sprite = _fullStar;
             _starImage2.sprite = _fullStar;
             _starImage3.sprite = _fullStar;
+            _currentStarCount = 3;
         }
         else if (_currentScore >= _secondStar)
         {
             _starImage1.sprite = _fullStar;
             _starImage2.sprite = _fullStar;
             _starImage3.sprite = GetPartialStar(_currentScore - _secondStar);
+            _currentStarCount = 2;
         }
         else if (_currentScore >= _firstStar)
         {
             _starImage1.sprite = _fullStar;
             _starImage2.sprite = GetPartialStar(_currentScore - _firstStar);
             _starImage3.sprite = _emptyStar;
+            _currentStarCount = 1;
         }
         else
         {
             _starImage1.sprite = GetPartialStar(_currentScore);
             _starImage2.sprite = _emptyStar;
             _starImage3.sprite = _emptyStar;
+            _currentStarCount = 0;
         }
     }
 
