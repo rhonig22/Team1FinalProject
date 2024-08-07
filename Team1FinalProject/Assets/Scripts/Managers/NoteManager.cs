@@ -20,7 +20,7 @@ public class NoteManager : MonoBehaviour
     public int NotesHit { get; private set; } = 0;
     public int NotesMissed { get; private set; } = 0;
     private Vector3 _messageOffset = new Vector3(-275f, 0, 1);
-    private Vector3 _messagePlacement = new Vector3(175f, 175f, 1);
+    private Vector3 _messagePlacement = new Vector3(-320f, -275f, 1);
 
     private void Awake()
     {
@@ -76,13 +76,10 @@ public class NoteManager : MonoBehaviour
 
         if (hitText != null) {
             var hitTextController = hitText.GetComponent<HitTextUXController>();
-            hitTextController.SetLocation(_messageOffset + _messagePlacement);
+            hitTextController.SetLocation(_messagePlacement);
         }
 
-       if (NotesHit % 2 == 0)
-           _messagePlacement.y *= -1;
-       if (NotesHit % 2 == 1)
-           _messagePlacement.x *= -1;
+     
     }
 
     public void NoteMissed()
