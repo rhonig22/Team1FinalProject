@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c3d5c922faf5643ac0122d4a5c1466, type: 3}
   m_Name: VeggieStirfryRecipe
   m_EditorClassIdentifier: 
-  _recipeName: Veggie StirFry
+  _recipeName: Veggie Stir Fry
   _threeStarScore: 2500
   _recipeSteps:
   - Station: 0
@@ -21,6 +21,6 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: 45fdc8a078cd010418e5e473e27d574d, type: 2}
   - Station: 1
     Ingredient: {fileID: 11400000, guid: c5f0bf7dc8c77d042a1fefaff598e61d, type: 2}
-  _recipeSprite: {fileID: 0}
+  _recipeSprite: {fileID: 21300000, guid: 070d1afb0a25668428e3fc071831445b, type: 3}
   _backingTrack: {fileID: 8300000, guid: 33169b3feae21da41b9cc20ab172e1df, type: 3}
   _bpm: 85

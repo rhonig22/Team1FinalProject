@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c3d5c922faf5643ac0122d4a5c1466, type: 3}
   m_Name: MeatRecipe
   m_EditorClassIdentifier: 
-  _recipeName: Meat
+  _recipeName: Meat!
   _threeStarScore: 3000
   _recipeSteps:
   - Station: 0
