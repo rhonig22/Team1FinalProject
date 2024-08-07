@@ -148,6 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _recipe: {fileID: 0}
+  _recipeNameText: {fileID: 4629623721027255401}
+  _recipeImage: {fileID: 9080088964664793117}
 --- !u!1 &3293228585423427475
 GameObject:
   m_ObjectHideFlags: 0
