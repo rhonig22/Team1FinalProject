@@ -15,5 +15,5 @@ public class RecipeEntry
 [Serializable]
 public class RecipeData
 {
-    public RecipeEntry[] RecipeList;
+    public List<RecipeEntry> RecipeList;
 }

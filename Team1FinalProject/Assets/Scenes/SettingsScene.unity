@@ -1993,6 +1993,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 535618052}
+    - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SettingsUXController, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

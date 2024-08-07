@@ -8,7 +8,6 @@ public class KitchenCanvasController : MonoBehaviour
 {
     [SerializeField] private GameObject _kitchenDimmer;
     [SerializeField] private GameObject _recipeCompletionPanel;
-    [SerializeField] private TextMeshProUGUI _recipeText;
     [SerializeField] private Image _ingredientImage;
 
     public static bool IsRhythmSection = false;
@@ -21,16 +20,12 @@ public class KitchenCanvasController : MonoBehaviour
         if (hasNotes)
             _ingredientImage.sprite = RecipeManager.Instance.GetCurrentIngredientSprite();
 
-        var wasActive = _recipeCompletionPanel.activeInHierarchy;
         _recipeCompletionPanel.SetActive(RecipeManager.Instance.RecipeCompleted);
-        if (!wasActive && RecipeManager.Instance.RecipeCompleted)
-        {
-            _recipeText.text = RecipeManager.Instance.GetRecipeName();
-        }
     }
 
     public void RecipeBookClicked()
     {
+        NoteManager.Instance.StopBeats();
         GameManager.Instance.LoadRecipeBook();
     }
 }
