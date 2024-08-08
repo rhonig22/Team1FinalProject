@@ -14,4 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ingredientName: Egg
   _ingredientPrefab: {fileID: 1097406184937033784, guid: 2802b2dfb30b4be4ca1b575f5deac38a, type: 3}
-  _ingredientSprite: {fileID: 0}
+  _ingredientSprites:
+  - {fileID: -103606146, guid: 0f43d7fe8a69fb64b9da9252e90812dd, type: 3}
+  - {fileID: -1466394272, guid: 0f43d7fe8a69fb64b9da9252e90812dd, type: 3}
+  - {fileID: -745178975, guid: 0f43d7fe8a69fb64b9da9252e90812dd, type: 3}
+  - {fileID: 729617188, guid: 0f43d7fe8a69fb64b9da9252e90812dd, type: 3}
+  - {fileID: 2094140553, guid: 0f43d7fe8a69fb64b9da9252e90812dd, type: 3}
