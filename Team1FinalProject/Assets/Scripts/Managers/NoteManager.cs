@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NoteManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class NoteManager : MonoBehaviour
     [SerializeField] private GameObject _goodHitMessage;
     [SerializeField] private GameObject _perfectHitMessage;
     public float BeatTempo { get; private set; }
+    public UnityEvent<int> BeatEvent { get; private set; } = new UnityEvent<int>(); 
     public readonly float NoteLoopSize = 31.5f;
     public readonly int NormalNotePoints = 100;
     public readonly int GoodNotePoints = 120;
@@ -35,6 +37,21 @@ public class NoteManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Update()
+    {
+        //If a whole "beat" in 60/bpm has elapsed(Plus a bit of float cruft), "Do things on the beat"
+        //first iteration just pulses the dots back and forth.
+        var musicSource = MusicManager.Instance.getMusicSource();
+        if (musicSource == null)
+            return;
+
+        float sampledTime = (musicSource.timeSamples / (musicSource.clip.frequency * GetBeatLength()));
+        if (CheckForNewBeat(sampledTime))
+        {
+            BeatEvent.Invoke(_lastBeat);
+        }
+    }
+
     public void StopBeats()
     {
         MusicManager.Instance.StopMusic();
@@ -53,6 +70,7 @@ public class NoteManager : MonoBehaviour
     {
         return 60f / BeatTempo;
     }
+
     public bool CheckForNewBeat(float beat)
     {
         if (Mathf.FloorToInt(beat) != _lastBeat)
@@ -62,6 +80,7 @@ public class NoteManager : MonoBehaviour
         }
         return false;
     }
+
     public void NoteHit(HitType type)
     {
         NotesHit++;
@@ -107,18 +126,6 @@ public class NoteManager : MonoBehaviour
         Score = 0;
         NotesHit = 0;
         NotesMissed = 0;
-    }
-    private void Update()
-    {
-        //If a whole "beat" in 60/bpm has elapsed(Plus a bit of float cruft), "Do things on the beat"
-        //first iteration just pulses the dots back and forth.
-        float sampledTime = (MusicManager.Instance.getMusicSource().timeSamples / (MusicManager.Instance.getMusicSource().clip.frequency * GetBeatLength()));
-        if (CheckForNewBeat(sampledTime))
-            {
-            PulseDot.index++;
-        }
-   
-
     }
 }
 
