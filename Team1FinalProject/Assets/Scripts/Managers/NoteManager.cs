@@ -115,7 +115,7 @@ public class NoteManager : MonoBehaviour
         float sampledTime = (MusicManager.Instance.getMusicSource().timeSamples / (MusicManager.Instance.getMusicSource().clip.frequency * GetBeatLength()));
         if (CheckForNewBeat(sampledTime))
             {
-            // if (Input.GetMouseButtonDown(0))
+             if (Input.GetMouseButtonDown(0))
             PulseDot.index++;
         }
    
