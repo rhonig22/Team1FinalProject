@@ -13,22 +13,11 @@ public class PulseDot : MonoBehaviour
         _spriteRenderer.sprite = _beatSprites[0];
     }
 
-    //this works once D:< 
+   
   void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            pulse();
+        _spriteRenderer.sprite = _beatSprites[index % _beatSprites.Length];
     }
-    private void pulse()
-    {
-        index++;
 
-        if (index >= _beatSprites.Length)
-            index = 0;
-
-        _spriteRenderer.sprite = _beatSprites[index];
-
-    }
-    
 
 }

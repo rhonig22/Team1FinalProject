@@ -22,6 +22,8 @@ public class NoteManager : MonoBehaviour
     private Vector3 _messageOffset = new Vector3(-275f, 0, 1);
     private Vector3 _messagePlacement = new Vector3(-320f, -275f, 1);
 
+    private int _lastBeat;
+
     private void Awake()
     {
         if (Instance != null)
@@ -47,7 +49,19 @@ public class NoteManager : MonoBehaviour
         ResetScore();
         IsBeatStarted = true;
     }
-
+    public float GetBeatLength()
+    {
+        return 60f / BeatTempo;
+    }
+    public bool CheckForNewBeat(float beat)
+    {
+        if (Mathf.FloorToInt(beat) != _lastBeat)
+        {
+            _lastBeat = Mathf.FloorToInt(beat);
+            return true;
+        }
+        return false;
+    }
     public void NoteHit(HitType type)
     {
         NotesHit++;
@@ -94,6 +108,19 @@ public class NoteManager : MonoBehaviour
         NotesHit = 0;
         NotesMissed = 0;
     }
+    private void Update()
+    {
+        //If a whole "beat" in 60/bpm has elapsed(Plus a bit of float cruft), "Do things on the beat"
+        //first iteration just pulses the dots back and forth.
+        float sampledTime = (MusicManager.Instance.getMusicSource().timeSamples / (MusicManager.Instance.getMusicSource().clip.frequency * GetBeatLength()));
+        if (CheckForNewBeat(sampledTime))
+            {
+            // if (Input.GetMouseButtonDown(0))
+            PulseDot.index++;
+        }
+   
+
+    }
 }
 
 public enum HitType
@@ -104,3 +131,4 @@ public enum HitType
     Good,
     Perfect
 }
+

@@ -67,4 +67,8 @@ public class MusicManager : MonoBehaviour
     public void StopMusicClip() {
         _musicSource.Stop();
     }
+    public AudioSource getMusicSource()
+    {  
+        return _musicSource; 
+    }    
 }
