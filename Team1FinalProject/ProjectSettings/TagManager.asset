@@ -6,6 +6,8 @@ TagManager:
   tags:
   - QteButton
   - RhythmController
+  - RecipeNames
+  - RecipeScores
   layers:
   - Default
   - TransparentFX

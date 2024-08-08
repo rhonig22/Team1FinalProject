@@ -36,6 +36,16 @@ public class RecipeManager : MonoBehaviour
         return 0;
     }
 
+    public float GetPercentCompleted()
+    {
+        if (_currentRecipe != null)
+        {
+            return _currentStepIndex / _currentRecipe.GetStepCount();
+        }
+
+        return 0;
+    }
+
     public RecipeStep GetNextStep()
     {
         return _currentRecipe.GetStep(_currentStepIndex);

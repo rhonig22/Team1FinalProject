@@ -6,18 +6,17 @@ public class PulseDot : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Sprite[] _beatSprites;
-    public static int index = 0;
+    private int index = 0;
 
     private void Start()
     {
         _spriteRenderer.sprite = _beatSprites[0];
+        NoteManager.Instance.BeatEvent.AddListener((int beat) => { index = beat % _beatSprites.Length; });
     }
 
    
-  void Update()
+    void Update()
     {
-        _spriteRenderer.sprite = _beatSprites[index % _beatSprites.Length];
+        _spriteRenderer.sprite = _beatSprites[index];
     }
-
-
 }
