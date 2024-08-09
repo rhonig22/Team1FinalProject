@@ -12,6 +12,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
+      
+      - name: Change Dir
+        run:
+            cd /Team1FinalProject
 
       # Cache
       - uses: actions/cache@v3
