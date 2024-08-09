@@ -15,7 +15,7 @@ jobs:
       
       - name: Change Dir
         run:
-            cd /Team1FinalProject
+            cd Team1FinalProject
 
       # Cache
       - uses: actions/cache@v3
