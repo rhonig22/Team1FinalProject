@@ -11,6 +11,7 @@ public class KitchenUXController : MonoBehaviour
 
     public void MainMenuClicked()
     {
+        NoteManager.Instance.StopBeats();
         GameManager.Instance.LoadTitleScreen();
     }
 }

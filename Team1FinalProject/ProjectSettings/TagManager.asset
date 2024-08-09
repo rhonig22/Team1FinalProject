@@ -6,6 +6,8 @@ TagManager:
   tags:
   - QteButton
   - RhythmController
+  - RecipeNames
+  - RecipeScores
   layers:
   - Default
   - TransparentFX
@@ -48,4 +50,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 684694947
+    locked: 0
+  - name: Top
+    uniqueID: 598905317
     locked: 0

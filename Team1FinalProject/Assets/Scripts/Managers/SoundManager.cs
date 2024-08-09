@@ -19,6 +19,11 @@ public class SoundManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        _volume = SaveDataManager.Instance.GetPlayerData().SoundFxVolume;
+    }
+
     public void PlaySound(AudioClip clip, Vector3 position)
     {
         AudioSource audioSource = Instantiate(_soundEffectsSource, position, Quaternion.identity);
@@ -32,5 +37,10 @@ public class SoundManager : MonoBehaviour
     public void ChangeMasterVolume(float volume)
     {
         _volume = volume;
+        var playerData = SaveDataManager.Instance.GetPlayerData();
+        playerData.SoundFxVolume = volume;
+        SaveDataManager.Instance.SetPlayerData(playerData);
     }
+
+    public float GetCurrentVolume() { return _volume; }
 }

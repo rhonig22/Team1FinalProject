@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance;
-    private float _volume = 1f;
+    private readonly float _maxVolume = .5f;
+    private float _volume = .5f;
     [SerializeField] private AudioSource _musicSource;
 
     private void Awake()
@@ -19,8 +21,15 @@ public class MusicManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        _volume = SaveDataManager.Instance.GetPlayerData().MusicVolume * _maxVolume;
+        _musicSource.volume = _volume;
+    }
+
     public void StartMusic()
     {
+        _musicSource.volume = _volume;
         _musicSource.Play();
     }
 
@@ -31,11 +40,18 @@ public class MusicManager : MonoBehaviour
 
     public void ChangeMasterVolume(float volume)
     {
-        _volume = volume;
+        _volume = volume * _maxVolume;
+        _musicSource.volume = _volume;
+        var playerData = SaveDataManager.Instance.GetPlayerData();
+        playerData.MusicVolume = volume;
+        SaveDataManager.Instance.SetPlayerData(playerData);
     }
+
+    public float GetCurrentVolume() { return _volume / _maxVolume; }
 
     public void PlayMusicClip(AudioClip clip, bool playOnce = false)
     {
+        _musicSource.volume = _volume;
         if (playOnce)
         {
             _musicSource.Stop();
@@ -51,4 +67,8 @@ public class MusicManager : MonoBehaviour
     public void StopMusicClip() {
         _musicSource.Stop();
     }
+    public AudioSource getMusicSource()
+    {  
+        return _musicSource; 
+    }    
 }
