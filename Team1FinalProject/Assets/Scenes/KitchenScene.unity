@@ -370,12 +370,12 @@ SpriteRenderer:
   m_SortingLayerID: 354633115
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b00ce4994e252d349ae3040448f41905, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90617f9739e6f2041b5d220a4ad23a4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 12.8, y: 7.2}
+  m_Size: {x: 3.2, y: 1.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2016,11 +2016,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7704423917661324666, guid: cd0de74719abc4c44897a914f27850f9, type: 3}
       propertyPath: m_Color.g
-      value: 0.94117653
+      value: 0.14117648
       objectReference: {fileID: 0}
     - target: {fileID: 7704423917661324666, guid: cd0de74719abc4c44897a914f27850f9, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.15686275
       objectReference: {fileID: 0}
     - target: {fileID: 7807131086974488375, guid: cd0de74719abc4c44897a914f27850f9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3742,7 +3742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1745141469
 MonoBehaviour:
   m_ObjectHideFlags: 0
