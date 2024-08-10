@@ -13,12 +13,14 @@ public class KitchenBackgroundRenderer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         var flattop = new GameObject("flattop", typeof(SpriteRenderer));
         var spriteRenderer = flattop.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = _flattop;
         spriteRenderer.sortingLayerName = "Background";
         spriteRenderer.sortingOrder = 1;
         flattop.transform.localScale = Vector3.one * 5;
+        flattop.transform.position = new Vector3(-1, 1.5f, 0);
         flattop.transform.SetParent(transform);
 
         var stovetop = new GameObject("stovetop", typeof(SpriteRenderer));
@@ -27,6 +29,7 @@ public class KitchenBackgroundRenderer : MonoBehaviour
         spriteRenderer.sortingLayerName = "Background";
         spriteRenderer.sortingOrder = 1;
         stovetop.transform.localScale = Vector3.one * 5;
+        stovetop.transform.position = new Vector3(3, 1.8f, 0);
         stovetop.transform.SetParent(transform);
 
         var prep = new GameObject("prep", typeof(SpriteRenderer));
@@ -35,6 +38,7 @@ public class KitchenBackgroundRenderer : MonoBehaviour
         spriteRenderer.sortingLayerName = "Background";
         spriteRenderer.sortingOrder = 1;
         prep.transform.localScale = Vector3.one * 5;
+        prep.transform.position = new Vector3(0, 0, 0);
         prep.transform.SetParent(transform);
 
         var fridge = new GameObject("fridge", typeof(SpriteRenderer));
@@ -43,6 +47,8 @@ public class KitchenBackgroundRenderer : MonoBehaviour
         spriteRenderer.sortingLayerName = "Background";
         spriteRenderer.sortingOrder = 1;
         fridge.transform.localScale = new Vector3(-5, 5, 5);
+        fridge.transform.position = new Vector3(6.5f, 2, 0);
         fridge.transform.SetParent(transform);
+        */
     }
 }
