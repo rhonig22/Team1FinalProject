@@ -7,18 +7,23 @@ public class InteractableAppliance : MonoBehaviour
 {
     private bool _isInRange;
     [SerializeField] private string _interactKey;
+    [SerializeField] private bool _RightOrUp;
     [SerializeField] private UnityEvent _interactAction;
     [SerializeField] private Station _station;
     void Update()
     {
-        if(_isInRange && !KitchenCanvasController.IsRhythmSection)  
+        if (_isInRange && !KitchenCanvasController.IsRhythmSection)
         {
-            if(Input.GetButtonDown(_interactKey))
+            if (
+                (Input.GetAxis(_interactKey) > 0f && _RightOrUp) //up and right
+                || (Input.GetAxis(_interactKey) < 0f && !_RightOrUp) //down and left
+                )
             {
                 _interactAction.Invoke();
             }
         }
     }
+
     public void FlashNextRecipeStep()
     { 
         RecipeStep step = RecipeManager.Instance.GetNextStep();
