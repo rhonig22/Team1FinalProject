@@ -14,7 +14,9 @@ public class NoteManager : MonoBehaviour
     [SerializeField] private GameObject _perfectHitMessage;
     [SerializeField] private ParticleSystem _celebrationParticles;
     public float BeatTempo { get; private set; }
-    public UnityEvent<int> BeatEvent { get; private set; } = new UnityEvent<int>(); 
+    public UnityEvent<int> BeatEvent { get; private set; } = new UnityEvent<int>();
+    public UnityEvent<int> SuccessfulHitEvent { get; private set; } = new UnityEvent<int>();
+
     public readonly float NoteLoopSize = 31.5f;
     public readonly int NormalNotePoints = 100;
     public readonly int GoodNotePoints = 120;
@@ -86,6 +88,8 @@ public class NoteManager : MonoBehaviour
     public void NoteHit(HitType type)
     {
         NotesHit++;
+
+        SuccessfulHitEvent.Invoke(NotesHit);
         RecipeManager.Instance.IncrementIngredientSprite();
 
         GameObject hitText = null;
@@ -110,11 +114,10 @@ public class NoteManager : MonoBehaviour
         }
 
         if (hitText != null) {
-            //_celebrationParticles = Instantiate(_celebrationParticles.gameObject, transform).GetComponent<ParticleSystem>();
-            //_celebrationParticles.Play();
+            
             var hitTextController = hitText.GetComponent<HitTextUXController>();
             hitTextController.SetLocation(_messagePlacement);
-            //Destroy(_celebrationParticles, _celebrationParticles.main.duration);
+            
         }
 
      

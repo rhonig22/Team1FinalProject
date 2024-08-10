@@ -51,6 +51,11 @@ public class RecipeManager : MonoBehaviour
         return _currentRecipe.GetStep(_currentStepIndex);
     }
 
+    public Station GetNextStation()
+    {
+        return GetNextStep().Station;
+    }
+
     public Sprite GetCurrentIngredientSprite()
     {
         var step = _currentRecipe.GetStep(_currentStepIndex);

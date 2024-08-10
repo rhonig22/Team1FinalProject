@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PulseToTheBeat : MonoBehaviour
+public class PulseToTheSuccessfulHit : MonoBehaviour
 {
     [SerializeField] float _pulseSize = 1.5f;
     [SerializeField] float _returnSpeed = 5f;
@@ -11,8 +11,8 @@ public class PulseToTheBeat : MonoBehaviour
     void Start()
     {
         _startSize = transform.localScale;
-        //When you hear a beat, expand
-        NoteManager.Instance.BeatEvent.AddListener((int beat) => { transform.localScale = _startSize * _pulseSize; });
+        //When you hear a ok/good/great, expand
+        NoteManager.Instance.SuccessfulHitEvent.AddListener((int hit) => { transform.localScale = _startSize * _pulseSize; });
     }
 
     // Update is called once per frame
