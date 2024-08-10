@@ -32,6 +32,7 @@ public class RhythmController : MonoBehaviour
             {
                 NoteManager.Instance.NoteHit(note.HitType);
                 note.PlayNote();
+                //particle effect?
                 note.SetInactive();
                 _laneScroller.RemoveNote(note);
             }
