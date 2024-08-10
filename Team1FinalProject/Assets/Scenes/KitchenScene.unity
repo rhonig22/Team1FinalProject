@@ -4071,6 +4071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScoreHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 2749583124031286656, guid: 010a4796bc434784fa318d2fcc2e917e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4417767460439298886, guid: 010a4796bc434784fa318d2fcc2e917e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4172,6 +4176,14 @@ PrefabInstance:
       value: Celebration Particles
       objectReference: {fileID: 0}
     - target: {fileID: 6837188756176028658, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837188756176028658, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837188756176028658, guid: 7a07be3402385884b967d27b3029f386, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4210,6 +4222,46 @@ PrefabInstance:
     - target: {fileID: 6837188756176028658, guid: 7a07be3402385884b967d27b3029f386, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650972978776436656, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650972978776436656, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: UVModule.mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650972978776436656, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: UVModule.timeMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650972978776436656, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650972978776436656, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.98960686
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650972978776436656, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650972978776436656, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650972978776436656, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650972978776436656, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650972978776436656, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
