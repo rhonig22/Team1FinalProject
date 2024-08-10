@@ -19,7 +19,14 @@ public class InteractableAppliance : MonoBehaviour
             }
         }
     }
-
+    public void FlashNextRecipeStep()
+    { 
+        RecipeStep step = RecipeManager.Instance.GetNextStep();
+        if (step.Station != _station)
+        {
+            //buttonflair lerp stuff here
+        }
+    }
     public void StartNextRecipeStep()
     {
         RecipeStep step = RecipeManager.Instance.GetNextStep();

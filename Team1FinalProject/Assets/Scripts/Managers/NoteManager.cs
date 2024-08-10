@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +12,7 @@ public class NoteManager : MonoBehaviour
     [SerializeField] private GameObject _normalHitMessage;
     [SerializeField] private GameObject _goodHitMessage;
     [SerializeField] private GameObject _perfectHitMessage;
+    [SerializeField] private ParticleSystem _celebrationParticles;
     public float BeatTempo { get; private set; }
     public UnityEvent<int> BeatEvent { get; private set; } = new UnityEvent<int>(); 
     public readonly float NoteLoopSize = 31.5f;
@@ -39,8 +41,8 @@ public class NoteManager : MonoBehaviour
 
     private void Update()
     {
-        //If a whole "beat" in 60/bpm has elapsed(Plus a bit of float cruft), "Do things on the beat"
-        //first iteration just pulses the dots back and forth.
+        //If a whole "beat" in 60/bpm has elapsed(Plus a bit of float cruft, "Do things on the beat"
+      
         var musicSource = MusicManager.Instance.getMusicSource();
         if (musicSource == null)
             return;
@@ -108,8 +110,11 @@ public class NoteManager : MonoBehaviour
         }
 
         if (hitText != null) {
+            //_celebrationParticles = Instantiate(_celebrationParticles.gameObject, transform).GetComponent<ParticleSystem>();
+            //_celebrationParticles.Play();
             var hitTextController = hitText.GetComponent<HitTextUXController>();
             hitTextController.SetLocation(_messagePlacement);
+            //Destroy(_celebrationParticles, _celebrationParticles.main.duration);
         }
 
      
