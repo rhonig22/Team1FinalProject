@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ingredientName: Chopped Tomatoes
   _ingredientPrefab: {fileID: 4013419605963424100, guid: 43e64b2a1ea27e8408ed17ca6349acbc, type: 3}
-  _ingredientSprite: {fileID: 0}
+  _ingredientSprites:
+  - {fileID: 21300000, guid: 579e67280f90e574ab3bdbb4b446002b, type: 3}
+  - {fileID: 21300000, guid: 0bafcbfd5a7a7b84f850154d0eaac2d0, type: 3}
+  - {fileID: 21300000, guid: d9207110c2527494f806a77cb6339946, type: 3}
+  - {fileID: 21300000, guid: 08700577afa75f0419ac7128fd278422, type: 3}
+  - {fileID: 21300000, guid: c0c6bab6c99aea0418fa520e79a1ec76, type: 3}
+  - {fileID: 21300000, guid: 7d69af73b9a8cfb41a17da7096d0c108, type: 3}
