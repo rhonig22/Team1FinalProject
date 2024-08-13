@@ -748,9 +748,9 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1078691429}
   - {fileID: 1883513988}
   - {fileID: 2075434961}
-  - {fileID: 1078691429}
   m_Father: {fileID: 324407793}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &256922615
@@ -1406,6 +1406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _station: 0
+  _pulseSize: 1.1
+  _returnSpeed: 4
 --- !u!1001 &698672032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1649,6 +1651,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _station: 3
+  _pulseSize: 1.1
+  _returnSpeed: 4
 --- !u!1001 &941012902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1907,6 +1911,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _station: 1
+  _pulseSize: 1.1
+  _returnSpeed: 4
 --- !u!1 &1091857453
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,6 +3212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _station: 2
+  _pulseSize: 1.1
+  _returnSpeed: 4
 --- !u!1 &1691782936
 GameObject:
   m_ObjectHideFlags: 0
