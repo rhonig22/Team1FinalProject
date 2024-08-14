@@ -17,10 +17,13 @@ public class InteractableAppliance : MonoBehaviour
             if (
                 (Input.GetAxis(_interactKey) > 0f && _RightOrUp) //up and right
                 || (Input.GetAxis(_interactKey) < 0f && !_RightOrUp) //down and left
-                )
+                || Input.GetKeyDown(KeyCode.W))
             {
+                //W is temporary for people w/o a controller till we get 
+                //up/down/left/right or wasd for the arrowkeyless
                 _interactAction.Invoke();
             }
+
         }
     }
 
