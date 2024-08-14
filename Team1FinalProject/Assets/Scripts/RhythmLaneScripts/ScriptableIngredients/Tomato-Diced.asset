@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tomato-Diced
   m_EditorClassIdentifier: 
   _ingredientName: Diced Tomato
-  _ingredientPrefab: {fileID: 0}
+  _ingredientPrefab: {fileID: 4013419605963424100, guid: 43e64b2a1ea27e8408ed17ca6349acbc, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: 821f8fb8c4f41fb4ca2c584ff2178be9, type: 3}
   - {fileID: 21300000, guid: c9081f99584684a448d4d10bc2df7aad, type: 3}
@@ -25,3 +25,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d2439155a97b3a146b077bedfd4fbb87, type: 3}
   - {fileID: 21300000, guid: 251747965e3b80f4abc4026b1c571a05, type: 3}
   - {fileID: 21300000, guid: 238f01a897ec2c141bcdd2505d817804, type: 3}
+  _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}

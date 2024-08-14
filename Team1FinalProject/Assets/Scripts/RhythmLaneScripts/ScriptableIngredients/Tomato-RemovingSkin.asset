@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Tomato-RemovingSkin
   m_EditorClassIdentifier: 
   _ingredientName: 
-  _ingredientPrefab: {fileID: 0}
+  _ingredientPrefab: {fileID: 4013419605963424100, guid: 43e64b2a1ea27e8408ed17ca6349acbc, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: b050ec17f38d49b40befced34f3f3bd9, type: 3}
   - {fileID: 21300000, guid: a201f35e63b0c184a80dd84e7c83fd05, type: 3}
   - {fileID: 21300000, guid: 7d48d50443190d94e838f4c11e40908d, type: 3}
   - {fileID: 21300000, guid: 7513a7c9b2bcee547aaa7350cf600289, type: 3}
   - {fileID: 21300000, guid: f915d39afe52b934486772247a2d3ec2, type: 3}
+  _backgroundPrepSprites: []
