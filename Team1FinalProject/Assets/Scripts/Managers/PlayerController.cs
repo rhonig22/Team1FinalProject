@@ -12,27 +12,32 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
+        if (!KitchenCanvasController.IsRhythmSection)
+        {
+           
 
-        if (Input.GetAxis("DPad Y") > 0.1f)
-        {
-            Debug.Log("Y greater than 1");
-            _stoveTopSpawn.SpawnPlayer(_player);
-        }
-        else if (Input.GetAxis("DPad X") > 0.1f)
-        {
-            Debug.Log("X greater than 1");
-            _fridgeSpawn.SpawnPlayer(_player);
-        }
-        else if (Input.GetAxis("DPad Y") < -0.1f)
-        {
-            Debug.Log("Y less than 1");
-            _prepSpawn.SpawnPlayer(_player);
-        }
-        else if (Input.GetAxis("DPad X") < -0.1f)
-        {
-            Debug.Log("X less than 1");
-            _flattopSpawn.SpawnPlayer(_player);
-        }
+            if (Input.GetAxisRaw("DPad Y") > 0.1f)
+            {
+                Debug.Log("Y greater than 1");
+                transform.position = _stoveTopSpawn.transform.position;
 
+            }
+            else if (Input.GetAxisRaw("DPad X") > 0.1f)
+            {
+                Debug.Log("X greater than 1");
+                transform.position = _fridgeSpawn.transform.position;
+
+            }
+            else if (Input.GetAxisRaw("DPad Y") < -0.1f)
+            {
+                Debug.Log("Y less than 1");
+                transform.position = _prepSpawn.transform.position;
+            }
+            else if (Input.GetAxisRaw("DPad X") < -0.1f)
+            {
+                Debug.Log("X less than 1");
+                transform.position = _flattopSpawn.transform.position;
+            }
+        }
     }
 }
