@@ -9,6 +9,14 @@ public class KitchenUXController : MonoBehaviour
         NoteManager.Instance.StartBeats();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            MainMenuClicked();
+        }
+    }
+
     public void MainMenuClicked()
     {
         NoteManager.Instance.StopBeats();
