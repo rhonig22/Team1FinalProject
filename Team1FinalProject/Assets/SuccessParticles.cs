@@ -21,7 +21,7 @@ public class SuccessParticles : MonoBehaviour
     {
         if(_emitParticles)
         {
-
+            _particleSystem.Play();
             _emitParticles = false;
             
         }
