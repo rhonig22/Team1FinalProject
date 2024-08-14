@@ -11,7 +11,7 @@ public class GhostNote : MonoBehaviour
     [SerializeField] private AudioClip _noteClip;
 
     private float _rhythmControllerLocation = 0f;
-    private float _noteHitHeight = .4f;
+    
 
     void Start()
     {
