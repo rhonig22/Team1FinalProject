@@ -17,5 +17,21 @@ MonoBehaviour:
   _ingredientSprites:
   - {fileID: 21300000, guid: 753f52aa73549ee4a912f168d08e7bbe, type: 3}
   - {fileID: 21300000, guid: 3a55b3aa379b558408cd311dab4d8d30, type: 3}
-  - {fileID: 21300000, guid: bc4a1ff7269598e42bcc0ea25677d3bc, type: 3}
-  - {fileID: 21300000, guid: 171b77abc2e57ce42a892f92073abea2, type: 3}
+  - {fileID: 21300000, guid: 97939188ec87c95408d261e35a182a54, type: 3}
+  - {fileID: 21300000, guid: 6976a2aa008db99438f9e6c07299b750, type: 3}
+  - {fileID: 21300000, guid: 815519ef9dc57bd4fbd8122fc76a813a, type: 3}
+  - {fileID: 21300000, guid: 9e83b3dacd53ead44bae43b11ef5ba26, type: 3}
+  - {fileID: 21300000, guid: 933d1da713ec3544c9eea2c4cb0d7840, type: 3}
+  - {fileID: 21300000, guid: c918278625b37c74787e351958e1ab05, type: 3}
+  - {fileID: 21300000, guid: 5564e7218e520d04aa9ac5a7b2114a32, type: 3}
+  - {fileID: 21300000, guid: 41aa1ebbb59de0348a7905f5dd086572, type: 3}
+  - {fileID: 21300000, guid: 7c1531e7d7f8f994d80c41729dfef996, type: 3}
+  - {fileID: 21300000, guid: cff7cc54da7cff940bf2f900673f1115, type: 3}
+  - {fileID: 21300000, guid: e48ad9830e2a2374ebd2fb8145b85fcd, type: 3}
+  - {fileID: 21300000, guid: 9dee035e87ca80a42936244bc00b56b4, type: 3}
+  - {fileID: 21300000, guid: 5a1eec207671c07418660f26f5c945f0, type: 3}
+  - {fileID: 21300000, guid: 48225477e0a8c6a41a3363755421ec33, type: 3}
+  - {fileID: 21300000, guid: f5d9f3cfd9ad5864cb0e13de4210a9ef, type: 3}
+  - {fileID: 21300000, guid: 307f0fe6c87529a4299df7b5e5cb9537, type: 3}
+  - {fileID: 21300000, guid: 5504dbb44c6941644b3b738bbf5cdcd6, type: 3}
+  - {fileID: 21300000, guid: b52e5d4233473924d94039ae24c159b6, type: 3}
