@@ -14,4 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ingredientName: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: 4a1fcb5f2af243b4ba247d1f57483a56, type: 3}
-  _ingredientSprites: []
+  _ingredientSprites:
+  - {fileID: 21300000, guid: 048a5cdb33c25d14c92c0357ddd31d54, type: 3}
+  - {fileID: 21300000, guid: a7d9cc9c6edd8e74496f2a9dbbcc26d0, type: 3}
+  - {fileID: 21300000, guid: 520e955ebf8cb1747ba596aba10a8391, type: 3}
+  - {fileID: 21300000, guid: c0c6bab6c99aea0418fa520e79a1ec76, type: 3}
+  - {fileID: 21300000, guid: 7d69af73b9a8cfb41a17da7096d0c108, type: 3}

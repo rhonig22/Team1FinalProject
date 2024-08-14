@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
-  m_Name: Plated_Spaghetti_Meatballs
+  m_Name: Blanch Tomato
   m_EditorClassIdentifier: 
-  _ingredientName: Plating
-  _ingredientPrefab: {fileID: 316161610368572042, guid: 374712a2d0ff32a4f98f3055404e01ef, type: 3}
+  _ingredientName: Blanch Tomato
+  _ingredientPrefab: {fileID: 0}
   _ingredientSprites:
-  - {fileID: 21300000, guid: 2c747bff81fa497499068cbd3c54d26b, type: 3}
-  - {fileID: 21300000, guid: a890177b755fca041a933bc1cfa394b8, type: 3}
-  - {fileID: 21300000, guid: e20399f229aebb44ca045dbb054a5a78, type: 3}
+  - {fileID: 21300000, guid: 64732fd00c58ec644ac1097ec33dd574, type: 3}
