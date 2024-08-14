@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: Tomato-Prep
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: Tomato
   _ingredientPrefab: {fileID: 4013419605963424100, guid: 43e64b2a1ea27e8408ed17ca6349acbc, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: 579e67280f90e574ab3bdbb4b446002b, type: 3}
