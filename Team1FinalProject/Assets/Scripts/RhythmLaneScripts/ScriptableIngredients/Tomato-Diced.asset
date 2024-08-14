@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
+  m_Name: Tomato-Diced
+  m_EditorClassIdentifier: 
+  _ingredientName: Diced Tomato
+  _ingredientPrefab: {fileID: 0}
+  _ingredientSprites:
+  - {fileID: 21300000, guid: 821f8fb8c4f41fb4ca2c584ff2178be9, type: 3}
+  - {fileID: 21300000, guid: c9081f99584684a448d4d10bc2df7aad, type: 3}
+  - {fileID: 21300000, guid: 93840bf833ba9954298e2161693ef17a, type: 3}
+  - {fileID: 21300000, guid: e2ab6f253f21bd244a57acb36b4d801b, type: 3}
+  - {fileID: 21300000, guid: ddf8411276cc10341aac1c06eb2c5546, type: 3}
+  - {fileID: 21300000, guid: 1d622359f1bac4c42b6b644099ab6bbb, type: 3}
+  - {fileID: 21300000, guid: 99f332b1157815e43a8c492bfe125b9d, type: 3}
+  - {fileID: 21300000, guid: d2439155a97b3a146b077bedfd4fbb87, type: 3}
+  - {fileID: 21300000, guid: 251747965e3b80f4abc4026b1c571a05, type: 3}
+  - {fileID: 21300000, guid: 238f01a897ec2c141bcdd2505d817804, type: 3}
