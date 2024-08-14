@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,7 +15,7 @@ public class InteractableAppliance : MonoBehaviour
     {
         if (_isInRange && !KitchenCanvasController.IsRhythmSection)
         {
-            if (
+          /*  if (
                 (Input.GetAxis(_interactKey) > 0f && _RightOrUp) //up and right
                 || (Input.GetAxis(_interactKey) < 0f && !_RightOrUp) //down and left
                 || Input.GetKeyDown(KeyCode.W))
@@ -23,20 +24,23 @@ public class InteractableAppliance : MonoBehaviour
                 //up/down/left/right or wasd for the arrowkeyless
                 _interactAction.Invoke();
             }
-
+          */
         }
     }
 
     public void StartNextRecipeStep()
     {
+        
         RecipeStep step = RecipeManager.Instance.GetNextStep();
+        UnityEngine.Debug.Log("Starting next recipe step: " + step);
         if (step.Station == _station)
             LaneScroller.Instance.AddToIngredientQueue(step.Ingredient.getPrefab());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
+        UnityEngine.Debug.Log("Entered Collision");
+        StartNextRecipeStep();
         if(collision.gameObject.CompareTag("Player"))
         {
             _isInRange = true;
