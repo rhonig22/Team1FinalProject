@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Tomato-Prep
   m_EditorClassIdentifier: 
   _ingredientName: 
-  _ingredientPrefab: {fileID: 0}
+  _ingredientPrefab: {fileID: 4013419605963424100, guid: 43e64b2a1ea27e8408ed17ca6349acbc, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: 579e67280f90e574ab3bdbb4b446002b, type: 3}
   - {fileID: 21300000, guid: 0bafcbfd5a7a7b84f850154d0eaac2d0, type: 3}
   - {fileID: 21300000, guid: b050ec17f38d49b40befced34f3f3bd9, type: 3}
+  _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}

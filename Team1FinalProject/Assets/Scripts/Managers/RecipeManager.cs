@@ -61,7 +61,11 @@ public class RecipeManager : MonoBehaviour
         var step = _currentRecipe.GetStep(_currentStepIndex);
         return step.Ingredient.getSprite(_currentIngredientSpriteIndex);
     }
-
+    public Sprite GetCurrentBackgroundPrepSprite()
+    {
+        var step = _currentRecipe.GetStep(_currentStepIndex);
+        return step.Ingredient.getBGPrepSprite(_currentIngredientSpriteIndex);
+    }
     public void IncrementIngredientSprite()
     {
         _currentIngredientSpriteIndex++;
