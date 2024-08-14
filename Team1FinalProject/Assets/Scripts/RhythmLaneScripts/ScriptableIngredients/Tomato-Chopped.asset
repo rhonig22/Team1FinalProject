@@ -21,3 +21,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 08700577afa75f0419ac7128fd278422, type: 3}
   - {fileID: 21300000, guid: c0c6bab6c99aea0418fa520e79a1ec76, type: 3}
   - {fileID: 21300000, guid: 7d69af73b9a8cfb41a17da7096d0c108, type: 3}
+  _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
