@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: Cooking Meatball
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: Meatball
   _ingredientPrefab: {fileID: 316161610368572042, guid: ac31dc2cb5998454bb4620ef6844da3d, type: 3}
   _ingredientSprites:
-  - {fileID: 21300000, guid: dbde68da0fde6dc47b763e58b384f6b6, type: 3}
-  - {fileID: 21300000, guid: 0e8a653ddd1345647bec10636d12e339, type: 3}
   - {fileID: 21300000, guid: 1295027a2da08014b99de3132f14edab, type: 3}
+  - {fileID: 21300000, guid: 2248660185c3e23459d0bd78e2fedf3c, type: 3}
+  - {fileID: 21300000, guid: 9d4b9472eaccd8749a270fc550fa3918, type: 3}
+  - {fileID: 21300000, guid: e06fa7c39305b8947876fe025063304c, type: 3}
   - {fileID: 21300000, guid: d5de8d82326cafe4e8965d961f41d955, type: 3}
   _backgroundPrepSprites:
   - {fileID: 21300000, guid: 55cb7552c4b22ce4e821889550cc12b4, type: 3}

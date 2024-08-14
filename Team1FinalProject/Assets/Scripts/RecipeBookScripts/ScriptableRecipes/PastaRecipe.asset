@@ -31,6 +31,8 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: a2419d214d04dcd418a274d1c7e8ec74, type: 2}
   - Station: 1
     Ingredient: {fileID: 11400000, guid: 76582f9bc12af2a48aba67adbe70745c, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 78ddf5651cccf3647962838a46dd86f7, type: 2}
   - Station: 3
     Ingredient: {fileID: 11400000, guid: 0dbec8e4a2682424fa7d0def332d5412, type: 2}
   - Station: 1
