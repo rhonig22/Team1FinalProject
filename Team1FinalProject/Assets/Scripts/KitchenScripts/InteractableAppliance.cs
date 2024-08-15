@@ -14,17 +14,16 @@ public class InteractableAppliance : MonoBehaviour
     {
         if (_isInRange && !KitchenCanvasController.IsRhythmSection)
         {
-            if (
-                (Input.GetAxis(_interactKey) > 0f && _RightOrUp) //up and right
-                || (Input.GetAxis(_interactKey) < 0f && !_RightOrUp) //down and left
-                || Input.GetKeyDown(KeyCode.W))
+            if ((Input.GetAxis(_interactKey) > 0f && _RightOrUp) //up and right
+                || (Input.GetAxis(_interactKey) < 0f && !_RightOrUp)//down and left
+                || (Input.GetKeyDown(KeyCode.E)))
+
+
             {
-                //W is temporary for people w/o a controller till we get 
-                //up/down/left/right or wasd for the arrowkeyless
                 _interactAction.Invoke();
             }
-
         }
+
     }
 
     public void StartNextRecipeStep()
