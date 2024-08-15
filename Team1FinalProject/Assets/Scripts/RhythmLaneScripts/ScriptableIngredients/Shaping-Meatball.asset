@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ingredientName: Meatball
   _ingredientPrefab: {fileID: 316161610368572042, guid: 512015e6e46acd64b9b5c872850fb80f, type: 3}
-  _ingredientSprites: []
-  _backgroundPrepSprites:
+  _ingredientSprites:
   - {fileID: 21300000, guid: 02d91e59d880d49419098b5b83ca7938, type: 3}
   - {fileID: 21300000, guid: dbde68da0fde6dc47b763e58b384f6b6, type: 3}
   - {fileID: 21300000, guid: 0e8a653ddd1345647bec10636d12e339, type: 3}
   - {fileID: 21300000, guid: 1295027a2da08014b99de3132f14edab, type: 3}
+  _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}

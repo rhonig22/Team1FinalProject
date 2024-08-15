@@ -58,8 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626495e4a69e6194d92de95397e8866a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IngredientName: Empty
-  _measureCount: 1
+  IngredientName: Baking Wellington
+  _measureCount: 2
 --- !u!1001 &857732645161223500
 PrefabInstance:
   m_ObjectHideFlags: 0

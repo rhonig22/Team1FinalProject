@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
-  m_Name: Bake Wellington
+  m_Name: Bake_Wellington
   m_EditorClassIdentifier: 
   _ingredientName: Bake Wellington
   _ingredientPrefab: {fileID: 316161610368572042, guid: 1b2118a01a1891847addc06f50dc6f4a, type: 3}

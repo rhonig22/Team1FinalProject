@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97c3d5c922faf5643ac0122d4a5c1466, type: 3}
-  m_Name: Beef Wellington
+  m_Name: BeefWellingtonRecipe
   m_EditorClassIdentifier: 
-  _recipeName: Beef Wellington
-  _threeStarScore: 2000
+  _recipeName: Beef Weelington
+  _threeStarScore: 3000
   _recipeSteps:
   - Station: 3
+    Ingredient: {fileID: 11400000, guid: 52c79f6b558ddde40a466933ead374f5, type: 2}
+  - Station: 0
     Ingredient: {fileID: 11400000, guid: 3a399975fce359e4ba33dfb0ee171848, type: 2}
-  - Station: 1
-    Ingredient: {fileID: 11400000, guid: 3a399975fce359e4ba33dfb0ee171848, type: 2}
-  _recipeSprite: {fileID: 0}
+  _recipeSprite: {fileID: 21300000, guid: 62a3358cfcad49a4e9fffdb5614a56fa, type: 3}
   _backingTrack: {fileID: 8300000, guid: 5d935dbdc27f1264aa202e6f9673a755, type: 3}
   _bpm: 115
