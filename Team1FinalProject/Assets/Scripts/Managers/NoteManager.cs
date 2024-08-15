@@ -45,18 +45,23 @@ public class NoteManager : MonoBehaviour
     private void Update()
     {
         //If a whole "beat" in 60/bpm has elapsed(Plus a bit of float cruft, "Do things on the beat"
+        if (MusicManager.Instance == null)
+            return;
 
         var musicSource = MusicManager.Instance.getMusicSource();
         if (musicSource == null)
         {
-        return;
+            return;
         }
         else
         {
-            float sampledTime = (musicSource.timeSamples / (musicSource.clip.frequency * GetBeatLength()));
-            if (CheckForNewBeat(sampledTime))
+            if (musicSource.isPlaying)
             {
-                BeatEvent.Invoke(_lastBeat);
+                float sampledTime = (musicSource.timeSamples / (musicSource.clip.frequency * GetBeatLength()));
+                if (CheckForNewBeat(sampledTime))
+                {
+                    BeatEvent.Invoke(_lastBeat);
+                }
             }
         }
     }
@@ -134,7 +139,7 @@ public class NoteManager : MonoBehaviour
         SoundManager.Instance.PlaySound(_noteMissedClip, Vector3.zero);
         NotesMissed++;
         MissedHitEvent.Invoke(NotesMissed);
-        Debug.Log("REALLY  missed");
+        //Debug.Log("REALLY  missed");
     }
 
     private void ResetScore()

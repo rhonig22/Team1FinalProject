@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
-    private float _volume = SoundManager.Instance.GetCurrentVolume();
+    private float _volume; 
     [SerializeField] private AudioSource _soundEffectsSource;
 
     private void Awake()
@@ -18,6 +18,7 @@ public class SoundManager : MonoBehaviour
         }
 
         Instance = this;
+        _volume = SoundManager.Instance.GetCurrentVolume();
     }
 
     private void Start()
@@ -42,7 +43,7 @@ public class SoundManager : MonoBehaviour
         audioSource.clip = clip;
         audioSource.Play();
         float clipLength = clip.length;
-        //Destroy(audioSource.gameObject, clipLength);
+        //Do not destroy here(but where?) as we need to change volume and that gives a lot of errors
         return audioSource;
     }
 

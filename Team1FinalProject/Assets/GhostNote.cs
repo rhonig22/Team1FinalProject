@@ -18,6 +18,7 @@ public class GhostNote : MonoBehaviour
 
     void Start()
     {
+        //listen for button hit and button miss
         NoteManager.Instance.SuccessfulHitEvent.AddListener((int sNotes) => { _missedNote = false; });
         NoteManager.Instance.MissedHitEvent.AddListener((int mNotes) => { _missedNote = true; });
         _rhythmControllerLocation = GameObject.FindGameObjectWithTag("RhythmController").transform.position.y;
@@ -34,17 +35,17 @@ public class GhostNote : MonoBehaviour
             _audioSource = SoundManager.Instance.PlayAdjustableSound(_noteClip, transform.position);
             //MonoBehaviour.Destroy(gameObject);
         }
-        else
+        else if (_audioSource != null)
         {
             if(_missedNote)
             {
-                Debug.Log("Miss");
+                //Debug.Log("Miss");
                 _audioSource.volume = (.1f * SoundManager.Instance.GetCurrentVolume());
             }
             else
             {
                 _audioSource.volume = SoundManager.Instance.GetCurrentVolume();
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
             }
                 
         }

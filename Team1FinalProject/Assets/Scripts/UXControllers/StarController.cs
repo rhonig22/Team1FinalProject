@@ -30,6 +30,8 @@ public class StarController : MonoBehaviour
 
     private void Update()
     {
+        if (NoteManager.Instance == null)
+            return;
         if (NoteManager.Instance.IsBeatStarted)
             SetScore(NoteManager.Instance.Score);
     }
