@@ -28,17 +28,15 @@ public class ScriptableIngredient : ScriptableObject
         if (_backgroundPrepSprites == null || _backgroundPrepSprites.Length == 0)
         {
 
-            //Debug.Log("background null");
             return null;
         }
         else if (index < _backgroundPrepSprites.Length)
         {
-            //Debug.Log("background shouldn't be null")
+            
 ;            return _backgroundPrepSprites[index];
         }
         else
-        {
-            //Debug.Log("What happened here");
+        {        
             return _backgroundPrepSprites[_backgroundPrepSprites.Length - 1];
         }
     }
