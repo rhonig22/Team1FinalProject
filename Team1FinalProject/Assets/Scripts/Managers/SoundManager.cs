@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
-    private float _volume = 1f;
+    private float _volume = SoundManager.Instance.GetCurrentVolume();
     [SerializeField] private AudioSource _soundEffectsSource;
 
     private void Awake()
@@ -32,6 +33,17 @@ public class SoundManager : MonoBehaviour
         audioSource.Play();
         float clipLength = clip.length;
         Destroy(audioSource.gameObject, clipLength);
+    }
+
+    public AudioSource PlayAdjustableSound(AudioClip clip, Vector3 position)
+    {
+        
+        AudioSource audioSource = Instantiate(_soundEffectsSource, position, Quaternion.identity);
+        audioSource.clip = clip;
+        audioSource.Play();
+        float clipLength = clip.length;
+        //Destroy(audioSource.gameObject, clipLength);
+        return audioSource;
     }
 
     public void ChangeMasterVolume(float volume)

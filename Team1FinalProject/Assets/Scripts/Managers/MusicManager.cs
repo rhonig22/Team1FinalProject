@@ -47,7 +47,7 @@ public class MusicManager : MonoBehaviour
         SaveDataManager.Instance.SetPlayerData(playerData);
     }
 
-    public float GetCurrentVolume() { return _volume / _maxVolume; }
+    public float GetCurrentVolume() { return _volume; }
 
     public void PlayMusicClip(AudioClip clip, bool playOnce = false)
     {

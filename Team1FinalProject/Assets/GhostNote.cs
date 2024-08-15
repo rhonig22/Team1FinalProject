@@ -11,10 +11,15 @@ public class GhostNote : MonoBehaviour
     [SerializeField] private AudioClip _noteClip;
 
     private float _rhythmControllerLocation = 0f;
+    private bool _playingClip = false;
+    private AudioSource _audioSource;
+    private bool _missedNote = false;
     
 
     void Start()
     {
+        NoteManager.Instance.SuccessfulHitEvent.AddListener((int sNotes) => { _missedNote = false; });
+        NoteManager.Instance.MissedHitEvent.AddListener((int mNotes) => { _missedNote = true; });
         _rhythmControllerLocation = GameObject.FindGameObjectWithTag("RhythmController").transform.position.y;
     }
 
@@ -23,10 +28,25 @@ public class GhostNote : MonoBehaviour
     {
         float currentCenter = transform.position.y;
 
-        if (currentCenter <= _rhythmControllerLocation)
+        if (currentCenter <= _rhythmControllerLocation && !_playingClip)
         {
-            SoundManager.Instance.PlaySound(_noteClip, transform.position);
-            MonoBehaviour.Destroy(gameObject);
+            _playingClip = true;
+            _audioSource = SoundManager.Instance.PlayAdjustableSound(_noteClip, transform.position);
+            //MonoBehaviour.Destroy(gameObject);
+        }
+        else
+        {
+            if(_missedNote)
+            {
+                Debug.Log("Miss");
+                _audioSource.volume = (.1f * SoundManager.Instance.GetCurrentVolume());
+            }
+            else
+            {
+                _audioSource.volume = SoundManager.Instance.GetCurrentVolume();
+                Debug.Log("Hit");
+            }
+                
         }
 
     }
