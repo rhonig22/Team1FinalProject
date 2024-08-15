@@ -23,7 +23,10 @@ public class SettingsUXController : MonoBehaviour
     {
         MusicManager.Instance.ChangeMasterVolume(_musicSlider.value);
     }
-
+    public float GetMusicVolume()
+    {
+        return MusicManager.Instance.GetCurrentVolume();
+    }
     public void SetSoundFXVolume()
     {
         SoundManager.Instance.ChangeMasterVolume(_soundSlider.value);
