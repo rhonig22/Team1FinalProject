@@ -30,7 +30,7 @@ public class SoundManager : MonoBehaviour
     {
         AudioSource audioSource = Instantiate(_soundEffectsSource, position, Quaternion.identity);
         audioSource.clip = clip;
-        audioSource.volume = _volume;
+        audioSource.volume = 0;// _volume;
         audioSource.Play();
         float clipLength = clip.length;
         Destroy(audioSource.gameObject, clipLength);
@@ -41,6 +41,7 @@ public class SoundManager : MonoBehaviour
         
         AudioSource audioSource = Instantiate(_soundEffectsSource, position, Quaternion.identity);
         audioSource.clip = clip;
+        audioSource.volume = _volume;
         audioSource.Play();
         float clipLength = clip.length;
         //Do not destroy here(but where?) as we need to change volume and that gives a lot of errors
