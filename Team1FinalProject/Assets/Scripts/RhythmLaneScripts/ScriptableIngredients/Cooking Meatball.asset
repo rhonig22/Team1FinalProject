@@ -21,6 +21,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e06fa7c39305b8947876fe025063304c, type: 3}
   - {fileID: 21300000, guid: d5de8d82326cafe4e8965d961f41d955, type: 3}
   _backgroundPrepSprites:
-  - {fileID: 21300000, guid: 55cb7552c4b22ce4e821889550cc12b4, type: 3}
-  - {fileID: 21300000, guid: 265ced154877f0149b99831485ce962e, type: 3}
-  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 9c24f436d78ca8349b6d91d7b04fb3b2, type: 3}
+  - {fileID: 21300000, guid: 9c24f436d78ca8349b6d91d7b04fb3b2, type: 3}
+  - {fileID: 21300000, guid: 9c24f436d78ca8349b6d91d7b04fb3b2, type: 3}
+  - {fileID: 21300000, guid: 9c24f436d78ca8349b6d91d7b04fb3b2, type: 3}
