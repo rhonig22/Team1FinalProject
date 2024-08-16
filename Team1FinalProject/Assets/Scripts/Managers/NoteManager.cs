@@ -55,7 +55,7 @@ public class NoteManager : MonoBehaviour
         }
         else
         {
-            if (musicSource.isPlaying)
+            if (musicSource.isPlaying && IsBeatStarted)
             {
                 float sampledTime = (musicSource.timeSamples / (musicSource.clip.frequency * GetBeatLength()));
                 if (CheckForNewBeat(sampledTime))

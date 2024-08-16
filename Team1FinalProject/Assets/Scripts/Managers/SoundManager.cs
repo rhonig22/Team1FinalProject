@@ -30,7 +30,7 @@ public class SoundManager : MonoBehaviour
     {
         AudioSource audioSource = Instantiate(_soundEffectsSource, position, Quaternion.identity);
         audioSource.clip = clip;
-        audioSource.volume = 0;// _volume;
+        audioSource.volume = _volume;
         audioSource.Play();
         float clipLength = clip.length;
         Destroy(audioSource.gameObject, clipLength);

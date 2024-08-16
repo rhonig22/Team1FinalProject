@@ -13,8 +13,9 @@ public class NextStepAppliance : MonoBehaviour
     {
         _startSize = transform.localScale;
         NoteManager.Instance.BeatEvent.AddListener((int beat) => 
-        { 
-            if (RecipeManager.Instance.GetNextStep().Station == _station)
+        {
+            var step = RecipeManager.Instance.GetNextStep();
+            if (step != null && step.Station == _station)
                 transform.localScale = _startSize * _pulseSize;
         });
 
@@ -24,6 +25,5 @@ public class NextStepAppliance : MonoBehaviour
     void Update()
     {
             transform.localScale = Vector3.Lerp(transform.localScale, _startSize, Time.deltaTime * _returnSpeed);
-            
     }
 }
