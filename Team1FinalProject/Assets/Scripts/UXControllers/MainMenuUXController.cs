@@ -23,4 +23,10 @@ public class MainMenuUXController : MonoBehaviour
     {
         GameManager.Instance.LoadSettings();
     }
+
+    public void ControlsClicked()
+    {
+        Debug.Log("Controls time!");
+        GameManager.Instance.LoadControls();
+    }
 }
