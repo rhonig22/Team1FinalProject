@@ -61,7 +61,10 @@ public class NoteScrollObject : MonoBehaviour
 
     public void PlayNote()
     {
-        SoundManager.Instance.PlaySound(_noteClip, transform.position);
+        if (_noteClip != null)
+        {
+            SoundManager.Instance.PlaySound(_noteClip, transform.position);
+        }
     }
 
     public void SetInactive()

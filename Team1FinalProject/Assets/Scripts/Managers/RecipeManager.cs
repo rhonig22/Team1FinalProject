@@ -48,12 +48,19 @@ public class RecipeManager : MonoBehaviour
 
     public RecipeStep GetNextStep()
     {
-        return _currentRecipe.GetStep(_currentStepIndex);
+        if (_currentRecipe != null)
+            return _currentRecipe.GetStep(_currentStepIndex);
+
+        return null;
     }
 
     public Station GetNextStation()
     {
-        return GetNextStep().Station;
+        var step = GetNextStep();
+        if (step != null)
+            return GetNextStep().Station;
+
+        return Station.Prep;
     }
 
     public Sprite GetCurrentIngredientSprite()
