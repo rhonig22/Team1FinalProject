@@ -7,8 +7,11 @@ public class SaveDataManager : MonoBehaviour
     public static SaveDataManager Instance;
     private readonly string _playerDataKey = "PlayerData";
     private readonly string _recipeDataKey = "RecipeData";
+    private readonly string _unlockablesKey = "UnlockablesData";
     private PlayerData _playerData;
     private RecipeData _recipeData;
+    private UnlockablesData _unlockables;
+    private Dictionary<string, bool> _unlockableMap = new Dictionary<string, bool>();
 
     private void Awake()
     {
@@ -41,6 +44,17 @@ public class SaveDataManager : MonoBehaviour
         {
             InitializeRecipeData();
         }
+
+        if (PlayerPrefs.HasKey(_unlockablesKey))
+        {
+            _unlockables = JsonUtility.FromJson<UnlockablesData>(PlayerPrefs.GetString(_unlockablesKey));
+        }
+        else
+        {
+            InitializeUnlockablesData();
+        }
+
+        SetupUnlockableMap();
     }
 
     public PlayerData GetPlayerData()
@@ -119,38 +133,73 @@ public class SaveDataManager : MonoBehaviour
         RecipeData recipeData = new RecipeData()
         {
             RecipeList = new List<RecipeEntry>()
-            {
-                new RecipeEntry()
-                {
-                    Unlocked = true,
-                    Stars = 0,
-                    HighScore = 0,
-                    Name = "Fried Egg"
-                },
-                new RecipeEntry()
-                {
-                    Unlocked = true,
-                    Stars = 0,
-                    HighScore = 0,
-                    Name = "Veggie Stir Fry"
-                },
-                new RecipeEntry()
-                {
-                    Unlocked = false,
-                    Stars = 0,
-                    HighScore = 0,
-                    Name = "Meat!"
-                },
-                new RecipeEntry()
-                {
-                    Unlocked = false,
-                    Stars = 0,
-                    HighScore = 0,
-                    Name = "Pasta"
-                }
-            }
         };
 
         _recipeData = recipeData;
+    }
+
+    public RecipeEntry InitializeRecipeEntry(string name, bool unlocked)
+    {
+        var entry = new RecipeEntry()
+        {
+            Unlocked = unlocked,
+            Stars = 0,
+            HighScore = 0,
+            Name = name
+        };
+
+        _recipeData.RecipeList.Add(entry);
+        return entry;
+    }
+
+    public void SetUnlockablesData()
+    {
+        PlayerPrefs.SetString(_unlockablesKey, JsonUtility.ToJson(_unlockableMap));
+        PlayerPrefs.Save();
+    }
+
+    public void InitializeUnlockablesData()
+    {
+        UnlockablesData unlockablesData = new UnlockablesData()
+        {
+            UnlockablesList = new List<Unlockable>()
+        };
+
+        _unlockables = unlockablesData;
+    }
+
+    public void UnlockedSomething(string unlockable)
+    {
+        var unlocked = new Unlockable()
+        {
+            Name = unlockable,
+            Unlocked = true,
+            UnlockedTime = Time.time
+        };
+
+        _unlockables.UnlockablesList.Add(unlocked);
+        _unlockableMap[unlockable] = true;
+    }
+
+    public bool IsUnlocked(string unlockable)
+    {
+        if (_unlockableMap.ContainsKey(unlockable))
+            return _unlockableMap[unlockable];
+
+        return false;
+    }
+
+    private void SetupUnlockableMap()
+    {
+        foreach (var unlockable in _unlockables.UnlockablesList)
+        {
+            _unlockableMap[unlockable.Name] = true;
+        }
+    }
+
+    public void ClearData()
+    {
+        PlayerPrefs.DeleteAll();
+        SetUpDataManager();
     }
 }

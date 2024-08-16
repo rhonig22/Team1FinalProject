@@ -7,6 +7,7 @@ public class SettingsUXController : MonoBehaviour
 {
     [SerializeField] Slider _musicSlider;
     [SerializeField] Slider _soundSlider;
+    [SerializeField] GameObject _confirmationMessage;
 
     private void Start()
     {
@@ -30,5 +31,21 @@ public class SettingsUXController : MonoBehaviour
     public void SetSoundFXVolume()
     {
         SoundManager.Instance.ChangeMasterVolume(_soundSlider.value);
+    }
+
+    public void ClearDataButtonClicked()
+    {
+        _confirmationMessage.SetActive(true);
+    }
+
+    public void ConfirmClearData()
+    {
+        SaveDataManager.Instance.ClearData();
+        _confirmationMessage.SetActive(false);
+    }
+
+    public void CancelClearData()
+    {
+        _confirmationMessage.SetActive(false);
     }
 }

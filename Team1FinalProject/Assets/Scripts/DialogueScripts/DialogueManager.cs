@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using JetBrains.Annotations;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _speakerName, _dialogue;
     [SerializeField] private Animator _anim;
     [SerializeField] private Image _speakerSprite;
+    [SerializeField] private GameObject _button;
 
     public UnityEvent DialogueFinished {  get; private set; } = new UnityEvent();
 
@@ -48,6 +50,7 @@ public class DialogueManager : MonoBehaviour
         _currentConvo = convo;
         _speakerName.text = "";
         _dialogue.text = "";
+        EventSystem.current.SetSelectedGameObject(_button);
 
         ReadNext();
     }

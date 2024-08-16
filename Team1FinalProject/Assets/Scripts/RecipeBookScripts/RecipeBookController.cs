@@ -44,12 +44,13 @@ public class RecipeBookController : MonoBehaviour
                 EventSystem.current.SetSelectedGameObject(button);
 
             var recipeEntry = SaveDataManager.Instance.GetRecipeEntry(recipe.GetName());
-            if (recipeEntry != null)
+            if (recipeEntry == null)
             {
-                var stars = GenerateStarController(recipeEntry, recipe.GetMaxScore());
-                stars.transform.localPosition = new Vector3(0, _currentOffset, 0);
+                recipeEntry = SaveDataManager.Instance.InitializeRecipeEntry(recipe.GetName(), true);
             }
 
+            var stars = GenerateStarController(recipeEntry, recipe.GetMaxScore());
+            stars.transform.localPosition = new Vector3(0, _currentOffset, 0);
             _currentOffset -= _yOffset;
         }
 
