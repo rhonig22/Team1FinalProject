@@ -717,10 +717,16 @@ MonoBehaviour:
   _rightButton: {fileID: 553024384}
   _recipesList:
   - {fileID: 11400000, guid: 820e318699fe18c47b12d3f4bacff11f, type: 2}
-  - {fileID: 11400000, guid: 9ed34cafea50c6c44a88995c30559c78, type: 2}
   - {fileID: 11400000, guid: 93e2527d94fbde64aa00d123a5e44474, type: 2}
+  - {fileID: 11400000, guid: 9ed34cafea50c6c44a88995c30559c78, type: 2}
   - {fileID: 11400000, guid: d598f7719b3152748999a69fac905596, type: 2}
   - {fileID: 11400000, guid: 9db9b55aea6c81d4a90dc9140b50ef89, type: 2}
+  - {fileID: 11400000, guid: 11d48f3e4343b4e4b9bd494daae35905, type: 2}
+  - {fileID: 11400000, guid: 1bebaf2d8fcd21847bbb476af871866a, type: 2}
+  - {fileID: 11400000, guid: f63e1b3b629de1e4eafc93319ad7b19a, type: 2}
+  - {fileID: 11400000, guid: 11e293540c2f4c541949a9cfca0e66b4, type: 2}
+  - {fileID: 11400000, guid: a01d80bb455dff147b8c2f468c3f6f5e, type: 2}
+  - {fileID: 11400000, guid: 8fd580fa5d526db4a8d6627cddfaef9e, type: 2}
 --- !u!1 &1278225911
 GameObject:
   m_ObjectHideFlags: 0
