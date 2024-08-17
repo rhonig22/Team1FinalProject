@@ -713,9 +713,17 @@ MonoBehaviour:
   _rightButton: {fileID: 553024384}
   _recipesList:
   - {fileID: 11400000, guid: 820e318699fe18c47b12d3f4bacff11f, type: 2}
-  - {fileID: 11400000, guid: 9ed34cafea50c6c44a88995c30559c78, type: 2}
-  - {fileID: 11400000, guid: 9db9b55aea6c81d4a90dc9140b50ef89, type: 2}
   - {fileID: 11400000, guid: d598f7719b3152748999a69fac905596, type: 2}
+  - {fileID: 11400000, guid: 9ed34cafea50c6c44a88995c30559c78, type: 2}
+  - {fileID: 11400000, guid: 93e2527d94fbde64aa00d123a5e44474, type: 2}
+  - {fileID: 11400000, guid: b29711c7e4b0a244ea2ff6f500ea6f8e, type: 2}
+  - {fileID: 11400000, guid: 5206c113f0d9a8e4d94171a9945f5bf3, type: 2}
+  - {fileID: 11400000, guid: 5fea8ce61dd595c46a7de252a68f54fc, type: 2}
+  - {fileID: 11400000, guid: ea8a4548a39a283488144b535c9110cb, type: 2}
+  - {fileID: 11400000, guid: ff6944f590d9bec41b4b97e04ea97bba, type: 2}
+  - {fileID: 11400000, guid: 166decff886b67c4eb3879ee5230d4cd, type: 2}
+  - {fileID: 11400000, guid: a07e913a77b409e4ebe874b22c5b1d08, type: 2}
+  - {fileID: 11400000, guid: 9db9b55aea6c81d4a90dc9140b50ef89, type: 2}
 --- !u!1 &1278225911
 GameObject:
   m_ObjectHideFlags: 0
