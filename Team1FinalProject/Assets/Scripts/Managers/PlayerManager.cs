@@ -6,20 +6,54 @@ using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public InputAction playerControls;
+    [SerializeField] private Transform _prepSpawn;
+    [SerializeField] private Transform _stoveTopSpawn;
+    [SerializeField] private Transform _flatTopSpawn;
+    [SerializeField] private Transform _fridgeSpawn;
+    [SerializeField] private InputAction _playerControls;
+    private readonly float _moveSpeed = 5f;
+    private Vector2 _moveTowards;
+    private Dictionary<Vector2, Transform> _spawnMap;
+
+    private void Start()
+    {
+        _moveTowards = transform.position;
+        _spawnMap = new Dictionary<Vector2, Transform>()
+        {
+            {new Vector2(1, 0), _fridgeSpawn },
+            {new Vector2(-1, 0), _flatTopSpawn },
+            {new Vector2(0, 1), _stoveTopSpawn },
+            {new Vector2(0, -1), _prepSpawn }
+        };
+
+        _playerControls.started += (context) => {
+            var direction = context.ReadValue<Vector2>();
+            Debug.Log(direction);
+            MoveTowards(_spawnMap[direction]);
+        };
+    }
 
     private void OnEnable()
     {
-        playerControls.Enable();
+        _playerControls.Enable();
     }
 
     private void OnDisable()
     {
-        playerControls.Disable();
+        _playerControls.Disable();
     }
 
+    private void MoveTowards(Transform moveTowards)
+    {
+        _moveTowards = moveTowards.position;
+    }
 
-
-
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (_moveTowards != null && (_moveTowards.x != transform.position.x || _moveTowards.y != transform.position.y))
+        {
+            transform.position = Vector3.Lerp(transform.position, _moveTowards, Time.fixedDeltaTime * _moveSpeed);
+        }
+    }
 }
