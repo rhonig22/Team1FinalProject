@@ -161,17 +161,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ab4924f53c4eb498dbd88ffdd4f419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 6222370243449919638}
-  playerControls:
+  _prepSpawn: {fileID: 0}
+  _stoveTopSpawn: {fileID: 0}
+  _flatTopSpawn: {fileID: 0}
+  _fridgeSpawn: {fileID: 0}
+  _rb: {fileID: 0}
+  _playerControls:
     m_Name: Player Controls
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 4f4aa27e-bc5b-4726-a762-877efff9d1a5
+    m_Id: bf0d2329-3261-425a-b190-601f4b4021d2
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 2D Vector
-      m_Id: 51137c22-b840-47b4-a09b-e8311be56260
+      m_Id: db951353-5f05-43a2-8230-e3bec0e509f4
       m_Path: 2DVector
       m_Interactions: 
       m_Processors: 
@@ -179,7 +183,47 @@ MonoBehaviour:
       m_Action: Player Controls
       m_Flags: 4
     - m_Name: up
-      m_Id: 33d91b72-a195-4d79-9417-28131e64e3fb
+      m_Id: 0424ae08-aa01-4fbc-9d0d-aa30767bdf2b
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 555bbb22-bdce-46ed-89be-207e669394b3
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 2d7de148-845e-469f-87d9-bd02600d8938
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 3f5663e0-5a3a-4358-b1b9-8b3c708e9f8f
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: 2D Vector
+      m_Id: 51549850-18b6-403c-b9af-a40e4691f323
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 28df9edc-ef57-4d4d-891d-6bc59b63c7a4
       m_Path: <Keyboard>/w
       m_Interactions: 
       m_Processors: 
@@ -187,7 +231,7 @@ MonoBehaviour:
       m_Action: Player Controls
       m_Flags: 8
     - m_Name: down
-      m_Id: a44b287f-36ff-4586-baaa-c6148980f5fb
+      m_Id: edf938ef-471d-4d54-94ac-196adf36be0c
       m_Path: <Keyboard>/s
       m_Interactions: 
       m_Processors: 
@@ -195,7 +239,7 @@ MonoBehaviour:
       m_Action: Player Controls
       m_Flags: 8
     - m_Name: left
-      m_Id: 54babfd9-5301-4cb0-a56e-8e47d0bd3587
+      m_Id: 856ff177-65f2-463e-9690-a8d6c23280b3
       m_Path: <Keyboard>/a
       m_Interactions: 
       m_Processors: 
@@ -203,8 +247,48 @@ MonoBehaviour:
       m_Action: Player Controls
       m_Flags: 8
     - m_Name: right
-      m_Id: 4fa92f36-fd03-4d43-9ee6-62af252b4f6f
+      m_Id: 3a363c5f-6fd2-4361-851a-0a673e6ea7c8
       m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: 2D Vector
+      m_Id: ab931f30-8413-4004-b2df-3cdda9e413a4
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 4
+    - m_Name: up
+      m_Id: f0035030-77b5-4636-9473-39a35dfedd23
+      m_Path: <Gamepad>/dpad/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 319db0c5-83af-4ae0-ae48-680b52e213d2
+      m_Path: <Gamepad>/dpad/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: left
+      m_Id: fca0f8ca-841f-4d7a-aca2-28adb48b130f
+      m_Path: <Gamepad>/dpad/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: right
+      m_Id: dbcb6f53-a5ef-4091-8e83-6135afb5c793
+      m_Path: <Gamepad>/dpad/right
       m_Interactions: 
       m_Processors: 
       m_Groups: 
