@@ -47,7 +47,7 @@ public class NoteScrollObject : MonoBehaviour
                 HitType = HitType.Perfect;
             }
         }
-        else if (currentCenter < _rhythmControllerLocation - _noteHitHeight)
+        else if (!_wasPressed && currentCenter < _rhythmControllerLocation - _noteHitHeight)
         {
             CanBePressed = false;
             HitType = HitType.Missed;
@@ -76,7 +76,10 @@ public class NoteScrollObject : MonoBehaviour
     public void SetMissed()
     {
         if (!_wasPressed)
+        {
             _spriteRenderer.sprite = _missedSprite;
+            NoteManager.Instance.NoteMissed();
+        }
     }
 
     public string GetButton() { return _buttonName; }

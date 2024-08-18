@@ -39,7 +39,6 @@ public class RhythmController : MonoBehaviour
             else
             {
                 NoteManager.Instance.NoteMissed();
-                note.SetMissed();
             }
         }
 
