@@ -28,7 +28,6 @@ public class PlayerManager : MonoBehaviour
 
         _playerControls.started += (context) => {
             var direction = context.ReadValue<Vector2>();
-            Debug.Log(direction);
             MoveTowards(_spawnMap[direction]);
         };
     }
