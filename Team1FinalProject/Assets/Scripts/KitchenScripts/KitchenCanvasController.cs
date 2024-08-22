@@ -23,10 +23,12 @@ public class KitchenCanvasController : MonoBehaviour
         {
             if (RecipeManager.Instance.IsCurrentIngredientAnimated())
             {
+                _ingredientAnimator.gameObject.SetActive(true);
                 _ingredientAnimator.SetTrigger(RecipeManager.Instance.GetAnimationTrigger());
             }
             else
             {
+                _ingredientAnimator.gameObject.SetActive(false);
                 _ingredientImage.sprite = RecipeManager.Instance.GetCurrentIngredientSprite();
             }
 
