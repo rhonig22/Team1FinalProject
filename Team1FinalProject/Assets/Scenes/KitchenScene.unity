@@ -1409,6 +1409,7 @@ MonoBehaviour:
   _recipeCompletionPanel: {fileID: 1691782936}
   _ingredientImage: {fileID: 312763754}
   _backgroundPrepImage: {fileID: 1501293985}
+  _ingredientAnimator: {fileID: 312763756}
 --- !u!1 &508717602
 GameObject:
   m_ObjectHideFlags: 0
@@ -3062,7 +3063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1691782937
 RectTransform:
   m_ObjectHideFlags: 0
