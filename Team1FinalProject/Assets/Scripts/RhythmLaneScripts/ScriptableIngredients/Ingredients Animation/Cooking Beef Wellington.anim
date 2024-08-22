@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Diced Tomato
+  m_Name: Cooking Beef Wellington
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,25 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 821f8fb8c4f41fb4ca2c584ff2178be9, type: 3}
+      value: {fileID: -568624635, guid: 98584b3845e9ba3449c3e9f18a5774a0, type: 3}
     - time: 0.20833333
-      value: {fileID: 21300000, guid: c9081f99584684a448d4d10bc2df7aad, type: 3}
+      value: {fileID: 90346936, guid: 98584b3845e9ba3449c3e9f18a5774a0, type: 3}
     - time: 0.41666666
-      value: {fileID: 21300000, guid: 93840bf833ba9954298e2161693ef17a, type: 3}
+      value: {fileID: 97824778, guid: 98584b3845e9ba3449c3e9f18a5774a0, type: 3}
     - time: 0.625
-      value: {fileID: 21300000, guid: e2ab6f253f21bd244a57acb36b4d801b, type: 3}
-    - time: 0.8333333
-      value: {fileID: 21300000, guid: ddf8411276cc10341aac1c06eb2c5546, type: 3}
-    - time: 1.0416666
-      value: {fileID: 21300000, guid: 1d622359f1bac4c42b6b644099ab6bbb, type: 3}
-    - time: 1.25
-      value: {fileID: 21300000, guid: 99f332b1157815e43a8c492bfe125b9d, type: 3}
-    - time: 1.4583334
-      value: {fileID: 21300000, guid: d2439155a97b3a146b077bedfd4fbb87, type: 3}
-    - time: 1.6666666
-      value: {fileID: 21300000, guid: 251747965e3b80f4abc4026b1c571a05, type: 3}
-    - time: 1.875
-      value: {fileID: 21300000, guid: 238f01a897ec2c141bcdd2505d817804, type: 3}
+      value: {fileID: -478749898, guid: 98584b3845e9ba3449c3e9f18a5774a0, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
@@ -62,22 +50,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 821f8fb8c4f41fb4ca2c584ff2178be9, type: 3}
-    - {fileID: 21300000, guid: c9081f99584684a448d4d10bc2df7aad, type: 3}
-    - {fileID: 21300000, guid: 93840bf833ba9954298e2161693ef17a, type: 3}
-    - {fileID: 21300000, guid: e2ab6f253f21bd244a57acb36b4d801b, type: 3}
-    - {fileID: 21300000, guid: ddf8411276cc10341aac1c06eb2c5546, type: 3}
-    - {fileID: 21300000, guid: 1d622359f1bac4c42b6b644099ab6bbb, type: 3}
-    - {fileID: 21300000, guid: 99f332b1157815e43a8c492bfe125b9d, type: 3}
-    - {fileID: 21300000, guid: d2439155a97b3a146b077bedfd4fbb87, type: 3}
-    - {fileID: 21300000, guid: 251747965e3b80f4abc4026b1c571a05, type: 3}
-    - {fileID: 21300000, guid: 238f01a897ec2c141bcdd2505d817804, type: 3}
+    - {fileID: -568624635, guid: 98584b3845e9ba3449c3e9f18a5774a0, type: 3}
+    - {fileID: 90346936, guid: 98584b3845e9ba3449c3e9f18a5774a0, type: 3}
+    - {fileID: 97824778, guid: 98584b3845e9ba3449c3e9f18a5774a0, type: 3}
+    - {fileID: -478749898, guid: 98584b3845e9ba3449c3e9f18a5774a0, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.9166666
+    m_StopTime: 0.6666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
