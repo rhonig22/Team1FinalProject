@@ -10,6 +10,7 @@ public class KitchenCanvasController : MonoBehaviour
     [SerializeField] private GameObject _recipeCompletionPanel;
     [SerializeField] private Image _ingredientImage;
     [SerializeField] private Image _backgroundPrepImage;
+    [SerializeField] private Animator _ingredientAnimator;
 
     public static bool IsRhythmSection = false;
 
@@ -20,7 +21,17 @@ public class KitchenCanvasController : MonoBehaviour
         _kitchenDimmer.SetActive(hasNotes);
         if (hasNotes)
         {
-            _ingredientImage.sprite = RecipeManager.Instance.GetCurrentIngredientSprite();
+            if (RecipeManager.Instance.IsCurrentIngredientAnimated())
+            {
+                _ingredientAnimator.gameObject.SetActive(true);
+                _ingredientAnimator.SetTrigger(RecipeManager.Instance.GetAnimationTrigger());
+            }
+            else
+            {
+                _ingredientAnimator.gameObject.SetActive(false);
+                _ingredientImage.sprite = RecipeManager.Instance.GetCurrentIngredientSprite();
+            }
+
             _backgroundPrepImage.sprite = RecipeManager.Instance.GetCurrentBackgroundPrepSprite();
         }
         _recipeCompletionPanel.SetActive(RecipeManager.Instance.RecipeCompleted);

@@ -5,9 +5,21 @@ using UnityEngine;
 public class ScriptableIngredient : ScriptableObject
 {
     [SerializeField] private string _ingredientName;
+    [SerializeField] private bool _hasAnimation;
+    [SerializeField] private string _animationTrigger;
     [SerializeField] private GameObject _ingredientPrefab;
     [SerializeField] private Sprite[] _ingredientSprites;
     [SerializeField] private Sprite[] _backgroundPrepSprites;
+
+    public bool IsAnimatedIngredient()
+    {
+        return _hasAnimation;
+    }
+
+    public string GetAnimationTrigger()
+    {
+        return _animationTrigger;
+    }
 
     public string GetName()
     {

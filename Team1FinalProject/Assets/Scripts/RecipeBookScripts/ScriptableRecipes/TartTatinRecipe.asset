@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TartTatinRecipe
   m_EditorClassIdentifier: 
   _recipeName: Tart Tatin
-  _threeStarScore: 0
+  _threeStarScore: 1000
   _recipeSteps: []
   _recipeSprite: {fileID: 21300000, guid: 032e123e15d29724cabfc254598babce, type: 3}
   _backingTrack: {fileID: 0}

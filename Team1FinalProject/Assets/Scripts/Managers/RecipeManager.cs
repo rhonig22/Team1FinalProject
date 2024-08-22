@@ -83,6 +83,18 @@ public class RecipeManager : MonoBehaviour
         return _currentRecipe.GetName();
     }
 
+    public bool IsCurrentIngredientAnimated()
+    {
+        var step = _currentRecipe.GetStep(_currentStepIndex);
+        return step.Ingredient.IsAnimatedIngredient();
+    }
+
+    public string GetAnimationTrigger()
+    {
+        var step = _currentRecipe.GetStep(_currentStepIndex);
+        return step.Ingredient.GetAnimationTrigger();
+    }
+
     public int GetBPM()
     {
         return _currentRecipe.GetBPM();
