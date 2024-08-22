@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RecipeBookScene.unity
     guid: d71d2d2180b279048b283f1d893395d1
+  - enabled: 1
+    path: Assets/Scenes/ControlsScene.unity
+    guid: 630b17da39f0a1845bb293d28bf20981
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 18173c6f6d19f7040bb72727f0c605df
   m_configObjects: {}

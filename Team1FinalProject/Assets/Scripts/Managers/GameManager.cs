@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private readonly string _introStoryScene = "IntroStoryScene";
     private readonly string _recipeBookScene = "RecipeBookScene";
     private readonly string _controlsScene = "ControlsScene";
+    private readonly string _creditsScene = "CreditsScene";
 
     private void Awake()
     {
@@ -73,7 +74,10 @@ public class GameManager : MonoBehaviour
     {
         LoadScene(_controlsScene);
     }
-
+    public void LoadCredits()
+    {
+        LoadScene(_creditsScene);
+    }
     private void LoadScene(string sceneName)
     {
         UnityAction loadNextBoss = () => { SceneManager.LoadScene(sceneName); };
