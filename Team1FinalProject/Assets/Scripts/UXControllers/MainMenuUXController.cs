@@ -29,4 +29,9 @@ public class MainMenuUXController : MonoBehaviour
         Debug.Log("Controls time!");
         GameManager.Instance.LoadControls();
     }
+    public void CreditsClicked()
+    {
+        Debug.Log("Credits Time!");
+        GameManager.Instance.LoadCredits();
+    }
 }
