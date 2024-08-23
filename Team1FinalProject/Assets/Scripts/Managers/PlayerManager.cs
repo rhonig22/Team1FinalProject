@@ -44,7 +44,8 @@ public class PlayerManager : MonoBehaviour
 
     private void MoveTowards(Transform moveTowards)
     {
-        _moveTowards = moveTowards.position;
+        if (!KitchenCanvasController.IsRhythmSection && !RecipeManager.Instance.RecipeCompleted)
+            _moveTowards = moveTowards.position;
     }
 
     // Update is called once per frame
