@@ -108,6 +108,17 @@ public class SaveDataManager : MonoBehaviour
         SetRecipeData();
     }
 
+    public int GetStarCount()
+    {
+        int stars = 0;
+        foreach (var recipe in _recipeData.RecipeList)
+        {
+            stars += recipe.Stars;
+        }
+
+        return stars;
+    }
+
     public void SetRecipeData()
     {
         PlayerPrefs.SetString(_recipeDataKey, JsonUtility.ToJson(_recipeData));

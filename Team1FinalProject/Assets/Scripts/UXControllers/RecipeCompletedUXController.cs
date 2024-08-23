@@ -22,6 +22,8 @@ public class RecipeCompletedUXController : MonoBehaviour
 
         if (NoteManager.Instance.Score > recipeEntry.HighScore)
         {
+            _starController.SetMaxScore(RecipeManager.Instance.GetMaxScore());
+            _starController.SetScore(NoteManager.Instance.Score);
             recipeEntry.Stars = _starController.GetCurrentStarCount();
             recipeEntry.HighScore = NoteManager.Instance.Score;
             SaveDataManager.Instance.SetRecipeEntryData(recipeEntry);
