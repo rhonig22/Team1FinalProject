@@ -7,6 +7,7 @@ public class ScriptableRecipe : ScriptableObject
 {
     [SerializeField] private string _recipeName;
     [SerializeField] private int _threeStarScore;
+    [SerializeField] private int _unlockRequirement;
     [SerializeField] private RecipeStep[] _recipeSteps;
     [SerializeField] private Sprite _recipeSprite;
     [SerializeField] private AudioClip _backingTrack;
@@ -38,6 +39,11 @@ public class ScriptableRecipe : ScriptableObject
     public int GetMaxScore()
     {
         return _threeStarScore;
+    }
+
+    public int GetUnlockRequirement()
+    {
+        return _unlockRequirement;
     }
 
     public int GetBPM()

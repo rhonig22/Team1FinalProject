@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recipeName: Shakshuka
   _threeStarScore: 1000
+  _unlockRequirement: 9
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 75b8ba7ae5f89d947967bb589cfa76d4, type: 2}
