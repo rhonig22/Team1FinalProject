@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 7360418}
   - component: {fileID: 7360417}
   - component: {fileID: 7360416}
+  - component: {fileID: 7360419}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -214,6 +215,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7360419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!224 &13150569 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4200726820912880014, guid: 1c11f5ddc63dca148a120a0ca6175d7b, type: 3}
@@ -1176,6 +1221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _musicSlider: {fileID: 0}
   _soundSlider: {fileID: 0}
+  _confirmationMessage: {fileID: 0}
 --- !u!224 &620173491 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4200726820912880014, guid: 1c11f5ddc63dca148a120a0ca6175d7b, type: 3}
@@ -1851,13 +1897,25 @@ PrefabInstance:
     - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1934575825}
+    - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 535618052}
     - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: MainMenuClicked
       objectReference: {fileID: 0}
     - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: SettingsUXController, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1868,6 +1926,11 @@ PrefabInstance:
 --- !u!224 &1934575824 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6760448925507269261, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
+  m_PrefabInstance: {fileID: 1934575823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1934575825 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2747155550972169334, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
   m_PrefabInstance: {fileID: 1934575823}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &2068330699 stripped
