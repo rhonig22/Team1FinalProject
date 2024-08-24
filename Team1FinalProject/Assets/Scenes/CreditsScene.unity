@@ -1917,7 +1917,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Team:\n\nJackson\nVictoria\nRyan \nNic\nDerek\nBen"
+  m_text: "Team:\n\nJackson Hering\nVictoria House\nRyan Honig\nNic Anderson\nDerek
+    Kitts\nBen  Seran \n\nSpecial thanks to Philip Martin!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
   m_sharedMaterial: {fileID: 5905083599740252335, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}

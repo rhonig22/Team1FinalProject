@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RecipeCompletedUXController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _recipeText;
     [SerializeField] private StarController _starController;
+    [SerializeField] private CanvasRenderer _victoryFoodRenderer;
 
     private void OnEnable()
     {
         var recipeName = RecipeManager.Instance.GetRecipeName();
+       
         _recipeText.text = recipeName;
+      
         var recipeEntry = SaveDataManager.Instance.GetRecipeEntry(recipeName);
+        //not yet working dynamically?
+        _victoryFoodRenderer.GetComponent<Image>().sprite = RecipeManager.Instance.GetRecipeVictorySprite();
+
+
         if (recipeEntry == null )
         {
             recipeEntry = new RecipeEntry();
