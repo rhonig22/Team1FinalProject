@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recipeName: Omelette
   _threeStarScore: 1000
+  _unlockRequirement: 0
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 5e58576e89c9c6445b69d92ff5bff4f3, type: 2}
@@ -28,5 +29,6 @@ MonoBehaviour:
   - Station: 2
     Ingredient: {fileID: 11400000, guid: aa024542013ce634b818ff9459ae3f48, type: 2}
   _recipeSprite: {fileID: 21300000, guid: 6a850e307ab493348854024bcaa57bb0, type: 3}
+  _recipeVictorySprite: {fileID: 21300000, guid: 4aa6366f3115b044aa10b60cbe0d472e, type: 3}
   _backingTrack: {fileID: 8300000, guid: 80316353d30d64f47b7cd96593b3269a, type: 3}
   _bpm: 88

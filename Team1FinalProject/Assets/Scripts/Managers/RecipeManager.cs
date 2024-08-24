@@ -82,7 +82,10 @@ public class RecipeManager : MonoBehaviour
     {
         return _currentRecipe.GetName();
     }
-
+    public Sprite GetRecipeVictorySprite()
+    {
+        return _currentRecipe.getVictorySprite();
+    }
     public bool IsCurrentIngredientAnimated()
     {
         var step = _currentRecipe.GetStep(_currentStepIndex);

@@ -10,6 +10,7 @@ public class ScriptableRecipe : ScriptableObject
     [SerializeField] private int _unlockRequirement;
     [SerializeField] private RecipeStep[] _recipeSteps;
     [SerializeField] private Sprite _recipeSprite;
+    [SerializeField] private Sprite _recipeVictorySprite;
     [SerializeField] private AudioClip _backingTrack;
     [SerializeField] private int _bpm;
 
@@ -17,7 +18,10 @@ public class ScriptableRecipe : ScriptableObject
     {
         return _recipeName;
     }
-
+    public Sprite getVictorySprite()
+    {
+        return _recipeVictorySprite;
+    }
     public Sprite getSprite()
     {
         return _recipeSprite;
