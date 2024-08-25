@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Conversation", menuName = "Dialogue/New Conversation")]
+[CreateAssetMenu(fileName = "New Conversation", menuName = "Scriptables/ Dialogue/ New Conversation")]
 
 public class Conversation : ScriptableObject
 {

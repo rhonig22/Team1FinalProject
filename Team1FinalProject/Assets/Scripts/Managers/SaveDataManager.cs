@@ -133,7 +133,13 @@ public class SaveDataManager : MonoBehaviour
             FaceChoice = 0,
             SoundFxVolume = 1,
             MusicVolume = 1,
-            PlayerName = ""
+            PlayerName = "",
+            Prep = Aesthetic.Modest,
+            Flattop = Aesthetic.Modest,
+            Stovetop = Aesthetic.Modest,
+            Fridge = Aesthetic.Modest,
+            Floor = Aesthetic.Modest,
+            Wall = Aesthetic.Modest,
         };
         SetPlayerData(playerData);
         _playerData = playerData;

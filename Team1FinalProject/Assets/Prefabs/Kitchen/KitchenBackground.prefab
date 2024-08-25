@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1252682735010980113}
   - component: {fileID: 3714012788966892780}
-  - component: {fileID: 3684848856623618399}
   m_Layer: 0
   m_Name: KitchenBackground
   m_TagString: Untagged
@@ -85,19 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3684848856623618399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8293265839929444640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07b9ceb541f280248a341967b8f57e40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _flattop: {fileID: 21300000, guid: b522dae933401cc499d015f0b56eab34, type: 3}
-  _stovetop: {fileID: 21300000, guid: e8a1b6774942a23468a97acf42ce5b0a, type: 3}
-  _prep: {fileID: 21300000, guid: 48a0fa9a512718d4c8d00b51b3c5256b, type: 3}
-  _fridge: {fileID: 21300000, guid: 9d4f4423466f87543a4f718fadfe512f, type: 3}

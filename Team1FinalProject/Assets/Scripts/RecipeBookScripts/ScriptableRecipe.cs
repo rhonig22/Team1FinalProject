@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenuAttribute (fileName = "New Recipe", menuName = "Recipes/ New Recipe")]
+[CreateAssetMenuAttribute (fileName = "New Recipe", menuName = "Scriptables/ New Recipe")]
 public class ScriptableRecipe : ScriptableObject
 {
     [SerializeField] private string _recipeName;

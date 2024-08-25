@@ -1421,6 +1421,7 @@ GameObject:
   - component: {fileID: 508717603}
   - component: {fileID: 508717604}
   - component: {fileID: 508717605}
+  - component: {fileID: 508717606}
   m_Layer: 0
   m_Name: prep station
   m_TagString: Untagged
@@ -1510,6 +1511,20 @@ MonoBehaviour:
   _station: 0
   _pulseSize: 1.1
   _returnSpeed: 4
+--- !u!114 &508717606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508717602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c2a7376d1b23fe47bca636f1bf4ddce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 508717604}
+  _itemType: 0
 --- !u!1001 &698672032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1666,6 +1681,7 @@ GameObject:
   - component: {fileID: 825972448}
   - component: {fileID: 825972449}
   - component: {fileID: 825972450}
+  - component: {fileID: 825972451}
   m_Layer: 0
   m_Name: FlatTop
   m_TagString: Untagged
@@ -1755,6 +1771,20 @@ MonoBehaviour:
   _station: 3
   _pulseSize: 1.1
   _returnSpeed: 4
+--- !u!114 &825972451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825972447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c2a7376d1b23fe47bca636f1bf4ddce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 825972449}
+  _itemType: 3
 --- !u!1001 &941012902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1916,6 +1946,7 @@ GameObject:
   - component: {fileID: 1078691429}
   - component: {fileID: 1078691430}
   - component: {fileID: 1078691431}
+  - component: {fileID: 1078691432}
   m_Layer: 0
   m_Name: Oven-StoveTop
   m_TagString: Untagged
@@ -2005,6 +2036,20 @@ MonoBehaviour:
   _station: 1
   _pulseSize: 1.1
   _returnSpeed: 4
+--- !u!114 &1078691432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078691428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c2a7376d1b23fe47bca636f1bf4ddce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 1078691430}
+  _itemType: 2
 --- !u!1 &1091857453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,6 +3004,7 @@ GameObject:
   - component: {fileID: 1658653479}
   - component: {fileID: 1658653480}
   - component: {fileID: 1658653481}
+  - component: {fileID: 1658653482}
   m_Layer: 0
   m_Name: Fridge
   m_TagString: Untagged
@@ -3048,6 +3094,20 @@ MonoBehaviour:
   _station: 2
   _pulseSize: 1.1
   _returnSpeed: 4
+--- !u!114 &1658653482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658653478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c2a7376d1b23fe47bca636f1bf4ddce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 1658653480}
+  _itemType: 1
 --- !u!1 &1660405116
 GameObject:
   m_ObjectHideFlags: 0

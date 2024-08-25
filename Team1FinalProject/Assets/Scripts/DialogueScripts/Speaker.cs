@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-[CreateAssetMenuAttribute (fileName = "New Speaker", menuName = "Dialogue/ New Speaker")]
+[CreateAssetMenuAttribute (fileName = "New Speaker", menuName = "Scriptables/ Dialogue/ New Speaker")]
 public class Speaker : ScriptableObject
 {
     [SerializeField] private string speakerName;
