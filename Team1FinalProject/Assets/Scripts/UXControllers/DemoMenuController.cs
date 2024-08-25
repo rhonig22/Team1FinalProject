@@ -28,10 +28,4 @@ public class DemoMenuController : MonoBehaviour
         NoteManager.Instance.StopBeats();
         GameManager.Instance.LoadTitleScreen();
     }
-
-    public void RestartClicked()
-    {
-        NoteManager.Instance.StopBeats();
-        GameManager.Instance.LoadDemoV2();
-    }
 }
