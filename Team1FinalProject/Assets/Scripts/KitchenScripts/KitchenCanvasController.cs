@@ -40,6 +40,7 @@ public class KitchenCanvasController : MonoBehaviour
     public void RecipeBookClicked()
     {
         NoteManager.Instance.StopBeats();
-        GameManager.Instance.LoadRecipeBook();
+        GameManager.Instance.PopBack();
+        GameManager.Instance.LoadRecipeBook(false);
     }
 }

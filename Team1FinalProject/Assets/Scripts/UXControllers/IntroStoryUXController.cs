@@ -16,17 +16,12 @@ public class IntroStoryUXController : MonoBehaviour
             GameManager.Instance.LoadRecipeBook();
     }
 
-    public void MainMenuClicked()
-    {
-        GameManager.Instance.LoadTitleScreen();
-    }
-
     private IEnumerator BeginDialogue()
     {
         yield return new WaitForSeconds(_dialogueStartTime);
         DialogueManager.Instance.DialogueFinished.AddListener(() => {
             SaveDataManager.Instance.UnlockedSomething(_firstTimeKey);
-            GameManager.Instance.LoadRecipeBook(); 
+            GameManager.Instance.LoadHubScene(); 
         });
         DialogueManager.Instance.StartConversation(introConvo);
     }

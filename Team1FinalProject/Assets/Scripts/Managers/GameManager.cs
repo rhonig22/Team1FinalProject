@@ -11,11 +11,12 @@ public class GameManager : MonoBehaviour
     private readonly string _kitchenScene = "KitchenScene";
     private readonly string _settingsScene = "SettingsScene";
     private readonly string _demoScene = "DemoQTE";
-    private readonly string _demoSceneV2 = "DemoV2";
     private readonly string _introStoryScene = "IntroStoryScene";
     private readonly string _recipeBookScene = "RecipeBookScene";
     private readonly string _controlsScene = "ControlsScene";
     private readonly string _creditsScene = "CreditsScene";
+    private readonly string _hubScene = "HubScene";
+    private List<string> _backStack = new List<string>();
 
     private void Awake()
     {
@@ -37,46 +38,78 @@ public class GameManager : MonoBehaviour
 
     public void LoadDemo()
     {
+        _backStack.Add(SceneManager.GetActiveScene().name);
         LoadScene(_demoScene);
-    }
-
-    public void LoadDemoV2()
-    {
-        LoadScene(_demoSceneV2);
     }
 
     public void LoadSettings()
     {
+        _backStack.Add(SceneManager.GetActiveScene().name);
         LoadScene(_settingsScene);
     }
 
     public void LoadKitchen()
     {
+        _backStack.Add(SceneManager.GetActiveScene().name);
         LoadScene(_kitchenScene);
     }
 
     public void LoadIntro()
     {
+        _backStack.Add(SceneManager.GetActiveScene().name);
         LoadScene(_introStoryScene);
     }
 
-    public void LoadRecipeBook()
+    public void LoadRecipeBook(bool addToBackStack = true)
     {
+        if (addToBackStack)
+            _backStack.Add(SceneManager.GetActiveScene().name);
         LoadScene(_recipeBookScene);
+    }
+
+    public void LoadHubScene()
+    {
+        _backStack.Add(SceneManager.GetActiveScene().name);
+        LoadScene(_hubScene);
     }
 
     public void LoadTitleScreen()
     {
+        _backStack.Clear();
         LoadScene(_titleScene);
     }
 
     public void LoadControls()
     {
+        _backStack.Add(SceneManager.GetActiveScene().name);
         LoadScene(_controlsScene);
     }
+
     public void LoadCredits()
     {
+        _backStack.Add(SceneManager.GetActiveScene().name);
         LoadScene(_creditsScene);
+    }
+
+    public void PopBack()
+    {
+        var last = _backStack.Count - 1;
+        _backStack.RemoveAt(last);
+    }
+
+    public void GoBack()
+    {
+        if (_backStack.Count > 0)
+        {
+            var last = _backStack.Count - 1;
+            var back = _backStack[last];
+            _backStack.RemoveAt(last);
+            LoadScene(back);
+        }
+        else
+        {
+            LoadScene(_titleScene);
+        }
     }
     private void LoadScene(string sceneName)
     {
