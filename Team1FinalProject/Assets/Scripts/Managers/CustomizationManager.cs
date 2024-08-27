@@ -44,7 +44,7 @@ public class CustomizationManager : MonoBehaviour
         _currentItemTypes[ItemType.Stovetop] = data.Stovetop;
     }
 
-    private void SetCurrentCustomization(ItemType type, Aesthetic aesthetic)
+    public void SetCurrentCustomization(ItemType type, Aesthetic aesthetic)
     {
         _currentItemTypes[type] = aesthetic;
         var data = SaveDataManager.Instance.GetPlayerData();

@@ -31,6 +31,11 @@ public class ScriptableCustomization : ScriptableObject
         foreach (var recipe in _requirement.Recipes)
         {
             var entry = SaveDataManager.Instance.GetRecipeEntry(recipe);
+            if (entry == null) {
+                shouldUnlock = false;
+                continue; 
+            }
+
             int currentVal = 0;
             switch (_requirement.RequirementType)
             {

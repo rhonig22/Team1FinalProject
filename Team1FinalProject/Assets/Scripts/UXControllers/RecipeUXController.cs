@@ -17,6 +17,7 @@ public class RecipeUXController : MonoBehaviour
             foreach (var unlock in unlocks)
             {
                 newText += unlock.GetName() + "\r\n";
+                CustomizationManager.Instance.SetCurrentCustomization(unlock.GetItemType(), unlock.GetAesthetic());
             }
 
             _unlockText.text = newText;
