@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class RecipeCompletedUXController : MonoBehaviour
@@ -9,9 +11,11 @@ public class RecipeCompletedUXController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _recipeText;
     [SerializeField] private StarController _starController;
     [SerializeField] private CanvasRenderer _victoryFoodRenderer;
+    [SerializeField] private Button _completedButton;
 
     private void OnEnable()
     {
+        EventSystem.current.SetSelectedGameObject(_completedButton.gameObject);
         var recipeName = RecipeManager.Instance.GetRecipeName();
        
         _recipeText.text = recipeName;

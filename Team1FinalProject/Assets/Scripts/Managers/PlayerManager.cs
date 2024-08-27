@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 
@@ -12,8 +13,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Transform _fridgeSpawn;
     [SerializeField] private InputAction _playerControls;
     private readonly float _moveSpeed = 5f;
-    private Vector2 _moveTowards;
+    private Vector3 _moveTowards;
     private Dictionary<Vector2, Transform> _spawnMap;
+    public UnityEvent SameStationAgain = new UnityEvent();
 
     private void Start()
     {
@@ -44,8 +46,17 @@ public class PlayerManager : MonoBehaviour
 
     private void MoveTowards(Transform moveTowards)
     {
-        if (!KitchenCanvasController.IsRhythmSection && !RecipeManager.Instance.RecipeCompleted)
+        if (KitchenCanvasController.IsRhythmSection || RecipeManager.Instance.RecipeCompleted)
+            return;
+
+        if (_moveTowards == moveTowards.position)
+        {
+            SameStationAgain.Invoke();
+        }
+        else
+        {
             _moveTowards = moveTowards.position;
+        }
     }
 
     // Update is called once per frame

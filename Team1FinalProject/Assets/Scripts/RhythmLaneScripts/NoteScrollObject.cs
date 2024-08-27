@@ -9,6 +9,7 @@ public class NoteScrollObject : MonoBehaviour
     [SerializeField] private Sprite _inactiveSprite;
     [SerializeField] private Sprite _missedSprite;
     [SerializeField] private AudioClip _noteClip;
+    [SerializeField] private Animator _animator;
 
     private readonly float _noteHitHeight = .4f;
     private readonly float _goodNoteHeight = .2f;
@@ -18,14 +19,16 @@ public class NoteScrollObject : MonoBehaviour
     public bool CanBePressed { get; private set; } = false;
     public HitType HitType { get; private set; } = HitType.Upcoming;
     private Vector3 _startSize;
-    private float _pulseSize = 1.5f;
 
 
 
     private void Start()
     {
         _startSize = transform.localScale;
-        //NoteManager.Instance.SuccessfulHitEvent.AddListener((int hit) => { transform.localScale = _startSize * _pulseSize; });
+        NoteManager.Instance.SuccessfulHitEvent.AddListener((NoteScrollObject note) => {
+            if (note == this)
+                _animator.SetTrigger("Success");
+        });
         _rhythmControllerLocation = GameObject.FindGameObjectWithTag("RhythmController").transform.position.y;
     }
 
