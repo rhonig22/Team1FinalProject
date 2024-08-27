@@ -32,6 +32,7 @@ public class NoteScrollObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //transform.localScale = Vector3.Lerp(transform.localScale, _startSize, Time.deltaTime * 5);
         if (HitType == HitType.Missed)
             return;
 
