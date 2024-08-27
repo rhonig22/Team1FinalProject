@@ -44,7 +44,7 @@ public class NoteManager : MonoBehaviour
 
     private void Update()
     {
-        //If a whole "beat" in 60/bpm has elapsed(Plus a bit of float cruft, "Do things on the beat"
+        //If a whole "beat" in 60/bpm has elapsed(Plus a bit of float cruft, "Do things on the beat")
         if (MusicManager.Instance == null)
             return;
 

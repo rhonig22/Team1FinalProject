@@ -18,6 +18,10 @@ MonoBehaviour:
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 825c08ca5232c564ab2bc855d85d1bcb, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 45fdc8a078cd010418e5e473e27d574d, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 45fdc8a078cd010418e5e473e27d574d, type: 2}
   _recipeSprite: {fileID: 21300000, guid: 1b71272cfec1f124fb3ee6950b8a6a30, type: 3}
   _recipeVictorySprite: {fileID: 0}
   _backingTrack: {fileID: 8300000, guid: 9f13bf648eb43a942a3ac70f7333d501, type: 3}

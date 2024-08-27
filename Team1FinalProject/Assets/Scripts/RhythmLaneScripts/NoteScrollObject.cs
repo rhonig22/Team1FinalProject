@@ -25,14 +25,14 @@ public class NoteScrollObject : MonoBehaviour
     private void Start()
     {
         _startSize = transform.localScale;
-        NoteManager.Instance.SuccessfulHitEvent.AddListener((int hit) => { transform.localScale = _startSize * _pulseSize; });
+        //NoteManager.Instance.SuccessfulHitEvent.AddListener((int hit) => { transform.localScale = _startSize * _pulseSize; });
         _rhythmControllerLocation = GameObject.FindGameObjectWithTag("RhythmController").transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.localScale = Vector3.Lerp(transform.localScale, _startSize, Time.deltaTime * 5);
+        //transform.localScale = Vector3.Lerp(transform.localScale, _startSize, Time.deltaTime * 5);
         if (HitType == HitType.Missed)
             return;
 
