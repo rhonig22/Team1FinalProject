@@ -15,7 +15,7 @@ public class NoteManager : MonoBehaviour
    
     public float BeatTempo { get; private set; }
     public UnityEvent<int> BeatEvent { get; private set; } = new UnityEvent<int>();
-    public UnityEvent<int> SuccessfulHitEvent { get; private set; } = new UnityEvent<int>();
+    public UnityEvent<NoteScrollObject> SuccessfulHitEvent { get; private set; } = new UnityEvent<NoteScrollObject>();
     public UnityEvent<int> MissedHitEvent { get; private set; } = new UnityEvent<int>();
 
     public readonly float NoteLoopSize = 31.5f;
@@ -95,11 +95,12 @@ public class NoteManager : MonoBehaviour
         return false;
     }
 
-    public void NoteHit(HitType type)
+    public void NoteHit(NoteScrollObject note)
     {
+        HitType type = note.HitType;
         NotesHit++;
 
-        SuccessfulHitEvent.Invoke(NotesHit);
+        SuccessfulHitEvent.Invoke(note);
         RecipeManager.Instance.IncrementIngredientSprite();
 
         GameObject hitText = null;

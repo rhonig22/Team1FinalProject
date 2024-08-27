@@ -12,7 +12,7 @@ public class PulseToTheSuccessfulHit : MonoBehaviour
     {
         _startSize = transform.localScale;
         //When you hear a ok/good/great, expand
-        NoteManager.Instance.SuccessfulHitEvent.AddListener((int hit) => { transform.localScale = _startSize * _pulseSize; });
+        NoteManager.Instance.SuccessfulHitEvent.AddListener((NoteScrollObject note) => { transform.localScale = _startSize * _pulseSize; });
     }
 
     // Update is called once per frame

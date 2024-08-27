@@ -1467,7 +1467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1934575826}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1278225914
@@ -2122,6 +2122,11 @@ RectTransform:
 --- !u!82 &1934575825 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2747155550972169334, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
+  m_PrefabInstance: {fileID: 1934575823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1934575826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3016969486874569221, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
   m_PrefabInstance: {fileID: 1934575823}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1969695247

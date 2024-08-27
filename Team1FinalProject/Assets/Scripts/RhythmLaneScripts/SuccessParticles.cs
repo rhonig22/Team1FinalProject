@@ -8,7 +8,7 @@ public class SuccessParticles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NoteManager.Instance.SuccessfulHitEvent.AddListener((int notesHit) =>
+        NoteManager.Instance.SuccessfulHitEvent.AddListener((NoteScrollObject note) =>
         {
             _particleSystem.Play();
         });
