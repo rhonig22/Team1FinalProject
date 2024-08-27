@@ -17,9 +17,15 @@ public class NoteScrollObject : MonoBehaviour
     private bool _wasPressed = false;
     public bool CanBePressed { get; private set; } = false;
     public HitType HitType { get; private set; } = HitType.Upcoming;
+    private Vector3 _startSize;
+    private float _pulseSize = 1.5f;
+
+
 
     private void Start()
     {
+        _startSize = transform.localScale;
+        //NoteManager.Instance.SuccessfulHitEvent.AddListener((int hit) => { transform.localScale = _startSize * _pulseSize; });
         _rhythmControllerLocation = GameObject.FindGameObjectWithTag("RhythmController").transform.position.y;
     }
 
@@ -46,6 +52,7 @@ public class NoteScrollObject : MonoBehaviour
             {
                 HitType = HitType.Perfect;
             }
+            
         }
         else if (!_wasPressed && currentCenter < _rhythmControllerLocation - _noteHitHeight)
         {
