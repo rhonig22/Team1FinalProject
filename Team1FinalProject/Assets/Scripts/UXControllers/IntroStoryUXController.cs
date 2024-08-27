@@ -5,6 +5,7 @@ using UnityEngine;
 public class IntroStoryUXController : MonoBehaviour
 {
     [SerializeField] private Conversation introConvo;
+    [SerializeField] private Conversation welcomeBackConvo;
     private readonly string _firstTimeKey = "FirstTimeConvo";
     private float _dialogueStartTime = .5f;
 
@@ -13,7 +14,9 @@ public class IntroStoryUXController : MonoBehaviour
         if (!SaveDataManager.Instance.IsUnlocked(_firstTimeKey))
             StartCoroutine(BeginDialogue());
         else
-            GameManager.Instance.LoadRecipeBook();
+        {
+            StartCoroutine(BeginWelcomeBackDialogue());
+        }
     }
 
     private IEnumerator BeginDialogue()
@@ -24,5 +27,13 @@ public class IntroStoryUXController : MonoBehaviour
             GameManager.Instance.LoadHubScene(); 
         });
         DialogueManager.Instance.StartConversation(introConvo);
+    }
+    private IEnumerator BeginWelcomeBackDialogue()
+    {
+        yield return new WaitForSeconds(_dialogueStartTime);
+        DialogueManager.Instance.DialogueFinished.AddListener(() => {
+            GameManager.Instance.LoadHubScene();
+        });
+        DialogueManager.Instance.StartConversation(welcomeBackConvo);
     }
 }
