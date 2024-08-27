@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddb9aca5a7164404cbb73e99de090d81, type: 3}
-  m_Name: BaseFlattop
+  m_Name: VaporFridge
   m_EditorClassIdentifier: 
-  _customizationName: Modest Flattop
-  _customizationSprite: {fileID: 21300000, guid: c094a019d4cf1944982f754d06067907, type: 3}
-  _aesthetic: 0
-  _itemType: 3
-  _unlocked: 1
+  _customizationName: Vaporwave Fridge
+  _customizationSprite: {fileID: 21300000, guid: 8125a7b74467609448e6d90a1051a290, type: 3}
+  _aesthetic: 1
+  _itemType: 1
+  _unlocked: 0
   _requirement:
     RequirementType: 0
-    MinValue: 0
-    Recipes: []
+    MinValue: 3
+    Recipes:
+    - Omelette

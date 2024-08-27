@@ -217,6 +217,10 @@ public class SaveDataManager : MonoBehaviour
     public void ClearData()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        _playerData = null;
+        _unlockables = null;
+        _recipeData = null;
         SetUpDataManager();
     }
 }
