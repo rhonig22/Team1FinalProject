@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: OmeletteRecipe
   m_EditorClassIdentifier: 
   _recipeName: Omelette
-  _threeStarScore: 1000
-  _unlockRequirement: 0
+  _threeStarPercent: 0.9
+  _unlockRequirement: 2
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 5e58576e89c9c6445b69d92ff5bff4f3, type: 2}
