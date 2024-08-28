@@ -19,6 +19,8 @@ public class IngredientObject : MonoBehaviour
 
     public int GetMeasureCount () { return _measureCount; }
 
-    //only works if we are actually using the "blank" notes everywhere and I'm not sure we are.
-    public int GetNoteCount () { return transform.childCount - (_measureCount * 4); }
+    public int GetNoteCount ()
+    {
+        return transform.GetComponentsInChildren<NoteScrollObject>().Length;
+    }
 }

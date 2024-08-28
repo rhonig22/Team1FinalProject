@@ -1,3 +1,4 @@
+using mixpanel;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -24,7 +25,6 @@ public class RecipeCompletedUXController : MonoBehaviour
         //not yet working dynamically?
         _victoryFoodRenderer.GetComponent<Image>().sprite = RecipeManager.Instance.GetRecipeVictorySprite();
 
-
         if (recipeEntry == null )
         {
             recipeEntry = new RecipeEntry();
@@ -40,5 +40,10 @@ public class RecipeCompletedUXController : MonoBehaviour
             recipeEntry.HighScore = NoteManager.Instance.Score;
             SaveDataManager.Instance.SetRecipeEntryData(recipeEntry);
         }
+
+        var props = new Value();
+        props["recipeName"] = recipeName;
+        props["score"] = NoteManager.Instance.Score;
+        MixpanelLogger.Instance.LogEvent("Recipe Completed", props);
     }
 }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BeefWellingtonRecipe
   m_EditorClassIdentifier: 
   _recipeName: Beef Wellington
-  _threeStarScore: 3000
-  _unlockRequirement: 3
+  _threeStarPercent: 0.9
+  _unlockRequirement: 9
   _recipeSteps:
   - Station: 3
     Ingredient: {fileID: 11400000, guid: 52c79f6b558ddde40a466933ead374f5, type: 2}

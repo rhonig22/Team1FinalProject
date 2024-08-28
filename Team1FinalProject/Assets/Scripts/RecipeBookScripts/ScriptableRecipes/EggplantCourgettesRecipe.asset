@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EggplantCourgettesRecipe
   m_EditorClassIdentifier: 
   _recipeName: Aubergines and Courgettes
-  _threeStarScore: 1000
-  _unlockRequirement: 21
+  _threeStarPercent: 0.9
+  _unlockRequirement: 22
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 825c08ca5232c564ab2bc855d85d1bcb, type: 2}

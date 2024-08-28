@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FriedEggRecipe
   m_EditorClassIdentifier: 
   _recipeName: Fried Egg
-  _threeStarScore: 2000
+  _threeStarPercent: 0.9
   _unlockRequirement: 0
   _recipeSteps:
   - Station: 0
