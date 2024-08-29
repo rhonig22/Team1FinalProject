@@ -171,7 +171,7 @@ public class SaveDataManager : MonoBehaviour
 
     public void SetUnlockablesData()
     {
-        PlayerPrefs.SetString(_unlockablesKey, JsonUtility.ToJson(_unlockableMap));
+        PlayerPrefs.SetString(_unlockablesKey, JsonUtility.ToJson(_unlockables));
         PlayerPrefs.Save();
     }
 

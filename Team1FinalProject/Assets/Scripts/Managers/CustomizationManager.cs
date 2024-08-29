@@ -89,4 +89,9 @@ public class CustomizationManager : MonoBehaviour
         return _allCustomizations.Find((ScriptableCustomization x) => x.GetAesthetic() == _currentItemTypes[itemType] && x.GetItemType() == itemType);
     }
 
+    public List<ScriptableCustomization> GetUnlockedItems(ItemType itemType)
+    {
+        return _allCustomizations.FindAll((ScriptableCustomization x) => x.IsUnlocked() && x.GetItemType() == itemType);
+    }
+
 }
