@@ -16,6 +16,8 @@ MonoBehaviour:
   _hasAnimation: 1
   _animationTrigger: SauteVeggies
   _ingredientPrefab: {fileID: 2866293424100990670, guid: 4a586940be745a045837ea88a2239b29, type: 3}
-  _ingredientSprites: []
+  _ingredientSprites:
+  - {fileID: -1816306458, guid: 943da62f2adbd434d9eceba990a18e1d, type: 3}
+  - {fileID: -1780933370, guid: 943da62f2adbd434d9eceba990a18e1d, type: 3}
   _backgroundPrepSprites:
   - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
