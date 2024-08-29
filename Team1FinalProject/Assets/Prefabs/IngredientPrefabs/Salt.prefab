@@ -92,7 +92,7 @@ PrefabInstance:
     - target: {fileID: 5455465116886333316, guid: e0a4248e66211334389aae777e3577ab, type: 3}
       propertyPath: _noteClip
       value: 
-      objectReference: {fileID: 8300000, guid: 98cae1932dcfc1542adfccaff7aca9f2, type: 3}
+      objectReference: {fileID: 8300000, guid: a04b6ac90eaf28747b3a2d9b0b6af0e2, type: 3}
     - target: {fileID: 8182696297463189816, guid: e0a4248e66211334389aae777e3577ab, type: 3}
       propertyPath: m_Name
       value: GhostNote

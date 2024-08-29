@@ -15,7 +15,7 @@ MonoBehaviour:
   _ingredientName: Fried Egg
   _hasAnimation: 0
   _animationTrigger: 
-  _ingredientPrefab: {fileID: 4153989815781522872, guid: 365669298e0c8c24897e50b9f7208303, type: 3}
+  _ingredientPrefab: {fileID: 316161610368572042, guid: 150721185ff5bf342a41e1764fc08bef, type: 3}
   _ingredientSprites:
   - {fileID: -1794808064, guid: c30dec41e8ec29e40baf8e509c20617f, type: 3}
   - {fileID: -625456211, guid: c30dec41e8ec29e40baf8e509c20617f, type: 3}
