@@ -6,7 +6,7 @@ using UnityEngine;
 public class ScriptableRecipe : ScriptableObject
 {
     [SerializeField] private string _recipeName;
-    [SerializeField] private int _threeStarScore;
+    [SerializeField] private float _threeStarPercent;
     [SerializeField] private int _unlockRequirement;
     [SerializeField] private RecipeStep[] _recipeSteps;
     [SerializeField] private Sprite _recipeSprite;
@@ -42,11 +42,19 @@ public class ScriptableRecipe : ScriptableObject
 
     public int GetMaxScore()
     {
-        return _threeStarScore;
+        var totalScore = 0;
+        foreach (var step in _recipeSteps)
+        {
+            totalScore += step.Ingredient.GetMaxIngredientScore();
+        }
+
+        return Mathf.FloorToInt(totalScore*_threeStarPercent);
     }
 
     public int GetUnlockRequirement()
     {
+        //for debugging w/o having to unlock recipes
+        //return 0;
         return _unlockRequirement;
     }
 

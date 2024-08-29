@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: BaseFridge
   m_EditorClassIdentifier: 
   _customizationName: Modest Fridge
-  _customizationSprite: {fileID: 21300000, guid: 9d4f4423466f87543a4f718fadfe512f, type: 3}
+  _customizationSprite: {fileID: 21300000, guid: 31a00de85930292429ebdc93b42636c7, type: 3}
   _aesthetic: 0
   _itemType: 1
+  _unlocked: 1
+  _requirement:
+    RequirementType: 0
+    MinValue: 0
+    Recipes: []

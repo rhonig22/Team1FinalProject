@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Tomato-Chopped
   m_EditorClassIdentifier: 
   _ingredientName: No Skin Tomato
+  _hasAnimation: 1
+  _animationTrigger: SlicedTomato
   _ingredientPrefab: {fileID: 4013419605963424100, guid: 43e64b2a1ea27e8408ed17ca6349acbc, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: f915d39afe52b934486772247a2d3ec2, type: 3}

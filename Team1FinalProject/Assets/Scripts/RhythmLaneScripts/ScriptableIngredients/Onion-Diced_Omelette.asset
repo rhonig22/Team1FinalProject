@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Onion-Diced_Omelette
   m_EditorClassIdentifier: 
   _ingredientName: Onion
+  _hasAnimation: 1
+  _animationTrigger: DicedOnion
   _ingredientPrefab: {fileID: 2513051249930926630, guid: 33c8b3ba517470145b6d27593df1cca5, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: e16e76a0c90ef604eb3281300594495f, type: 3}

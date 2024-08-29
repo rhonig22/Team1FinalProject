@@ -394,12 +394,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 447188481}
     - target: {fileID: 9062774548847637861, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 132149316}
+    - target: {fileID: 9062774548847637861, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RecipeBookClicked
       objectReference: {fileID: 0}
     - target: {fileID: 9062774548847637861, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062774548847637861, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: KitchenCanvasController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062774548847637861, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -411,6 +423,22 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 968471548076176401, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
   m_PrefabInstance: {fileID: 132149314}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &132149316 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6154743861103916265, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
+  m_PrefabInstance: {fileID: 132149314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &132149317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9062774548847637861, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
+  m_PrefabInstance: {fileID: 132149314}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &188849203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -993,7 +1021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9529412, b: 0.67058825, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1540,7 +1568,7 @@ Transform:
   m_GameObject: {fileID: 508717602}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.45, y: -0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1587,7 +1615,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 48a0fa9a512718d4c8d00b51b3c5256b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a5ee4ad3fbe88f46b517c18e1f2de6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2012,7 +2040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.99215686, g: 0.6, b: 0.06666667, a: 0.59607846}
+  m_Color: {r: 0.86882186, g: 0.5529412, b: 0.99215686, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8061,7 +8089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1691782937
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8098,6 +8126,7 @@ MonoBehaviour:
   _recipeText: {fileID: 189518533}
   _starController: {fileID: 1198427615}
   _victoryFoodRenderer: {fileID: 1791880656}
+  _completedButton: {fileID: 132149317}
 --- !u!1 &1702350179
 GameObject:
   m_ObjectHideFlags: 0

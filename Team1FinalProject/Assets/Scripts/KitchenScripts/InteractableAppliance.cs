@@ -19,9 +19,18 @@ public class InteractableAppliance : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player") && !KitchenCanvasController.IsRhythmSection)
+        if (collision.gameObject.CompareTag("Player") && !KitchenCanvasController.IsRhythmSection)
         {
             _interactAction.Invoke();
+            collision.gameObject.GetComponent<PlayerManager>().SameStationAgain.AddListener(() => { _interactAction.Invoke(); });
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !KitchenCanvasController.IsRhythmSection)
+        {
+            collision.gameObject.GetComponent<PlayerManager>().SameStationAgain.RemoveAllListeners();
         }
     }
 }

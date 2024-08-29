@@ -26,6 +26,12 @@ public class ScriptableIngredient : ScriptableObject
         return _ingredientName;
     }
 
+    public int GetMaxIngredientScore()
+    {
+        int notes = _ingredientPrefab.GetComponent<IngredientObject>().GetNoteCount();
+        return notes * NoteManager.Instance.PerfectNotePoints;
+    }
+
     public Sprite getSprite(int index)
     {
         if (_ingredientSprites == null || _ingredientSprites.Length == 0)

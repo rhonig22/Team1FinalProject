@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Boiling Pasta
   m_EditorClassIdentifier: 
   _ingredientName: Pasta
+  _hasAnimation: 1
+  _animationTrigger: BoilingPasta
   _ingredientPrefab: {fileID: 316161610368572042, guid: c0a15395d63437244904a71d2b5b91c2, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: 872faa2d268d57d438a8908331e4d1af, type: 3}

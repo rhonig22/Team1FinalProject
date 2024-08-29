@@ -15,7 +15,7 @@ public class NoteManager : MonoBehaviour
    
     public float BeatTempo { get; private set; }
     public UnityEvent<int> BeatEvent { get; private set; } = new UnityEvent<int>();
-    public UnityEvent<int> SuccessfulHitEvent { get; private set; } = new UnityEvent<int>();
+    public UnityEvent<NoteScrollObject> SuccessfulHitEvent { get; private set; } = new UnityEvent<NoteScrollObject>();
     public UnityEvent<int> MissedHitEvent { get; private set; } = new UnityEvent<int>();
 
     public readonly float NoteLoopSize = 31.5f;
@@ -44,7 +44,7 @@ public class NoteManager : MonoBehaviour
 
     private void Update()
     {
-        //If a whole "beat" in 60/bpm has elapsed(Plus a bit of float cruft, "Do things on the beat"
+        //If a whole "beat" in 60/bpm has elapsed(Plus a bit of float cruft, "Do things on the beat")
         if (MusicManager.Instance == null)
             return;
 
@@ -95,11 +95,12 @@ public class NoteManager : MonoBehaviour
         return false;
     }
 
-    public void NoteHit(HitType type)
+    public void NoteHit(NoteScrollObject note)
     {
+        HitType type = note.HitType;
         NotesHit++;
 
-        SuccessfulHitEvent.Invoke(NotesHit);
+        SuccessfulHitEvent.Invoke(note);
         RecipeManager.Instance.IncrementIngredientSprite();
 
         GameObject hitText = null;

@@ -18,4 +18,9 @@ public class IngredientObject : MonoBehaviour
     }
 
     public int GetMeasureCount () { return _measureCount; }
+
+    public int GetNoteCount ()
+    {
+        return transform.GetComponentsInChildren<NoteScrollObject>().Length;
+    }
 }

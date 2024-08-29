@@ -93,10 +93,10 @@ public class RecipeBookController : MonoBehaviour
     {
         bool isLeftEnabled = _currentPage > 0;
         _leftButton.interactable = isLeftEnabled;
-        //_leftButton.enabled = isLeftEnabled;
         bool isRightEnabled = _currentPage + 1 < _pages.Count;
         _rightButton.interactable = isRightEnabled;
-        //_rightButton.enabled = isRightEnabled;
+        var button = _pages[_currentPage].GetComponentInChildren<Button>();
+        EventSystem.current.SetSelectedGameObject(button.gameObject);
     }
 
     private GameObject GenerateRecipeButton(ScriptableRecipe recipe)

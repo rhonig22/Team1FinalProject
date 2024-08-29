@@ -171,7 +171,7 @@ public class SaveDataManager : MonoBehaviour
 
     public void SetUnlockablesData()
     {
-        PlayerPrefs.SetString(_unlockablesKey, JsonUtility.ToJson(_unlockableMap));
+        PlayerPrefs.SetString(_unlockablesKey, JsonUtility.ToJson(_unlockables));
         PlayerPrefs.Save();
     }
 
@@ -217,6 +217,10 @@ public class SaveDataManager : MonoBehaviour
     public void ClearData()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        _playerData = null;
+        _unlockables = null;
+        _recipeData = null;
         SetUpDataManager();
     }
 }

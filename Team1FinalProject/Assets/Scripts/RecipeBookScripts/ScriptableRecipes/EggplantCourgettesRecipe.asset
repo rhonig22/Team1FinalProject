@@ -13,10 +13,22 @@ MonoBehaviour:
   m_Name: EggplantCourgettesRecipe
   m_EditorClassIdentifier: 
   _recipeName: Aubergines and Courgettes
+  _threeStarPercent: 0.9
+  _unlockRequirement: 22
+  _recipeSteps:
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 825c08ca5232c564ab2bc855d85d1bcb, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: c3d5efeae5d944a439183e66729bf711, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 58c4dbbd876ae9b44930aedecb545bca, type: 2}
+  - Station: 1
+    Ingredient: {fileID: 11400000, guid: 45001e314a0688943bf9455d6763841c, type: 2}
   _threeStarScore: 1000
   _unlockRequirement: 0
   _recipeSteps: []
   _recipeSprite: {fileID: 21300000, guid: 1b71272cfec1f124fb3ee6950b8a6a30, type: 3}
   _recipeVictorySprite: {fileID: 0}
-  _backingTrack: {fileID: 0}
-  _bpm: 0
+  _recipeVictorySprite: {fileID: 0}
+  _backingTrack: {fileID: 8300000, guid: ade0cf2a7a52c6c418736225a11c59cd, type: 3}
+  _bpm: 56
