@@ -15,6 +15,6 @@ MonoBehaviour:
   _ingredientName: 
   _hasAnimation: 0
   _animationTrigger: 
-  _ingredientPrefab: {fileID: 316161610368572042, guid: befaf3638cd966744a15aa02ab8c2ac9, type: 3}
+  _ingredientPrefab: {fileID: 316161610368572042, guid: 186b726411e78924198a1fa52364eae8, type: 3}
   _ingredientSprites: []
   _backgroundPrepSprites: []
