@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: Folding omelette
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: Omelette
   _hasAnimation: 1
   _animationTrigger: MakingAnOmelette
   _ingredientPrefab: {fileID: 316161610368572042, guid: da1353a3932379140932cf437f1f0142, type: 3}
