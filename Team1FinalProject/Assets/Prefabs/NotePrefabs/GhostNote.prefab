@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74858d9bbeb7a8c4788cb02db1fe06b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _noteClip: {fileID: 0}
+  _noteClip: {fileID: 8300000, guid: 4a7f4afd0523024498c04ff14de76d71, type: 3}
