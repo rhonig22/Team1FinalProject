@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: VeggieStirfryPlating
   m_EditorClassIdentifier: 
   _ingredientName: VeggieStirfryPlating
+  _hasAnimation: 0
+  _animationTrigger: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: 72d32069481c3664db88798d682e7b8c, type: 3}
-  _ingredientSprites: []
-  _backgroundPrepSprites: []
+  _ingredientSprites:
+  - {fileID: 21300000, guid: 2c747bff81fa497499068cbd3c54d26b, type: 3}
+  - {fileID: 21300000, guid: fd55831feb57f4d49b0646e325234e6d, type: 3}
+  _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}

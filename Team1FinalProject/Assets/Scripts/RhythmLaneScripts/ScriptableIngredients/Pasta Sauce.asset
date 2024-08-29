@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Pasta Sauce
   m_EditorClassIdentifier: 
   _ingredientName: Pasta Sauce
+  _hasAnimation: 1
+  _animationTrigger: BoilingTomatoSauce
   _ingredientPrefab: {fileID: 316161610368572042, guid: 4a1fcb5f2af243b4ba247d1f57483a56, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: 048a5cdb33c25d14c92c0357ddd31d54, type: 3}

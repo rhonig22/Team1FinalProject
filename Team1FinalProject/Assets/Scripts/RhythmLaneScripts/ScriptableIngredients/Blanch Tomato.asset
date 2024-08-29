@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Blanch Tomato
   m_EditorClassIdentifier: 
   _ingredientName: Blanching Tomato
+  _hasAnimation: 1
+  _animationTrigger: BlanchingTomatoes
   _ingredientPrefab: {fileID: 4013419605963424100, guid: 43e64b2a1ea27e8408ed17ca6349acbc, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: 64732fd00c58ec644ac1097ec33dd574, type: 3}
