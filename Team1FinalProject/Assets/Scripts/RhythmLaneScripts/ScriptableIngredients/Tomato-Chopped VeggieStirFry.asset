@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Tomato-Chopped VeggieStirFry
   m_EditorClassIdentifier: 
   _ingredientName: No Skin Tomato
+  _hasAnimation: 1
+  _animationTrigger: SlicedTomato
   _ingredientPrefab: {fileID: 4013419605963424100, guid: 21ec685b15cfcaf488f57b2ed0e51947, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: f915d39afe52b934486772247a2d3ec2, type: 3}

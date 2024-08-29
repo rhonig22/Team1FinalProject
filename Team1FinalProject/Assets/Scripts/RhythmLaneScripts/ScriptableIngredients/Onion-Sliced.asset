@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Onion-Sliced
   m_EditorClassIdentifier: 
   _ingredientName: Onion
+  _hasAnimation: 1
+  _animationTrigger: SlicedOnion
   _ingredientPrefab: {fileID: 2513051249930926630, guid: a7c0e329fd4af2443a99092d49eaf0a1, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: 753f52aa73549ee4a912f168d08e7bbe, type: 3}
