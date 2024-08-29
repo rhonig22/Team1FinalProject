@@ -88,8 +88,13 @@ public class RecipeManager : MonoBehaviour
     }
     public bool IsCurrentIngredientAnimated()
     {
-        var step = _currentRecipe.GetStep(_currentStepIndex);
-        return step.Ingredient.IsAnimatedIngredient();
+        if (_currentIngredientSpriteIndex > 0)
+        {
+            var step = _currentRecipe.GetStep(_currentStepIndex);
+            return step.Ingredient.IsAnimatedIngredient();
+        }
+
+        return false;
     }
 
     public string GetAnimationTrigger()

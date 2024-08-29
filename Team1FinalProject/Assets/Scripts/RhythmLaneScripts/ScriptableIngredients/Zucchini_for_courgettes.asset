@@ -16,6 +16,8 @@ MonoBehaviour:
   _hasAnimation: 1
   _animationTrigger: SlicedZucchini
   _ingredientPrefab: {fileID: 316161610368572042, guid: 9cd6278aa25a5b14ca6dc5a5b0e32c8a, type: 3}
-  _ingredientSprites: []
+  _ingredientSprites:
+  - {fileID: 751364225, guid: 2c10794b7d0a8fb45a49396e749fa628, type: 3}
+  - {fileID: -1726904516, guid: 2c10794b7d0a8fb45a49396e749fa628, type: 3}
   _backgroundPrepSprites:
   - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
