@@ -16,6 +16,8 @@ MonoBehaviour:
   _hasAnimation: 1
   _animationTrigger: BakingBeefWellington
   _ingredientPrefab: {fileID: 316161610368572042, guid: 1b2118a01a1891847addc06f50dc6f4a, type: 3}
-  _ingredientSprites: []
+  _ingredientSprites:
+  - {fileID: 1821059105, guid: e916d3465c5325448b221c18a85344e8, type: 3}
+  - {fileID: 1853386205, guid: e916d3465c5325448b221c18a85344e8, type: 3}
   _backgroundPrepSprites:
   - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
