@@ -15,7 +15,7 @@ MonoBehaviour:
   _ingredientName: 
   _hasAnimation: 1
   _animationTrigger: MakingAnOmelette
-  _ingredientPrefab: {fileID: 4153989815781522872, guid: 365669298e0c8c24897e50b9f7208303, type: 3}
+  _ingredientPrefab: {fileID: 316161610368572042, guid: da1353a3932379140932cf437f1f0142, type: 3}
   _ingredientSprites: []
   _backgroundPrepSprites:
   - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
