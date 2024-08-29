@@ -10,6 +10,11 @@ public class CustomizedItem : MonoBehaviour
 
     private void Start()
     {
+        SetCurrentSprite();
+    }
+
+    public void SetCurrentSprite()
+    {
         _spriteRenderer.sprite = CustomizationManager.Instance.GetCurrentItem(_itemType).GetSprite();
     }
 }
