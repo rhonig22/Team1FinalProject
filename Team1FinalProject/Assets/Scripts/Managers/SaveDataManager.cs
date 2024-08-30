@@ -221,6 +221,7 @@ public class SaveDataManager : MonoBehaviour
         _playerData = null;
         _unlockables = null;
         _recipeData = null;
+        _unlockableMap = new Dictionary<string, bool>();
         SetUpDataManager();
     }
 }
