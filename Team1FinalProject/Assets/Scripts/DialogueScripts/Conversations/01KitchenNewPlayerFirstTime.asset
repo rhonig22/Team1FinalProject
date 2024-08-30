@@ -17,5 +17,5 @@ MonoBehaviour:
     dialogue: Oh man. I can't believe I'm finally here!
   - speaker: {fileID: 11400000, guid: eb29e5629de62b34fa8039b477bc261a, type: 2}
     dialogue: . . .
-  - speaker: {fileID: 11400000, guid: 09be5ae41fc1d9c40af12caf55e53f55, type: 2}
+  - speaker: {fileID: 11400000, guid: eb29e5629de62b34fa8039b477bc261a, type: 2}
     dialogue: But what do I know how to make?
