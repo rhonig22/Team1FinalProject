@@ -41,7 +41,12 @@ public class RecipeBookController : MonoBehaviour
             var button = GenerateRecipeButton(recipe);
             button.transform.localPosition = new Vector3(0, _currentOffset, 0);
             if (i == 0)
-                EventSystem.current.SetSelectedGameObject(button);
+            {
+                if (!RecipeUXController.DontSelectRecipe)
+                {
+                    EventSystem.current.SetSelectedGameObject(button);
+                }
+            }
 
             var recipeEntry = SaveDataManager.Instance.GetRecipeEntry(recipe.GetName());
             if (recipeEntry == null)
@@ -54,7 +59,7 @@ public class RecipeBookController : MonoBehaviour
             _currentOffset -= _yOffset;
         }
 
-        SetPageButtonStates();
+        SetPageButtonStates(false);
     }
 
     private void CreatePage(bool isFirstPage)
@@ -89,14 +94,17 @@ public class RecipeBookController : MonoBehaviour
         }
     }
 
-    private void SetPageButtonStates()
+    private void SetPageButtonStates(bool selectButton = true)
     {
         bool isLeftEnabled = _currentPage > 0;
         _leftButton.interactable = isLeftEnabled;
         bool isRightEnabled = _currentPage + 1 < _pages.Count;
         _rightButton.interactable = isRightEnabled;
-        var button = _pages[_currentPage].GetComponentInChildren<Button>();
-        EventSystem.current.SetSelectedGameObject(button.gameObject);
+        if (selectButton)
+        {
+            var button = _pages[_currentPage].GetComponentInChildren<Button>();
+            EventSystem.current.SetSelectedGameObject(button.gameObject);
+        }
     }
 
     private GameObject GenerateRecipeButton(ScriptableRecipe recipe)

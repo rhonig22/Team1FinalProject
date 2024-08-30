@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class UnlockedUXController : MonoBehaviour
 {
-    [SerializeField] private GameObject _doneButton;
+    [SerializeField] GameObject _doneButton;
 
     private void OnEnable()
     {
