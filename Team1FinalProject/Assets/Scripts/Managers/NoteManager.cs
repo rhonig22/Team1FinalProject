@@ -19,8 +19,8 @@ public class NoteManager : MonoBehaviour
     public UnityEvent<int> MissedHitEvent { get; private set; } = new UnityEvent<int>();
 
     public readonly float NoteLoopSize = 31.5f;
-    public readonly int NormalNotePoints = 100;
-    public readonly int GoodNotePoints = 120;
+    public readonly int NormalNotePoints = 120;
+    public readonly int GoodNotePoints = 140;
     public readonly int PerfectNotePoints = 150;
     public bool IsBeatStarted { get; private set; } = false;
     public int Score { get; private set; } = 0;
