@@ -7,6 +7,7 @@ public class RecipeUXController : MonoBehaviour
 {
     [SerializeField] GameObject _unlockScreen;
     [SerializeField] TextMeshProUGUI _unlockText;
+    public static bool DontSelectRecipe = false;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class RecipeUXController : MonoBehaviour
                 CustomizationManager.Instance.SetCurrentCustomization(unlock.GetItemType(), unlock.GetAesthetic());
             }
 
+            DontSelectRecipe = true;
             _unlockText.text = newText;
             _unlockScreen.SetActive(true);
         }
