@@ -15,6 +15,7 @@ public class StarController : MonoBehaviour
     [SerializeField] Sprite _halfStar;
     [SerializeField] Sprite _threeQuarterStar;
     [SerializeField] Sprite _fullStar;
+    [SerializeField] Animator _animator;
     private int _maxScore;
 
     private int _currentStarCount = 0;
@@ -62,6 +63,8 @@ public class StarController : MonoBehaviour
             _starImage1.sprite = _fullStar;
             _starImage2.sprite = _fullStar;
             _starImage3.sprite = _fullStar;
+            if (_currentStarCount == 2)
+                _animator.SetTrigger("ShineStars");
             _currentStarCount = 3;
         }
         else if (_currentScore >= _secondStar)
@@ -69,6 +72,8 @@ public class StarController : MonoBehaviour
             _starImage1.sprite = _fullStar;
             _starImage2.sprite = _fullStar;
             _starImage3.sprite = GetPartialStar(_currentScore - _secondStar);
+            if (_currentStarCount == 1)
+                _animator.SetTrigger("ShineStars");
             _currentStarCount = 2;
         }
         else if (_currentScore >= _firstStar)
@@ -76,6 +81,8 @@ public class StarController : MonoBehaviour
             _starImage1.sprite = _fullStar;
             _starImage2.sprite = GetPartialStar(_currentScore - _firstStar);
             _starImage3.sprite = _emptyStar;
+            if (_currentStarCount == 0)
+                _animator.SetTrigger("ShineStars");
             _currentStarCount = 1;
         }
         else
