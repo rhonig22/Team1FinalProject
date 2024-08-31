@@ -7,6 +7,7 @@ public class NextStepAppliance : MonoBehaviour
     [SerializeField] private Station _station;
     [SerializeField] float _pulseSize = 1.05f;
     [SerializeField] float _returnSpeed = 4f;
+    [SerializeField] GameObject _glow;
     private Vector3 _startSize;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,11 @@ public class NextStepAppliance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            transform.localScale = Vector3.Lerp(transform.localScale, _startSize, Time.deltaTime * _returnSpeed);
+        transform.localScale = Vector3.Lerp(transform.localScale, _startSize, Time.deltaTime * _returnSpeed);
+        var step = RecipeManager.Instance.GetNextStep();
+        if (step != null && step.Station == _station)
+            _glow.SetActive(true);
+        else
+            _glow.SetActive(false);
     }
 }
