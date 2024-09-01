@@ -9690,6 +9690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Celebration Particles
       objectReference: {fileID: 0}
+    - target: {fileID: 2722425073664606550, guid: 7a07be3402385884b967d27b3029f386, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6837188756176028658, guid: 7a07be3402385884b967d27b3029f386, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
