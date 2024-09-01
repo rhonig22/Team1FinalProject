@@ -26,8 +26,9 @@ public class NoteManager : MonoBehaviour
     public int Score { get; private set; } = 0;
     public int NotesHit { get; private set; } = 0;
     public int NotesMissed { get; private set; } = 0;
-    private Vector3 _messageOffset = new Vector3(-275f, 0, 1);
-    private Vector3 _messagePlacement = new Vector3(-320f, -275f, 1);
+    private Vector3 _messagePlacement = new Vector3(-500f, -320f, 1);
+    private Vector3 _perfectShift = new Vector3(25f, 0, 1);
+    private GameObject _hitText;
 
     private int _lastBeat;
 
@@ -61,6 +62,12 @@ public class NoteManager : MonoBehaviour
                 if (CheckForNewBeat(sampledTime))
                 {
                     BeatEvent.Invoke(_lastBeat);
+                }
+
+                if (!LaneScroller.Instance.HasUpcomingNotes() && _hitText != null)
+                {
+                    Destroy(_hitText);
+                    _hitText = null;
                 }
             }
         }
@@ -103,20 +110,27 @@ public class NoteManager : MonoBehaviour
         SuccessfulHitEvent.Invoke(note);
         RecipeManager.Instance.IncrementIngredientSprite();
 
-        GameObject hitText = null;
+        if (_hitText != null)
+        {
+            Destroy(_hitText);
+            _hitText = null;
+        }
+
+        var shift = false;
         switch (type)
         {
             case HitType.Normal:
                 Score += NormalNotePoints;
-                hitText = Instantiate(_normalHitMessage, _normalHitMessage.transform.position, _normalHitMessage.transform.rotation);
+                _hitText = Instantiate(_normalHitMessage, _normalHitMessage.transform.position, _normalHitMessage.transform.rotation);
                 break;
             case HitType.Good:
                 Score += GoodNotePoints;
-                hitText = Instantiate(_goodHitMessage, _goodHitMessage.transform.position, _goodHitMessage.transform.rotation);
+                _hitText = Instantiate(_goodHitMessage, _goodHitMessage.transform.position, _goodHitMessage.transform.rotation);
                 break;
             case HitType.Perfect:
                 Score += PerfectNotePoints;
-                hitText = Instantiate(_perfectHitMessage, _perfectHitMessage.transform.position, _perfectHitMessage.transform.rotation);
+                _hitText = Instantiate(_perfectHitMessage, _perfectHitMessage.transform.position, _perfectHitMessage.transform.rotation);
+                shift = true;
                 break;
             case HitType.Missed:
             case HitType.Upcoming:
@@ -124,11 +138,10 @@ public class NoteManager : MonoBehaviour
                 break;
         }
 
-        if (hitText != null) {
+        if (_hitText != null) {
             
-            var hitTextController = hitText.GetComponent<HitTextUXController>();
-            hitTextController.SetLocation(_messagePlacement);
-            
+            var hitTextController = _hitText.GetComponent<HitTextUXController>();
+            hitTextController.SetLocation(_messagePlacement + (shift ? _perfectShift : Vector3.zero));
         }
 
      
@@ -140,7 +153,12 @@ public class NoteManager : MonoBehaviour
         SoundManager.Instance.PlaySound(_noteMissedClip, Vector3.zero);
         NotesMissed++;
         MissedHitEvent.Invoke(NotesMissed);
-        //Debug.Log("REALLY  missed");
+
+        if (_hitText != null)
+        {
+            Destroy(_hitText);
+            _hitText = null;
+        }
     }
 
     private void ResetScore()
