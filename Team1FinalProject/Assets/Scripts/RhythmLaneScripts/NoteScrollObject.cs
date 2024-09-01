@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using mixpanel;
 
 public class NoteScrollObject : MonoBehaviour
 {
@@ -19,8 +20,6 @@ public class NoteScrollObject : MonoBehaviour
     public bool CanBePressed { get; private set; } = false;
     public HitType HitType { get; private set; } = HitType.Upcoming;
     private Vector3 _startSize;
-
-
 
     private void Start()
     {
@@ -76,6 +75,8 @@ public class NoteScrollObject : MonoBehaviour
         {
             SoundManager.Instance.PlaySound(_noteClip, transform.position);
         }
+
+        LogNoteEvent(true);
     }
 
     public void SetInactive()
@@ -91,7 +92,19 @@ public class NoteScrollObject : MonoBehaviour
             _spriteRenderer.sprite = _missedSprite;
             NoteManager.Instance.NoteMissed();
         }
+
+        LogNoteEvent(false);
     }
 
     public string GetButton() { return _buttonName; }
+
+    private void LogNoteEvent(bool wasHit)
+    {
+        var props = new Value();
+        props["recipeName"] = RecipeManager.Instance.GetRecipeName();
+        props["ingredientName"] = RecipeManager.Instance.GetNextStep().Ingredient.GetName();
+        props["noteNumber"] = LaneScroller.NoteCounter;
+        props["wasHit"] = wasHit;
+        MixpanelLogger.Instance.LogEvent("Note Event", props);
+    }
 }

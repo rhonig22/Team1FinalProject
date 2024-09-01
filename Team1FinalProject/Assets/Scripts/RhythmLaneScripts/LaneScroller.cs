@@ -15,6 +15,7 @@ public class LaneScroller : MonoBehaviour
     private readonly float _secondsPerMinute = 60f;
     private List<NoteScrollObject> _notes = new List<NoteScrollObject>();
     private List<GameObject> _ingredientQueue = new List<GameObject>();
+    public static int NoteCounter { get; private set; } = 0;
 
     private void Awake()
     {
@@ -77,6 +78,7 @@ public class LaneScroller : MonoBehaviour
     {
         var hasNotes = HasUpcomingNotes();
         _notes.Remove(note);
+        NoteCounter++;
 
         if (hasNotes && !HasUpcomingNotes())
         {
@@ -104,6 +106,7 @@ public class LaneScroller : MonoBehaviour
     private void GetNextIngredient()
     {
         var nextIngredientPrefab = PopIngredientQueue();
+        NoteCounter = 1;
         var ingredient = Instantiate(nextIngredientPrefab, new Vector3(transform.position.x, transform.position.y + _currentTop, 0f), transform.rotation);
         ingredient.transform.parent = transform;
         _notes.AddRange(ingredient.GetComponentsInChildren<NoteScrollObject>());
