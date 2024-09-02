@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626495e4a69e6194d92de95397e8866a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IngredientName: Empty
+  IngredientName: Plating
   _measureCount: 4
 --- !u!1001 &21744602448362629
 PrefabInstance:

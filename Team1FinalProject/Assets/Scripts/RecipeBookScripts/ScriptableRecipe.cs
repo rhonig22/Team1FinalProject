@@ -54,8 +54,8 @@ public class ScriptableRecipe : ScriptableObject
     public int GetUnlockRequirement()
     {
         //for debugging w/o having to unlock recipes
-        //return 0;
-        return _unlockRequirement;
+        return 0;
+        //return _unlockRequirement;
     }
 
     public int GetBPM()
