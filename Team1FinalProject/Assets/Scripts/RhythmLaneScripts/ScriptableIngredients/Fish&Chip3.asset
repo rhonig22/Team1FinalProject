@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: Fish&Chip3
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: fish&chips3
   _hasAnimation: 0
   _animationTrigger: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: efaf42ca40dcf434c969db9bc6c06924, type: 3}

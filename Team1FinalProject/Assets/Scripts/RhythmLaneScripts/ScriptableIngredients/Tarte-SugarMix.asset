@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: Tarte-SugarMix
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: sugar
   _hasAnimation: 0
   _animationTrigger: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: aa3370abb0f05354a8e4ddffd1c58c01, type: 3}

@@ -13,6 +13,7 @@ public class ScriptableRecipe : ScriptableObject
     [SerializeField] private Sprite _recipeVictorySprite;
     [SerializeField] private AudioClip _backingTrack;
     [SerializeField] private int _bpm;
+    private readonly int _defaultMax = 1000;
 
     public string GetName()
     {
@@ -48,7 +49,10 @@ public class ScriptableRecipe : ScriptableObject
             totalScore += step.Ingredient.GetMaxIngredientScore();
         }
 
-        return Mathf.FloorToInt(totalScore*_threeStarPercent);
+        if (totalScore > 0)
+            return Mathf.FloorToInt(totalScore*_threeStarPercent);
+
+        return _defaultMax;
     }
 
     public int GetUnlockRequirement()

@@ -989,6 +989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unlockScreen: {fileID: 680292945}
   _unlockText: {fileID: 193627459}
+  _recipeBook: {fileID: 670679333}
 --- !u!224 &553024383 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8779053212087363953, guid: 25e8b3ff7352d244dbccde83f7371230, type: 3}

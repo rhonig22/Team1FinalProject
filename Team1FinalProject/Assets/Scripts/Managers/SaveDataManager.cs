@@ -196,6 +196,7 @@ public class SaveDataManager : MonoBehaviour
 
         _unlockables.UnlockablesList.Add(unlocked);
         _unlockableMap[unlockable] = true;
+        SetUnlockablesData();
     }
 
     public bool IsUnlocked(string unlockable)
