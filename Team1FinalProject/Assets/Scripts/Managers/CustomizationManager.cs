@@ -21,6 +21,11 @@ public class CustomizationManager : MonoBehaviour
 
     private void Start()
     {
+        ResetCustomizations();
+    }
+
+    public void ResetCustomizations()
+    {
         SetInitialUnlocks();
         GetCurrentCustomizations();
     }

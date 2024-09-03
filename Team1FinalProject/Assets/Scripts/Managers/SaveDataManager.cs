@@ -223,5 +223,6 @@ public class SaveDataManager : MonoBehaviour
         _recipeData = null;
         _unlockableMap = new Dictionary<string, bool>();
         SetUpDataManager();
+        CustomizationManager.Instance.ResetCustomizations();
     }
 }

@@ -30,7 +30,7 @@ public class RecipeButtonController : MonoBehaviour
         _recipe = recipe;
         _recipeNameText.text = recipe.GetName();
         _recipeImage.sprite = recipe.getSprite();
-        bool unlocked = recipe.GetUnlockRequirement() <= SaveDataManager.Instance.GetStarCount();
+        bool unlocked = recipe.GetUnlockRequirement() <= SaveDataManager.Instance.GetStarCount() || GameManager.IsUnlockedMode;
         _unlockedArea.SetActive(unlocked);
         _lockedArea.SetActive(!unlocked);
         _unlockRequirement.text = "" + recipe.GetUnlockRequirement();
