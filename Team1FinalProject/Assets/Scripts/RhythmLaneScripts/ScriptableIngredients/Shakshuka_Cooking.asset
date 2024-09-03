@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
-  m_Name: FlameWok
+  m_Name: Shakshuka_Cooking
   m_EditorClassIdentifier: 
-  _ingredientName: FlameWok
+  _ingredientName: Shakshuka
   _hasAnimation: 1
-  _animationTrigger: FlameWok
-  _ingredientPrefab: {fileID: 316161610368572042, guid: 5a5557a7aa61d8f47acd9ce4cf6fd74a, type: 3}
+  _animationTrigger: ShakshukaSauce
+  _ingredientPrefab: {fileID: 4153989815781522872, guid: 365669298e0c8c24897e50b9f7208303, type: 3}
   _ingredientSprites:
-  - {fileID: 1958853848, guid: 943da62f2adbd434d9eceba990a18e1d, type: 3}
-  - {fileID: -37688445, guid: 943da62f2adbd434d9eceba990a18e1d, type: 3}
+  - {fileID: 365347956, guid: 2e55ca3de3e35374b89e6a1f48fdd186, type: 3}
+  - {fileID: -1117366365, guid: 2e55ca3de3e35374b89e6a1f48fdd186, type: 3}
   _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
   - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
