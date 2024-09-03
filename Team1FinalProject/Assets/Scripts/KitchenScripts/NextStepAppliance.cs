@@ -8,16 +8,32 @@ public class NextStepAppliance : MonoBehaviour
     [SerializeField] float _pulseSize = 1.05f;
     [SerializeField] float _returnSpeed = 4f;
     [SerializeField] GameObject _glow;
+    [SerializeField] GameObject _sparkles;
+    [SerializeField] List<Transform> _sparklePositions = new List<Transform>();
+    private readonly int _sparkleCount = 3;
+    private readonly float _sparkleDelay = .1f;
+    private int _positionIndex = 0;
+    private List<Animator> _sparkleAnimators = new List<Animator>();
     private Vector3 _startSize;
+
     // Start is called before the first frame update
     void Start()
     {
         _startSize = transform.localScale;
+        for (var i = 0; i < _sparkleCount; i++) {
+            var sparkle = Instantiate(_sparkles, transform);
+            _sparkleAnimators.Add(sparkle.GetComponent<Animator>());
+        }
+
         NoteManager.Instance.BeatEvent.AddListener((int beat) => 
         {
             var step = RecipeManager.Instance.GetNextStep();
             if (step != null && step.Station == _station)
+            {
                 transform.localScale = _startSize * _pulseSize;
+
+                StartCoroutine(TriggerSparkles());
+            }
         });
 
     }
@@ -31,5 +47,18 @@ public class NextStepAppliance : MonoBehaviour
             _glow.SetActive(true);
         else
             _glow.SetActive(false);
+    }
+
+    private IEnumerator TriggerSparkles()
+    {
+        int typeIndex = 0;
+        foreach (var sparkleAnimator in _sparkleAnimators)
+        {
+            sparkleAnimator.transform.localPosition = _sparklePositions[_positionIndex++].localPosition;
+            sparkleAnimator.SetTrigger("Sparkle" + (typeIndex + 1));
+            typeIndex = (typeIndex + 1) % 3;
+            _positionIndex %= _sparklePositions.Count;
+            yield return new WaitForSeconds(_sparkleDelay);
+        }
     }
 }
