@@ -16,6 +16,7 @@ public class LaneScroller : MonoBehaviour
     private List<NoteScrollObject> _notes = new List<NoteScrollObject>();
     private List<GameObject> _ingredientQueue = new List<GameObject>();
     public static int NoteCounter { get; private set; } = 0;
+    private bool _isIngredientRunning = false;
 
     private void Awake()
     {
@@ -65,6 +66,10 @@ public class LaneScroller : MonoBehaviour
     {
         return _notes.Count > 0 || _ingredientQueue.Count > 0;
     }
+    public bool IsIngredientRunning()
+    {
+        return _isIngredientRunning;
+    }
 
     public NoteScrollObject GetNextNote()
     {
@@ -82,8 +87,15 @@ public class LaneScroller : MonoBehaviour
 
         if (hasNotes && !HasUpcomingNotes())
         {
-            RecipeManager.Instance.IncrementStep();
+            StartCoroutine(DelayedStepIncrement());
         }
+    }
+
+    private IEnumerator DelayedStepIncrement()
+    {
+        yield return new WaitForSeconds(.5f);
+        RecipeManager.Instance.IncrementStep();
+        _isIngredientRunning = false;
     }
 
     public void AddToIngredientQueue(GameObject ingredientPrefab)
@@ -97,6 +109,7 @@ public class LaneScroller : MonoBehaviour
         {
             var nextIngredientPrefab = _ingredientQueue[0];
             _ingredientQueue.RemoveAt(0);
+            _isIngredientRunning = true;
             return nextIngredientPrefab;
         }
 

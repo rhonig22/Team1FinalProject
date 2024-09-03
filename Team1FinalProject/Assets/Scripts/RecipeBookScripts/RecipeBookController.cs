@@ -102,9 +102,14 @@ public class RecipeBookController : MonoBehaviour
         _rightButton.interactable = isRightEnabled;
         if (selectButton)
         {
-            var button = _pages[_currentPage].GetComponentInChildren<Button>();
-            EventSystem.current.SetSelectedGameObject(button.gameObject);
+            SelectCurrentPageButton();
         }
+    }
+
+    public void SelectCurrentPageButton()
+    {
+        var button = _pages[_currentPage].GetComponentInChildren<Button>();
+        EventSystem.current.SetSelectedGameObject(button.gameObject);
     }
 
     private GameObject GenerateRecipeButton(ScriptableRecipe recipe)

@@ -20,7 +20,7 @@ public class KitchenCanvasController : MonoBehaviour
 
     private void Update()
     {
-        var hasNotes = LaneScroller.Instance.HasUpcomingNotes();
+        var hasNotes = LaneScroller.Instance.IsIngredientRunning();
         if (hasNotes && !IsRhythmSection)
         {
             _canStartAnimationFlag = true;

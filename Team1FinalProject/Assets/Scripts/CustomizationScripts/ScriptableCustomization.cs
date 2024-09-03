@@ -12,6 +12,7 @@ public class ScriptableCustomization : ScriptableObject
     [SerializeField] private Aesthetic _aesthetic;
     [SerializeField] private ItemType _itemType;
     [SerializeField] private UnlockRequirement _requirement;
+    [SerializeField] private bool _isBase;
     private bool _unlocked { get; set; } = false;
 
     public bool GetInitialUnlock()
@@ -26,7 +27,7 @@ public class ScriptableCustomization : ScriptableObject
 
     public bool CheckUnlockRequirement()
     {
-        if (_unlocked)
+        if (_unlocked || _isBase)
             return false;
 
         bool shouldUnlock = true;

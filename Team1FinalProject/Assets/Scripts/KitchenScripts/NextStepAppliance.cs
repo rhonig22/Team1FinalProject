@@ -10,8 +10,7 @@ public class NextStepAppliance : MonoBehaviour
     [SerializeField] GameObject _glow;
     [SerializeField] GameObject _sparkles;
     [SerializeField] List<Transform> _sparklePositions = new List<Transform>();
-    private readonly int _sparkleCount = 3;
-    private readonly float _sparkleDelay = .1f;
+    private readonly float _sparkleDelay = .02f;
     private int _positionIndex = 0;
     private List<Animator> _sparkleAnimators = new List<Animator>();
     private Vector3 _startSize;
@@ -20,7 +19,7 @@ public class NextStepAppliance : MonoBehaviour
     void Start()
     {
         _startSize = transform.localScale;
-        for (var i = 0; i < _sparkleCount; i++) {
+        for (var i = 0; i < _sparklePositions.Count; i++) {
             var sparkle = Instantiate(_sparkles, transform);
             _sparkleAnimators.Add(sparkle.GetComponent<Animator>());
         }

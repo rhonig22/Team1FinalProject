@@ -7,6 +7,7 @@ public class RecipeUXController : MonoBehaviour
 {
     [SerializeField] GameObject _unlockScreen;
     [SerializeField] TextMeshProUGUI _unlockText;
+    [SerializeField] RecipeBookController _recipeBook;
     public static bool DontSelectRecipe = false;
 
     private void Start()
@@ -34,6 +35,7 @@ public class RecipeUXController : MonoBehaviour
 
     public void CloseUnlockScreen()
     {
-        _unlockScreen.SetActive(false); 
+        _unlockScreen.SetActive(false);
+        _recipeBook.SelectCurrentPageButton();
     }
 }
