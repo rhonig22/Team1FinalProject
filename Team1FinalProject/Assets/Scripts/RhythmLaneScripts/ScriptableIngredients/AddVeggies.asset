@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ingredientName: AddVeggies
   _hasAnimation: 1
-  _animationTrigger: SauteVeggies
+  _animationTrigger: FlameWok
   _ingredientPrefab: {fileID: 316161610368572042, guid: 1b1d1cab8dd25c74d813f0e41d850bf1, type: 3}
   _ingredientSprites:
-  - {fileID: -1816306458, guid: 943da62f2adbd434d9eceba990a18e1d, type: 3}
-  - {fileID: -1780933370, guid: 943da62f2adbd434d9eceba990a18e1d, type: 3}
+  - {fileID: 1958853848, guid: 943da62f2adbd434d9eceba990a18e1d, type: 3}
+  - {fileID: -37688445, guid: 943da62f2adbd434d9eceba990a18e1d, type: 3}
   _backgroundPrepSprites:
   - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
