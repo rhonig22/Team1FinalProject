@@ -9,6 +9,7 @@ public class RecipeUXController : MonoBehaviour
 {
     [SerializeField] GameObject _unlockScreen;
     [SerializeField] TextMeshProUGUI _unlockText;
+    [SerializeField] TextMeshProUGUI _starCount;
     [SerializeField] Image _unlockImage;
     [SerializeField] RecipeBookController _recipeBook;
     public static bool DontSelectRecipe = false;
@@ -16,6 +17,7 @@ public class RecipeUXController : MonoBehaviour
 
     private void Start()
     {
+        _starCount.text = "" + SaveDataManager.Instance.GetStarCount();
         _unlocks = CustomizationManager.Instance.CheckUnlocks();
         if (_unlocks.Count > 0)
         {
