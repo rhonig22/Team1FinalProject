@@ -65,7 +65,7 @@ public class ScriptableCustomization : ScriptableObject
 
     public bool IsUnlocked()
     {
-        return _unlocked || GameManager.IsUnlockedMode;
+        return _unlocked || _isBase || GameManager.IsUnlockedMode;
     }
 
     public string GetName()
