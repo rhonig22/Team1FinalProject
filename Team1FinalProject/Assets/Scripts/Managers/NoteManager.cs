@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using Cinemachine;
 
 public class NoteManager : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class NoteManager : MonoBehaviour
     [SerializeField] private GameObject _normalHitMessage;
     [SerializeField] private GameObject _goodHitMessage;
     [SerializeField] private GameObject _perfectHitMessage;
-   
+    [SerializeField] private CinemachineImpulseSource _impulse;
+
     public float BeatTempo { get; private set; }
     public UnityEvent<int> BeatEvent { get; private set; } = new UnityEvent<int>();
     public UnityEvent<NoteScrollObject> SuccessfulHitEvent { get; private set; } = new UnityEvent<NoteScrollObject>();
@@ -29,6 +31,7 @@ public class NoteManager : MonoBehaviour
     private Vector3 _messagePlacement = new Vector3(-500f, -320f, 1);
     private Vector3 _perfectShift = new Vector3(25f, 0, 1);
     private GameObject _hitText;
+    private readonly float _impulseSize = .05f;
 
     private int _lastBeat;
 
@@ -41,6 +44,11 @@ public class NoteManager : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    private void Start()
+    {
+        BeatEvent.AddListener((int beat) => ScreenBump(beat));
     }
 
     private void Update()
@@ -71,6 +79,29 @@ public class NoteManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void ScreenBump(int beat)
+    {
+        switch(beat % 4)
+        {
+            case 0:
+                _impulse.m_DefaultVelocity = new Vector3(0, _impulseSize, 0);
+                break;
+            case 1:
+                _impulse.m_DefaultVelocity = new Vector3(_impulseSize, 0, 0);
+                break;
+            case 2:
+                _impulse.m_DefaultVelocity = new Vector3(0, _impulseSize * -1, 0);
+                break;
+            case 3:
+                _impulse.m_DefaultVelocity = new Vector3(_impulseSize * -1, 0, 0);
+                break;
+            default:
+                break;
+        }
+
+        _impulse.GenerateImpulse();
     }
 
     public void StopBeats()
