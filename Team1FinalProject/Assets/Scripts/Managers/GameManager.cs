@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    [SerializeField] private AudioClip _backingTrack;
     public static bool IsUnlockedMode { get; private set; } = false;
     private readonly string _titleScene = "TitleScene";
     private readonly string _kitchenScene = "KitchenScene";
@@ -31,6 +32,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        PlayBackingTrack();
+    }
+
     // called second
     private void OnLevelWasLoaded(int level)
     {
@@ -47,38 +53,38 @@ public class GameManager : MonoBehaviour
 
     public void LoadDemo()
     {
-        _backStack.Add(SceneManager.GetActiveScene().name);
+        AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_demoScene);
     }
 
     public void LoadSettings()
     {
-        _backStack.Add(SceneManager.GetActiveScene().name);
+        AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_settingsScene);
     }
 
     public void LoadKitchen()
     {
-        _backStack.Add(SceneManager.GetActiveScene().name);
+        AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_kitchenScene);
     }
 
     public void LoadIntro()
     {
-        _backStack.Add(SceneManager.GetActiveScene().name);
+        AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_introStoryScene);
     }
 
     public void LoadRecipeBook(bool addToBackStack = true)
     {
         if (addToBackStack)
-            _backStack.Add(SceneManager.GetActiveScene().name);
+            AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_recipeBookScene);
     }
 
     public void LoadHubScene()
     {
-        _backStack.Add(SceneManager.GetActiveScene().name);
+        AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_hubScene);
     }
 
@@ -90,13 +96,13 @@ public class GameManager : MonoBehaviour
 
     public void LoadControls()
     {
-        _backStack.Add(SceneManager.GetActiveScene().name);
+        AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_controlsScene);
     }
 
     public void LoadCredits()
     {
-        _backStack.Add(SceneManager.GetActiveScene().name);
+        AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_creditsScene);
     }
 
@@ -126,4 +132,20 @@ public class GameManager : MonoBehaviour
         TransitionManager.Instance.FadeOut(loadNextBoss);
     }
 
+    private void AddToBackstack(string sceneName)
+    {
+        if (sceneName == _introStoryScene)
+            return;
+
+        _backStack.Add(sceneName);
+    }
+
+    public void PlayBackingTrack()
+    {
+        var music = MusicManager.Instance.getMusicSource();
+        if (music.isPlaying && music.clip == _backingTrack)
+            return;
+
+        MusicManager.Instance.PlayMusicClip(_backingTrack);
+    }
 }
