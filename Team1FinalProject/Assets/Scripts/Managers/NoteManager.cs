@@ -25,6 +25,7 @@ public class NoteManager : MonoBehaviour
     public readonly int GoodNotePoints = 140;
     public readonly int PerfectNotePoints = 150;
     public bool IsBeatStarted { get; private set; } = false;
+    public bool IsDoubleTime { get; private set; } = false;
     public int Score { get; private set; } = 0;
     public int NotesHit { get; private set; } = 0;
     public int NotesMissed { get; private set; } = 0;
@@ -113,14 +114,15 @@ public class NoteManager : MonoBehaviour
 
     public void StartBeats()
     {
-        BeatTempo = RecipeManager.Instance.GetBPM();
+        IsDoubleTime = RecipeManager.Instance.IsDoubleTime();
+        BeatTempo = RecipeManager.Instance.GetBPM() * (IsDoubleTime ? 2 : 1);
         MusicManager.Instance.PlayMusicClip(RecipeManager.Instance.GetBackingTrack());
         ResetScore();
         IsBeatStarted = true;
     }
     public float GetBeatLength()
     {
-        return 60f / BeatTempo;
+        return (60f / BeatTempo) * (IsDoubleTime ? 2 : 1);
     }
 
     public bool CheckForNewBeat(float beat)
