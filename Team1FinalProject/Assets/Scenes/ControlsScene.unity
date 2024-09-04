@@ -1048,6 +1048,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 185996049860906320, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 238356839207011127, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1095,6 +1099,14 @@ PrefabInstance:
     - target: {fileID: 1199675475914703042, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
       propertyPath: m_audioClip
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649901658606567728, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593792905079833937, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
