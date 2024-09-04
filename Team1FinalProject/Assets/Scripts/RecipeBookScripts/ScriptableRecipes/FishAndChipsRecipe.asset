@@ -27,6 +27,6 @@ MonoBehaviour:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 745acb1f77145de458e03ed826580e30, type: 2}
   _recipeSprite: {fileID: 21300000, guid: bcfbfb9cd6c1c2040bcb3530a299049a, type: 3}
-  _recipeVictorySprite: {fileID: 0}
+  _recipeVictorySprite: {fileID: 21300000, guid: c38d8e64abb23d642a5f3b3d29552dd0, type: 3}
   _backingTrack: {fileID: 8300000, guid: a5ee31dc0784a504c87dbafae4148c30, type: 3}
   _bpm: 80
