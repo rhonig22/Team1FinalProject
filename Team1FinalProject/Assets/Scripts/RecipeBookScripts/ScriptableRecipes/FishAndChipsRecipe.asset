@@ -30,3 +30,4 @@ MonoBehaviour:
   _recipeVictorySprite: {fileID: 21300000, guid: c38d8e64abb23d642a5f3b3d29552dd0, type: 3}
   _backingTrack: {fileID: 8300000, guid: a5ee31dc0784a504c87dbafae4148c30, type: 3}
   _bpm: 80
+  _doubleTime: 1

@@ -108,6 +108,11 @@ public class RecipeManager : MonoBehaviour
         return _currentRecipe.GetBPM();
     }
 
+    public bool IsDoubleTime()
+    {
+        return _currentRecipe.IsDoubleTime();
+    }
+
     public AudioClip GetBackingTrack()
     {
         return _currentRecipe.GetBackingTrack();
