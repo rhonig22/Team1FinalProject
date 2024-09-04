@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: Zucchini_for_courgettes
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: zucchini
   _hasAnimation: 1
   _animationTrigger: SlicedZucchini
   _ingredientPrefab: {fileID: 316161610368572042, guid: 9cd6278aa25a5b14ca6dc5a5b0e32c8a, type: 3}

@@ -22,6 +22,10 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: c3d5efeae5d944a439183e66729bf711, type: 2}
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 58c4dbbd876ae9b44930aedecb545bca, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 3251a9c4ce8c19f4198616a17806047d, type: 2}
+  - Station: 1
+    Ingredient: {fileID: 11400000, guid: ef0f70bf7e259e44cbb9e88db9793422, type: 2}
   - Station: 1
     Ingredient: {fileID: 11400000, guid: 7261fc551299fb34db9af5e1ba490a21, type: 2}
   - Station: 1
@@ -34,3 +38,4 @@ MonoBehaviour:
   _recipeVictorySprite: {fileID: 0}
   _backingTrack: {fileID: 8300000, guid: ade0cf2a7a52c6c418736225a11c59cd, type: 3}
   _bpm: 56
+  _doubleTime: 1

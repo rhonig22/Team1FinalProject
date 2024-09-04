@@ -16,8 +16,8 @@ MonoBehaviour:
   _customizationSprite: {fileID: 21300000, guid: 7a5ee4ad3fbe88f46b517c18e1f2de6f, type: 3}
   _aesthetic: 0
   _itemType: 0
-  _unlocked: 1
   _requirement:
     RequirementType: 0
     MinValue: 0
     Recipes: []
+  _isBase: 1

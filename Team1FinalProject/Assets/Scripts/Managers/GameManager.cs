@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public static bool IsUnlockedMode { get; private set; } = false;
     private readonly string _titleScene = "TitleScene";
     private readonly string _kitchenScene = "KitchenScene";
     private readonly string _settingsScene = "SettingsScene";
@@ -34,6 +35,14 @@ public class GameManager : MonoBehaviour
     private void OnLevelWasLoaded(int level)
     {
         TransitionManager.Instance.FadeIn(() => { });
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Enable Debug Button 1"))
+        {
+            IsUnlockedMode = true;
+        }
     }
 
     public void LoadDemo()

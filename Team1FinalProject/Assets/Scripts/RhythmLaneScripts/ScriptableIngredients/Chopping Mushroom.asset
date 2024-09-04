@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: Chopping Mushroom
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: chopping mushrooms
   _hasAnimation: 0
   _animationTrigger: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: ce9b1d6eac8987f45ab2475996e6912f, type: 3}

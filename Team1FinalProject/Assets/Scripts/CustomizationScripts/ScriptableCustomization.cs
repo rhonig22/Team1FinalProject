@@ -11,20 +11,23 @@ public class ScriptableCustomization : ScriptableObject
     [SerializeField] private Sprite _customizationSprite;
     [SerializeField] private Aesthetic _aesthetic;
     [SerializeField] private ItemType _itemType;
-    [SerializeField] private bool _unlocked = false;
     [SerializeField] private UnlockRequirement _requirement;
+    [SerializeField] private bool _isBase;
+    private bool _unlocked { get; set; } = false;
 
     public bool GetInitialUnlock()
     {
         if (SaveDataManager.Instance.IsUnlocked(_customizationName))
             _unlocked = true;
+        else
+            _unlocked = false;
 
         return _unlocked; 
     }
 
     public bool CheckUnlockRequirement()
     {
-        if (_unlocked)
+        if (_unlocked || _isBase)
             return false;
 
         bool shouldUnlock = true;
@@ -60,7 +63,10 @@ public class ScriptableCustomization : ScriptableObject
         return shouldUnlock;
     }
 
-    public bool IsUnlocked() { return _unlocked; }
+    public bool IsUnlocked()
+    {
+        return _unlocked || _isBase || GameManager.IsUnlockedMode;
+    }
 
     public string GetName()
     {

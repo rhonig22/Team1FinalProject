@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: Tomato_for_courgettes
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: tomato
   _hasAnimation: 0
   _animationTrigger: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: 7ef084904762e4d4f9e32dc32ae3400e, type: 3}

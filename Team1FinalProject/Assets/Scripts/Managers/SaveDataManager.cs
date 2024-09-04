@@ -196,6 +196,7 @@ public class SaveDataManager : MonoBehaviour
 
         _unlockables.UnlockablesList.Add(unlocked);
         _unlockableMap[unlockable] = true;
+        SetUnlockablesData();
     }
 
     public bool IsUnlocked(string unlockable)
@@ -223,5 +224,6 @@ public class SaveDataManager : MonoBehaviour
         _recipeData = null;
         _unlockableMap = new Dictionary<string, bool>();
         SetUpDataManager();
+        CustomizationManager.Instance.ResetCustomizations();
     }
 }
