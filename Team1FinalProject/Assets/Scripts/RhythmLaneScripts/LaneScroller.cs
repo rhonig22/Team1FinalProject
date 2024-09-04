@@ -101,6 +101,7 @@ public class LaneScroller : MonoBehaviour
     public void AddToIngredientQueue(GameObject ingredientPrefab)
     {
         _ingredientQueue.Add(ingredientPrefab);
+        _isIngredientRunning = true;
     }
 
     public GameObject PopIngredientQueue()
@@ -109,7 +110,6 @@ public class LaneScroller : MonoBehaviour
         {
             var nextIngredientPrefab = _ingredientQueue[0];
             _ingredientQueue.RemoveAt(0);
-            _isIngredientRunning = true;
             return nextIngredientPrefab;
         }
 
