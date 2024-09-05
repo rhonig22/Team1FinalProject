@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6965275212855768332}
@@ -101,8 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buttonName: XButton
   _spriteRenderer: {fileID: 772677787050595575}
+  _activeSprite: {fileID: 0}
   _inactiveSprite: {fileID: 21300000, guid: e92b6bb776d38cf4aa3dfb35f2edf332, type: 3}
   _missedSprite: {fileID: 21300000, guid: b659c597b79df9d419454af90192a9eb, type: 3}
+  _activeSpriteKeyboard: {fileID: 0}
+  _inactiveSpriteKeyboard: {fileID: 0}
+  _missedSpriteKeyboard: {fileID: 0}
   _noteClip: {fileID: 0}
   _animator: {fileID: 1663377592685915109}
 --- !u!95 &1663377592685915109
