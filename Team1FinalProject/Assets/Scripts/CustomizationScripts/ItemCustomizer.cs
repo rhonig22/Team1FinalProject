@@ -12,6 +12,7 @@ public class ItemCustomizer : MonoBehaviour
     [SerializeField] private ItemType _itemType;
     [SerializeField] private Button _button;
     [SerializeField] private TextMeshProUGUI _buttonText;
+    [SerializeField] private AudioClip _buttonClick;
     private ScriptableCustomization _currentCustomization;
     private List<ScriptableCustomization> _customizationList;
     public UnityEvent NewCustomizationSet = new UnityEvent();
@@ -23,7 +24,7 @@ public class ItemCustomizer : MonoBehaviour
         _buttonText.text = _currentCustomization.GetName();
         _customizationList = CustomizationManager.Instance.GetUnlockedItems(_itemType);
         if (_customizationList.Count < 2)
-            _button.enabled = false;
+            _button.interactable = false;
     }
 
     public void CustomizerClicked()
@@ -35,5 +36,6 @@ public class ItemCustomizer : MonoBehaviour
         _buttonText.text = nextCustomization.GetName();
         _currentCustomization = nextCustomization;
         NewCustomizationSet.Invoke();
+        SoundManager.Instance.PlaySound(_buttonClick, transform.position);
     }
 }

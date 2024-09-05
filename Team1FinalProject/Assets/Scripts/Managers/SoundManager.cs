@@ -44,7 +44,7 @@ public class SoundManager : MonoBehaviour
         audioSource.volume = _volume;
         audioSource.Play();
         float clipLength = clip.length;
-        //Do not destroy here(but where?) as we need to change volume and that gives a lot of errors
+        Destroy(audioSource.gameObject, clipLength);
         return audioSource;
     }
 
