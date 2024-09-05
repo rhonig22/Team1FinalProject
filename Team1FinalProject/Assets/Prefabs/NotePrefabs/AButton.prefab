@@ -101,12 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buttonName: AButton
   _spriteRenderer: {fileID: 772677787050595575}
-  _activeSprite: {fileID: 0}
+  _activeSprite: {fileID: 21300000, guid: faabf150a133cb349b9f1d1242480b04, type: 3}
   _inactiveSprite: {fileID: 21300000, guid: 63266afc5659b05478476b18ab06d212, type: 3}
   _missedSprite: {fileID: 21300000, guid: 2c9d15c9b8a43d44ea597251324e243c, type: 3}
-  _activeSpriteKeyboard: {fileID: 0}
-  _inactiveSpriteKeyboard: {fileID: 0}
-  _missedSpriteKeyboard: {fileID: 0}
+  _activeSpriteKeyboard: {fileID: 21300000, guid: dd6c5ca84f6cbe947a88d8e6e4ffb523, type: 3}
+  _inactiveSpriteKeyboard: {fileID: 21300000, guid: 83b064ca65e7c8d438453dcc9bc6260d, type: 3}
+  _missedSpriteKeyboard: {fileID: 21300000, guid: 5888296dfb85cb0439cb12f9b1da2628, type: 3}
   _noteClip: {fileID: 0}
   _animator: {fileID: 610365151807063953}
 --- !u!95 &610365151807063953

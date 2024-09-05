@@ -69,14 +69,6 @@ PrefabInstance:
       value: YButton (4)
       objectReference: {fileID: 0}
     - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -137,14 +129,6 @@ PrefabInstance:
     - target: {fileID: 325119394969636372, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
       propertyPath: m_Name
       value: YButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -209,14 +193,6 @@ PrefabInstance:
       value: BButton
       objectReference: {fileID: 0}
     - target: {fileID: 7310177467960135483, guid: e2291e5d5f33c8d49911ed5c77ecd7bd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: e2291e5d5f33c8d49911ed5c77ecd7bd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: e2291e5d5f33c8d49911ed5c77ecd7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -279,14 +255,6 @@ PrefabInstance:
       value: AButton (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7310177467960135483, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -347,14 +315,6 @@ PrefabInstance:
     - target: {fileID: 325119394969636372, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
       propertyPath: m_Name
       value: YButton (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -485,14 +445,6 @@ PrefabInstance:
       value: YButton (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -553,14 +505,6 @@ PrefabInstance:
     - target: {fileID: 325119394969636372, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
       propertyPath: m_Name
       value: YButton (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7310177467960135483, guid: 42ad4e5aed558d641957825f4fdfae4c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -625,14 +569,6 @@ PrefabInstance:
       value: BButton (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7310177467960135483, guid: e2291e5d5f33c8d49911ed5c77ecd7bd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: e2291e5d5f33c8d49911ed5c77ecd7bd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: e2291e5d5f33c8d49911ed5c77ecd7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -693,14 +629,6 @@ PrefabInstance:
     - target: {fileID: 325119394969636372, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
       propertyPath: m_Name
       value: AButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310177467960135483, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7310177467960135483, guid: 9a5a4e1a0dd3ecf4cb4bfa90e7d3e067, type: 3}
       propertyPath: m_LocalPosition.x

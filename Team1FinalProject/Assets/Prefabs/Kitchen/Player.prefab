@@ -242,6 +242,10 @@ MonoBehaviour:
       m_Action: Player Controls
       m_Flags: 8
     m_Flags: 0
+  _spriteRenderer: {fileID: 5067826178194276714}
+  _frontSprite: {fileID: 21300000, guid: 6afb223c8bd64104fb7e8af050660513, type: 3}
+  _backSprite: {fileID: 21300000, guid: 82165ebea91de7b4ea49b1e46b5aa8a4, type: 3}
+  _sideSprite: {fileID: 21300000, guid: 8bc5da650981eaf40ace023f06284e4b, type: 3}
   SameStationAgain:
     m_PersistentCalls:
       m_Calls: []
@@ -272,7 +276,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 440726932693465125}

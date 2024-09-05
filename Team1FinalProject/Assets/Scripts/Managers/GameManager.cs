@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     [SerializeField] private AudioClip _backingTrack;
     public static bool IsUnlockedMode { get; private set; } = false;
+    public static bool IsController { get; private set; } = false;
     private readonly string _titleScene = "TitleScene";
     private readonly string _kitchenScene = "KitchenScene";
     private readonly string _settingsScene = "SettingsScene";
@@ -149,5 +150,14 @@ public class GameManager : MonoBehaviour
             return;
 
         MusicManager.Instance.PlayMusicClip(_backingTrack);
+    }
+
+    public void ControlsChanged(PlayerInput playerInput)
+    {
+        Debug.Log(playerInput.currentControlScheme);
+        if (playerInput.currentControlScheme == "Gamepad")
+        {
+            IsController = true;
+        }
     }
 }
