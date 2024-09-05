@@ -28,6 +28,7 @@ public class NoteScrollObject : MonoBehaviour
     private void Start()
     {
         _startSize = transform.localScale;
+        _spriteRenderer.sprite = GameManager.IsController ? _activeSprite : _activeSpriteKeyboard;
         NoteManager.Instance.SuccessfulHitEvent.AddListener((NoteScrollObject note) => {
             if (note == this)
                 _animator.SetTrigger("Success");
@@ -85,7 +86,7 @@ public class NoteScrollObject : MonoBehaviour
 
     public void SetInactive()
     {
-        _spriteRenderer.sprite = _inactiveSprite;
+        _spriteRenderer.sprite = GameManager.IsController ? _inactiveSprite : _inactiveSpriteKeyboard;
         _wasPressed = true;
     }
 
@@ -93,7 +94,7 @@ public class NoteScrollObject : MonoBehaviour
     {
         if (!_wasPressed)
         {
-            _spriteRenderer.sprite = _missedSprite;
+            _spriteRenderer.sprite = GameManager.IsController ? _missedSprite : _missedSpriteKeyboard;
             NoteManager.Instance.NoteMissed();
         }
 
