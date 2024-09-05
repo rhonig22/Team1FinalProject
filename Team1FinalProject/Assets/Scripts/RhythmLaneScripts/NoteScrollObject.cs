@@ -7,8 +7,12 @@ public class NoteScrollObject : MonoBehaviour
 {
     [SerializeField] private string _buttonName = "XButton";
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Sprite _activeSprite;
     [SerializeField] private Sprite _inactiveSprite;
     [SerializeField] private Sprite _missedSprite;
+    [SerializeField] private Sprite _activeSpriteKeyboard;
+    [SerializeField] private Sprite _inactiveSpriteKeyboard;
+    [SerializeField] private Sprite _missedSpriteKeyboard;
     [SerializeField] private AudioClip _noteClip;
     [SerializeField] private Animator _animator;
 

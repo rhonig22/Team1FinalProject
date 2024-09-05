@@ -45,11 +45,10 @@ public class LaneScroller : MonoBehaviour
             _beatTempo = NoteManager.Instance.BeatTempo / _secondsPerMinute;
             if (NoteManager.Instance.IsDoubleTime)
             {
-                _measureSize *= 2;
-                var rests = transform.GetComponentsInChildren<PulseDot>();
-                foreach (PulseDot rest in rests)
-                    rest.transform.localPosition *= 2f;
+                _measureSize *= NoteManager.Instance.DoubleTimeFactor;
             }
+
+            SetUpInitialRests();
         }
 
         if (NoteManager.Instance.IsBeatStarted)
@@ -136,17 +135,32 @@ public class LaneScroller : MonoBehaviour
         if (NoteManager.Instance.IsDoubleTime)
         {
             foreach (NoteScrollObject note in ingredientNotes)
-                note.transform.localPosition *= 2f;
+                note.transform.localPosition *= NoteManager.Instance.DoubleTimeFactor;
 
             var rests = ingredient.GetComponentsInChildren<PulseDot>();
             foreach (PulseDot rest in rests)
-                rest.transform.localPosition *= 2f;
+                rest.transform.localPosition *= NoteManager.Instance.DoubleTimeFactor;
 
             var ghostNote = ingredient.GetComponentInChildren<GhostNote>();
             if (ghostNote != null)
-                ghostNote.transform.localPosition *= 2f;
+                ghostNote.transform.localPosition *= NoteManager.Instance.DoubleTimeFactor;
         }
 
         _notes.AddRange(ingredientNotes);
+    }
+
+    private void SetUpInitialRests()
+    {
+        for (var i = 0; i < 3; i++)
+        {
+            var ingredient = Instantiate(_emptyIngredientPrefab, new Vector3(transform.position.x, _currentTop - i * _measureSize, 0f), transform.rotation);
+            ingredient.transform.parent = transform;
+            if (NoteManager.Instance.IsDoubleTime)
+            {
+                var rests = ingredient.GetComponentsInChildren<PulseDot>();
+                foreach (PulseDot rest in rests)
+                    rest.transform.localPosition *= NoteManager.Instance.DoubleTimeFactor;
+            }
+        }
     }
 }

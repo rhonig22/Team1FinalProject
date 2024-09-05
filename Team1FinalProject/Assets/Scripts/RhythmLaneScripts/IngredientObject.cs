@@ -12,8 +12,8 @@ public class IngredientObject : MonoBehaviour
     private void Start()
     {
         if (NoteManager.Instance.IsDoubleTime) {
-            _measureSize *= 2;
-            _minYThreshold *= 2;
+            _measureSize *= NoteManager.Instance.DoubleTimeFactor;
+            _minYThreshold *= NoteManager.Instance.DoubleTimeFactor;
         }
     }
 
