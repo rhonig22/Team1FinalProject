@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6965275212855768332}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 598905317
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f2eb73583dd6ed74fa74608799ef050e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0e28f5217bbebda448bcf5c69a937c24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,8 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buttonName: BButton
   _spriteRenderer: {fileID: 772677787050595575}
-  _inactiveSprite: {fileID: 21300000, guid: bdae658f26c82a84ab1983ee004fe644, type: 3}
-  _missedSprite: {fileID: 21300000, guid: df5a41c07574bfe4d8f80ae3b778a91b, type: 3}
+  _inactiveSprite: {fileID: 21300000, guid: 1a72adc2dc4cd134ebc8e317eb779f2c, type: 3}
+  _missedSprite: {fileID: 21300000, guid: 84b5a347e44d25a428aed3b0dd1108d6, type: 3}
   _noteClip: {fileID: 0}
   _animator: {fileID: 7764090417295284234}
 --- !u!95 &7764090417295284234
