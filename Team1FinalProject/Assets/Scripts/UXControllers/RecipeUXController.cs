@@ -34,6 +34,10 @@ public class RecipeUXController : MonoBehaviour
             _unlockText.text = newText;
             _unlockScreen.SetActive(true);
         }
+        else
+        {
+            DontSelectRecipe = false;
+        }
     }
 
     public void MainMenuClicked()

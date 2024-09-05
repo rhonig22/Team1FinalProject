@@ -7,11 +7,16 @@ public class XboxButtonController : MonoBehaviour
 {
     [SerializeField] private Button _button;
     [SerializeField] private string _buttonKey;
+    [SerializeField] private AudioClip _buttonClick;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        _button.onClick.AddListener(() => SoundManager.Instance.PlaySound(_buttonClick, transform.position));
+    }
+
     void Update()
     {
-        if(Input.GetButtonDown(_buttonKey))
+        if (!string.IsNullOrEmpty(_buttonKey) && Input.GetButtonDown(_buttonKey))
             _button.onClick.Invoke();
     }
 }

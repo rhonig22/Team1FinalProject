@@ -154,7 +154,6 @@ public class GameManager : MonoBehaviour
 
     public void ControlsChanged(PlayerInput playerInput)
     {
-        Debug.Log(playerInput.currentControlScheme);
         if (playerInput.currentControlScheme == "Gamepad")
         {
             IsController = true;

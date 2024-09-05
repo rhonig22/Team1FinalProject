@@ -14,10 +14,11 @@ public class RecipeButtonController : MonoBehaviour
     [SerializeField] private GameObject _lockedArea;
     [SerializeField] private TextMeshProUGUI _unlockRequirement;
     [SerializeField] private Button _button;
-
+    [SerializeField] private AudioClip _buttonClick;
 
     public void RecipeClicked()
     {
+        SoundManager.Instance.PlaySound(_buttonClick, transform.position);
         var props = new Value();
         props["recipeName"] = _recipe.GetName();
         MixpanelLogger.Instance.LogEvent("Recipe Started", props);
