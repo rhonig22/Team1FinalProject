@@ -1610,17 +1610,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Unity Packages:
-
-    a
-
-    b
-
-    c
-
-    d
-
-    e'
+  m_text: "Added Unity  Packages:\nJetBrains Rider Edition\nLootLocker\nMixpanel\nCinemachine\nAseprite
+    Importer\n\nSoftware:\nAseprite\nProcreate\nMuseScore \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
   m_sharedMaterial: {fileID: 5905083599740252335, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
@@ -1683,7 +1674,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -11.207275, y: -165.86768, z: -127.13916, w: 0}
+  m_margin: {x: -11.207275, y: -165.86768, z: -127.13916, w: -185.50177}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
