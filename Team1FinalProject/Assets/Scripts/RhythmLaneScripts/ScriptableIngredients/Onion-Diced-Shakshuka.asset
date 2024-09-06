@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
+  m_Name: Onion-Diced-Shakshuka
+  m_EditorClassIdentifier: 
+  _ingredientName: Onion
+  _hasAnimation: 1
+  _animationTrigger: DicedOnion
+  _ingredientPrefab: {fileID: 2513051249930926630, guid: f411cbe2537d3374a865fac9c0a36768, type: 3}
+  _ingredientSprites:
+  - {fileID: 21300000, guid: e16e76a0c90ef604eb3281300594495f, type: 3}
+  - {fileID: 21300000, guid: 4d1f061b20c13f745b46cfe678b8100c, type: 3}
+  - {fileID: 21300000, guid: d37474fbdfc88d54bb25502c22a5c822, type: 3}
+  - {fileID: 21300000, guid: ddd754b580fa21146bfae1a2467caaf2, type: 3}
+  - {fileID: 21300000, guid: 378b9a611d1c2064a98c9c2679bafcae, type: 3}
+  - {fileID: 21300000, guid: 30132b25b1c97b149a358420f365185b, type: 3}
+  - {fileID: 21300000, guid: c4384c8f557cca44ebcd2711ccb5faa6, type: 3}
+  - {fileID: 21300000, guid: 06f82a109d18da345b769ffb736b5f4c, type: 3}
+  - {fileID: 21300000, guid: b40e863c899b00c40a7cde3ed0fc5074, type: 3}
+  - {fileID: 21300000, guid: abd91070ae2d706479a596192a9e3965, type: 3}
+  - {fileID: 21300000, guid: bb79b61b407f69942b684f60d783a858, type: 3}
+  - {fileID: 21300000, guid: e7032ba2ad10aa1458abf7ea577e6bac, type: 3}
+  - {fileID: 21300000, guid: 2cb930143525a37488774d424c4448c6, type: 3}
+  - {fileID: 21300000, guid: a50a29bf3cfa405449abcf1fa0e0b162, type: 3}
+  - {fileID: 21300000, guid: 3f266fd079096294ab4d9dc7b08aa8b7, type: 3}
+  - {fileID: 21300000, guid: 9bb77420643703f40900b13974966745, type: 3}
+  - {fileID: 21300000, guid: df8a72a193fe85f4cbebc57802a5abc0, type: 3}
+  - {fileID: 21300000, guid: dc280deeb1602124da6a21600ad66dac, type: 3}
+  _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
