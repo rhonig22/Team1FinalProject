@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: VeggieStirfryRecipe
   m_EditorClassIdentifier: 
   _recipeName: Veggie Stir Fry
+  _successMessage: Mixed to perfection!
+  _motivationMessage: 'Not stirred enough! '
   _threeStarPercent: 0.9
   _unlockRequirement: 4
   _recipeSteps:
@@ -32,3 +34,5 @@ MonoBehaviour:
   _recipeVictorySprite: {fileID: 21300000, guid: fd55831feb57f4d49b0646e325234e6d, type: 3}
   _backingTrack: {fileID: 8300000, guid: 33169b3feae21da41b9cc20ab172e1df, type: 3}
   _bpm: 85
+  _doubleTime: 0
+  _isPlaceholder: 0

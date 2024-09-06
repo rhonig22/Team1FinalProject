@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: FishAndChipsRecipe
   m_EditorClassIdentifier: 
   _recipeName: Fish'n'Chips
+  _successMessage: 'Fish finished frying & chips completly crisped '
+  _motivationMessage: Something's a little fishy...
   _threeStarPercent: 0.9
-  _unlockRequirement: 17
+  _unlockRequirement: 9
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: f2e78c46c405aff40b13bb394384819f, type: 2}
@@ -31,3 +33,4 @@ MonoBehaviour:
   _backingTrack: {fileID: 8300000, guid: a5ee31dc0784a504c87dbafae4148c30, type: 3}
   _bpm: 80
   _doubleTime: 1
+  _isPlaceholder: 0

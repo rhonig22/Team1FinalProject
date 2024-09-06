@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: FriedEggRecipe
   m_EditorClassIdentifier: 
   _recipeName: Fried Egg
+  _successMessage: 'Great job! Now let''s see what else is on the menu... '
+  _motivationMessage: Let's master this before moving on...
   _threeStarPercent: 0.9
   _unlockRequirement: 0
   _recipeSteps:
@@ -26,3 +28,5 @@ MonoBehaviour:
   _recipeVictorySprite: {fileID: 21300000, guid: ee4514e3a8b98bd4fbe43153fc9cf7f4, type: 3}
   _backingTrack: {fileID: 8300000, guid: c9664c5798a723144805df944ef0b1b3, type: 3}
   _bpm: 88
+  _doubleTime: 0
+  _isPlaceholder: 0

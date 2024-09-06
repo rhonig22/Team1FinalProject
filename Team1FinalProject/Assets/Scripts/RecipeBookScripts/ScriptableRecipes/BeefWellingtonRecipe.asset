@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: BeefWellingtonRecipe
   m_EditorClassIdentifier: 
   _recipeName: Beef Wellington
+  _successMessage: 'Gordon Approved! '
+  _motivationMessage: 'More like a Beef Unwellington... '
   _threeStarPercent: 0.9
-  _unlockRequirement: 9
+  _unlockRequirement: 14
   _recipeSteps:
   - Station: 3
     Ingredient: {fileID: 11400000, guid: 52c79f6b558ddde40a466933ead374f5, type: 2}
@@ -30,3 +32,5 @@ MonoBehaviour:
   _recipeVictorySprite: {fileID: 21300000, guid: a01c2c77e0af0d54880522a286b6dca2, type: 3}
   _backingTrack: {fileID: 8300000, guid: 5d935dbdc27f1264aa202e6f9673a755, type: 3}
   _bpm: 115
+  _doubleTime: 0
+  _isPlaceholder: 0
