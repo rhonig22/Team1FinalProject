@@ -630,7 +630,7 @@ PrefabInstance:
     - target: {fileID: 9062774548847637861, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 132149316}
+      objectReference: {fileID: 0}
     - target: {fileID: 9062774548847637861, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RecipeBookClicked
@@ -655,11 +655,6 @@ PrefabInstance:
 --- !u!224 &132149315 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 968471548076176401, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
-  m_PrefabInstance: {fileID: 132149314}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &132149316 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6154743861103916265, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
   m_PrefabInstance: {fileID: 132149314}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &132149317 stripped
@@ -4833,7 +4828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -420, y: 0}
+  m_AnchoredPosition: {x: -471, y: -30}
   m_SizeDelta: {x: 320, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1501293985
@@ -11558,6 +11553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f799d7600a4324244bd7abd67e9a2c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _buttonClick: {fileID: 0}
+  _noteCursor: {fileID: 0}
 --- !u!1001 &6610528929190180352
 PrefabInstance:
   m_ObjectHideFlags: 0
