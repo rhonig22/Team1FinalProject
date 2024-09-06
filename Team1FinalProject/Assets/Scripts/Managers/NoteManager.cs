@@ -74,7 +74,7 @@ public class NoteManager : MonoBehaviour
                     BeatEvent.Invoke(_lastBeat);
                 }
 
-                if (!LaneScroller.Instance.HasUpcomingNotes() && _hitText != null)
+                if (!LaneScroller.Instance.IsIngredientRunning() && _hitText != null)
                 {
                     Destroy(_hitText);
                     _hitText = null;

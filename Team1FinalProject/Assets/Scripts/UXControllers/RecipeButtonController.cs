@@ -12,6 +12,7 @@ public class RecipeButtonController : MonoBehaviour
     [SerializeField] private Image _recipeImage;
     [SerializeField] private GameObject _unlockedArea;
     [SerializeField] private GameObject _lockedArea;
+    [SerializeField] private GameObject _comingSoon;
     [SerializeField] private TextMeshProUGUI _unlockRequirement;
     [SerializeField] private Button _button;
     [SerializeField] private AudioClip _buttonClick;
@@ -35,7 +36,10 @@ public class RecipeButtonController : MonoBehaviour
         _unlockedArea.SetActive(unlocked);
         _lockedArea.SetActive(!unlocked);
         _unlockRequirement.text = "" + recipe.GetUnlockRequirement();
-        if (!unlocked)
+        if (!unlocked || recipe.IsPlaceholder())
             _button.enabled = false;
+
+        if (recipe.IsPlaceholder())
+            _comingSoon.SetActive(true);
     }
 }

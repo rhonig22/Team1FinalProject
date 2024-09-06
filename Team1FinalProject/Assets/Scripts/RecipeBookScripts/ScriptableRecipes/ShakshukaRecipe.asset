@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: ShakshukaRecipe
   m_EditorClassIdentifier: 
   _recipeName: Shakshuka
+  _successMessage: 'Perfectly poached! '
+  _motivationMessage: There might have been some eggshell in that...
   _threeStarPercent: 0.9
-  _unlockRequirement: 14
+  _unlockRequirement: 22
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 47ab09e22ae164e4b9452b8a2e081c71, type: 2}
@@ -31,3 +33,4 @@ MonoBehaviour:
   _backingTrack: {fileID: 8300000, guid: f309c6c682233314f8e5417e139c645a, type: 3}
   _bpm: 141
   _doubleTime: 0
+  _isPlaceholder: 0

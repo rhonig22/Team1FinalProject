@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: OmeletteRecipe
   m_EditorClassIdentifier: 
   _recipeName: Omelette
+  _successMessage: 'This is eggcellent work! '
+  _motivationMessage: 'Gotta break some eggs... '
   _threeStarPercent: 0.9
   _unlockRequirement: 2
   _recipeSteps:
@@ -32,3 +34,5 @@ MonoBehaviour:
   _recipeVictorySprite: {fileID: 21300000, guid: 4aa6366f3115b044aa10b60cbe0d472e, type: 3}
   _backingTrack: {fileID: 8300000, guid: c9664c5798a723144805df944ef0b1b3, type: 3}
   _bpm: 88
+  _doubleTime: 0
+  _isPlaceholder: 0

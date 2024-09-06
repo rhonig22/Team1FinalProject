@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: BeefBourgignonRecipe
   m_EditorClassIdentifier: 
   _recipeName: Beef Bourgignon
+  _successMessage: 'Bon Appetite! '
+  _motivationMessage: 'Not beefy enough... '
   _threeStarPercent: 0.9
-  _unlockRequirement: 11
+  _unlockRequirement: 19
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: f6b6cce32a7dbf541af08d27743dd1ce, type: 2}
@@ -32,3 +34,5 @@ MonoBehaviour:
   _recipeVictorySprite: {fileID: 0}
   _backingTrack: {fileID: 8300000, guid: e537a353068fa1e44a5cd8e5df5d4afb, type: 3}
   _bpm: 120
+  _doubleTime: 0
+  _isPlaceholder: 0

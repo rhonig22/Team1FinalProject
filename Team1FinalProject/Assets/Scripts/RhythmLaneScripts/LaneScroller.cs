@@ -102,7 +102,7 @@ public class LaneScroller : MonoBehaviour
 
     private IEnumerator DelayedStepIncrement()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1f);
         RecipeManager.Instance.IncrementStep();
         _isIngredientRunning = false;
     }

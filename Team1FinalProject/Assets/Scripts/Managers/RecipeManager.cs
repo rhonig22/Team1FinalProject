@@ -6,6 +6,7 @@ public class RecipeManager : MonoBehaviour
 {
     public static RecipeManager Instance;
     public bool RecipeCompleted { get; private set; } = false;
+    private readonly int _successMessageThreshold = 2;
     private ScriptableRecipe _currentRecipe;
     private int _currentStepIndex;
     private int _currentIngredientSpriteIndex = 0;
@@ -82,6 +83,15 @@ public class RecipeManager : MonoBehaviour
     {
         return _currentRecipe.GetName();
     }
+
+    public string GetRecipeMessage(int stars)
+    {
+        if (stars >= _successMessageThreshold)
+            return _currentRecipe.GetSuccessMessage();
+
+        return _currentRecipe.GetMotivationMessage();
+    }
+
     public Sprite GetRecipeVictorySprite()
     {
         return _currentRecipe.getVictorySprite();
