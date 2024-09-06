@@ -15,7 +15,7 @@ MonoBehaviour:
   _ingredientName: Shakshuka
   _hasAnimation: 1
   _animationTrigger: ShakshukaSauce
-  _ingredientPrefab: {fileID: 4153989815781522872, guid: 365669298e0c8c24897e50b9f7208303, type: 3}
+  _ingredientPrefab: {fileID: 316161610368572042, guid: 187f2aa0c394c764a9697a0876f4dc73, type: 3}
   _ingredientSprites:
   - {fileID: 365347956, guid: 2e55ca3de3e35374b89e6a1f48fdd186, type: 3}
   - {fileID: -1117366365, guid: 2e55ca3de3e35374b89e6a1f48fdd186, type: 3}

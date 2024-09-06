@@ -17,9 +17,9 @@ MonoBehaviour:
   _unlockRequirement: 14
   _recipeSteps:
   - Station: 0
-    Ingredient: {fileID: 11400000, guid: 75b8ba7ae5f89d947967bb589cfa76d4, type: 2}
+    Ingredient: {fileID: 11400000, guid: 47ab09e22ae164e4b9452b8a2e081c71, type: 2}
   - Station: 0
-    Ingredient: {fileID: 11400000, guid: 06ace7973fcc5154c923343eaf87ccfa, type: 2}
+    Ingredient: {fileID: 11400000, guid: 2f60df5bb88f05a48aa1d0d996a2e1e6, type: 2}
   - Station: 1
     Ingredient: {fileID: 11400000, guid: 56fa3ab7778270e4c81f645d5f87a8ef, type: 2}
   - Station: 1
@@ -28,5 +28,6 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: 926fc72f0ae637a4ba053e511a3f1444, type: 2}
   _recipeSprite: {fileID: 21300000, guid: 78344daae462b354bad450da13b340a9, type: 3}
   _recipeVictorySprite: {fileID: 21300000, guid: e446f35b00da19945bb5f06104a16cd6, type: 3}
-  _backingTrack: {fileID: 8300000, guid: 9f13bf648eb43a942a3ac70f7333d501, type: 3}
-  _bpm: 126
+  _backingTrack: {fileID: 8300000, guid: f309c6c682233314f8e5417e139c645a, type: 3}
+  _bpm: 141
+  _doubleTime: 0
