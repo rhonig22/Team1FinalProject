@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: DicedOnion_BeefB
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: Diced Onion
   _hasAnimation: 0
   _animationTrigger: 
   _ingredientPrefab: {fileID: 2513051249930926630, guid: 8a988f937ba5cdf4c923bad8bd71b01e, type: 3}
