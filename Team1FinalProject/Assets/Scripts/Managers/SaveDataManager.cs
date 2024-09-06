@@ -133,7 +133,7 @@ public class SaveDataManager : MonoBehaviour
             FaceChoice = 0,
             SoundFxVolume = 1,
             MusicVolume = 1,
-            PlayerName = "",
+            PlayerName = "chef" + Random.Range(1000, 10000),
             Prep = Aesthetic.Modest,
             Flattop = Aesthetic.Modest,
             Stovetop = Aesthetic.Modest,
@@ -143,6 +143,18 @@ public class SaveDataManager : MonoBehaviour
         };
         SetPlayerData(playerData);
         _playerData = playerData;
+    }
+
+    public void SetPlayerName(string name)
+    {
+        _playerData.PlayerName = name;
+        SetPlayerData(_playerData);
+    }
+
+    public void SetPlayerId(string id)
+    {
+        _playerData.PlayerId = id;
+        SetPlayerData(_playerData);
     }
 
     public void InitializeRecipeData()

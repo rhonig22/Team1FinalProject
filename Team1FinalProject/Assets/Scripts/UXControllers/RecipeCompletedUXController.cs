@@ -39,6 +39,7 @@ public class RecipeCompletedUXController : MonoBehaviour
             recipeEntry.Stars = _starController.GetCurrentStarCount();
             recipeEntry.HighScore = NoteManager.Instance.Score;
             SaveDataManager.Instance.SetRecipeEntryData(recipeEntry);
+            LeaderboardManager.Instance.SubmitLootLockerScore(SaveDataManager.Instance.GetStarCount());
         }
 
         var props = new Value();

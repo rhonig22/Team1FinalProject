@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     private readonly string _controlsScene = "ControlsScene";
     private readonly string _creditsScene = "CreditsScene";
     private readonly string _hubScene = "HubScene";
+    private readonly string _leaderboardScene = "LeaderboardScene";
     private List<string> _backStack = new List<string>();
 
     private void Awake()
@@ -89,6 +90,12 @@ public class GameManager : MonoBehaviour
     {
         AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_hubScene);
+    }
+
+    public void LoadLeaderboardScene()
+    {
+        AddToBackstack(SceneManager.GetActiveScene().name);
+        LoadScene(_leaderboardScene);
     }
 
     public void LoadTitleScreen()

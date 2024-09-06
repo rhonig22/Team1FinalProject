@@ -15,6 +15,12 @@ public class HubUXController : MonoBehaviour
         GameManager.Instance.LoadRecipeBook();
     }
 
+    public void LeaderboardClicked()
+    {
+        SoundManager.Instance.PlaySound(_buttonClick, transform.position);
+        GameManager.Instance.LoadLeaderboardScene();
+    }
+
     public void CustomizeKitchenClicked()
     {
         _customizerPanel.SetActive(true);
