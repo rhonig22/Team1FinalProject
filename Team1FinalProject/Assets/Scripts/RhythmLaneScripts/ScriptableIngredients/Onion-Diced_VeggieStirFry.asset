@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Onion-Diced_VeggieStirFry
   m_EditorClassIdentifier: 
   _ingredientName: Onion
+  _hasAnimation: 1
+  _animationTrigger: DicedOnion
   _ingredientPrefab: {fileID: 2513051249930926630, guid: 0e41372227ba8d54888ed2e9e6483777, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: e16e76a0c90ef604eb3281300594495f, type: 3}

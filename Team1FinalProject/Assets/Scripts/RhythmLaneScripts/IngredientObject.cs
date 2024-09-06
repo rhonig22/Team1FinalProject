@@ -5,9 +5,17 @@ using UnityEngine;
 public class IngredientObject : MonoBehaviour
 {
     public string IngredientName;
-    private readonly float _minYThreshold = -6f;
-    private readonly float _measureSize = 4f;
+    private float _minYThreshold = -6f;
+    private float _measureSize = 4f;
     [SerializeField] private int _measureCount = 1;
+
+    private void Start()
+    {
+        if (NoteManager.Instance.IsDoubleTime) {
+            _measureSize *= NoteManager.Instance.DoubleTimeFactor;
+            _minYThreshold *= NoteManager.Instance.DoubleTimeFactor;
+        }
+    }
 
     private void Update()
     {
@@ -18,4 +26,9 @@ public class IngredientObject : MonoBehaviour
     }
 
     public int GetMeasureCount () { return _measureCount; }
+
+    public int GetNoteCount ()
+    {
+        return transform.GetComponentsInChildren<NoteScrollObject>().Length;
+    }
 }

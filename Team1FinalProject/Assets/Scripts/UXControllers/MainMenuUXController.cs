@@ -4,29 +4,23 @@ using UnityEngine;
 
 public class MainMenuUXController : MonoBehaviour
 {
-    public void PlayDemoClicked()
-    {
-        GameManager.Instance.LoadDemo();
-    }
+    [SerializeField] private AudioClip _buttonClick;
 
     public void PlayStoryClicked()
     {
+        SoundManager.Instance.PlaySound(_buttonClick, transform.position);
         GameManager.Instance.LoadIntro();
     }
 
     public void SettingsClicked()
     {
+        SoundManager.Instance.PlaySound(_buttonClick, transform.position);
         GameManager.Instance.LoadSettings();
     }
 
-    public void ControlsClicked()
-    {
-        Debug.Log("Controls time!");
-        GameManager.Instance.LoadControls();
-    }
     public void CreditsClicked()
     {
-        Debug.Log("Credits Time!");
+        SoundManager.Instance.PlaySound(_buttonClick, transform.position);
         GameManager.Instance.LoadCredits();
     }
 }

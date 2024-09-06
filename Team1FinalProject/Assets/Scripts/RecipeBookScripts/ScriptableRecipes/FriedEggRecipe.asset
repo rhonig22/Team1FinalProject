@@ -13,16 +13,20 @@ MonoBehaviour:
   m_Name: FriedEggRecipe
   m_EditorClassIdentifier: 
   _recipeName: Fried Egg
-  _threeStarScore: 2000
+  _successMessage: 'Great job! Now let''s see what else is on the menu... '
+  _motivationMessage: Let's master this before moving on...
+  _threeStarPercent: 0.9
   _unlockRequirement: 0
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 5e58576e89c9c6445b69d92ff5bff4f3, type: 2}
   - Station: 1
-    Ingredient: {fileID: 11400000, guid: aa024542013ce634b818ff9459ae3f48, type: 2}
+    Ingredient: {fileID: 11400000, guid: 371ed24d4031cb545975f62939364861, type: 2}
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 0ba2c9916a0c76d47ae625220408e2bb, type: 2}
   _recipeSprite: {fileID: 21300000, guid: 4c4269c366bca0f48b4270cc67f2f272, type: 3}
   _recipeVictorySprite: {fileID: 21300000, guid: ee4514e3a8b98bd4fbe43153fc9cf7f4, type: 3}
-  _backingTrack: {fileID: 8300000, guid: 80316353d30d64f47b7cd96593b3269a, type: 3}
+  _backingTrack: {fileID: 8300000, guid: c9664c5798a723144805df944ef0b1b3, type: 3}
   _bpm: 88
+  _doubleTime: 0
+  _isPlaceholder: 0

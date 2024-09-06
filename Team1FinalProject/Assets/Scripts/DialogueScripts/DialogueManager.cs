@@ -57,7 +57,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ReadNext()
     {
-        if (_currentIndex > _currentConvo.GetLength())
+        if (_typing == null && _currentIndex > _currentConvo.GetLength())
         {
             EnableDialogBox(false);
             DialogueFinished.Invoke();
@@ -66,21 +66,18 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            _speakerName.text = _currentConvo.getLineByIndex(_currentIndex).speaker.GetName();
-
-            if (_typing == null)
-            {
-                _typing = StartCoroutine(TypeText(_currentConvo.getLineByIndex(_currentIndex).dialogue));
-            }
-            else
+            if (_typing != null)
             {
                 StopCoroutine(_typing);
                 _typing = null;
-                _typing = StartCoroutine(TypeText(_currentConvo.getLineByIndex(_currentIndex).dialogue));
-
+                _dialogue.text = _currentConvo.getLineByIndex(_currentIndex - 1).dialogue;
+                return;
             }
-            //dialogue.text = currentConvo.getLineByIndex(currentIndex).dialogue;
-            _speakerSprite.sprite = _currentConvo.getLineByIndex(_currentIndex).speaker.getSprite();
+
+            var currentLine = _currentConvo.getLineByIndex(_currentIndex);
+            _speakerName.text = currentLine.speaker.GetName();
+            _speakerSprite.sprite = currentLine.speaker.getSprite();
+            _typing = StartCoroutine(TypeText(currentLine.dialogue));
             _currentIndex++;
         }
        

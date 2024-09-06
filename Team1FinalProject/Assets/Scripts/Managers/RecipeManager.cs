@@ -6,6 +6,7 @@ public class RecipeManager : MonoBehaviour
 {
     public static RecipeManager Instance;
     public bool RecipeCompleted { get; private set; } = false;
+    private readonly int _successMessageThreshold = 2;
     private ScriptableRecipe _currentRecipe;
     private int _currentStepIndex;
     private int _currentIngredientSpriteIndex = 0;
@@ -82,14 +83,28 @@ public class RecipeManager : MonoBehaviour
     {
         return _currentRecipe.GetName();
     }
+
+    public string GetRecipeMessage(int stars)
+    {
+        if (stars >= _successMessageThreshold)
+            return _currentRecipe.GetSuccessMessage();
+
+        return _currentRecipe.GetMotivationMessage();
+    }
+
     public Sprite GetRecipeVictorySprite()
     {
         return _currentRecipe.getVictorySprite();
     }
     public bool IsCurrentIngredientAnimated()
     {
-        var step = _currentRecipe.GetStep(_currentStepIndex);
-        return step.Ingredient.IsAnimatedIngredient();
+        if (_currentIngredientSpriteIndex > 0)
+        {
+            var step = _currentRecipe.GetStep(_currentStepIndex);
+            return step.Ingredient.IsAnimatedIngredient();
+        }
+
+        return false;
     }
 
     public string GetAnimationTrigger()
@@ -101,6 +116,11 @@ public class RecipeManager : MonoBehaviour
     public int GetBPM()
     {
         return _currentRecipe.GetBPM();
+    }
+
+    public bool IsDoubleTime()
+    {
+        return _currentRecipe.IsDoubleTime();
     }
 
     public AudioClip GetBackingTrack()

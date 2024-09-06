@@ -19,7 +19,7 @@ public class GhostNote : MonoBehaviour
     void Start()
     {
         //listen for button hit and button miss
-        NoteManager.Instance.SuccessfulHitEvent.AddListener((int sNotes) => { _missedNote = false; });
+        NoteManager.Instance.SuccessfulHitEvent.AddListener((NoteScrollObject note) => { _missedNote = false; });
         NoteManager.Instance.MissedHitEvent.AddListener((int mNotes) => { _missedNote = true; });
         _rhythmControllerLocation = GameObject.FindGameObjectWithTag("RhythmController").transform.position.y;
     }

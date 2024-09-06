@@ -10,6 +10,7 @@ public class ScriptableIngredient : ScriptableObject
     [SerializeField] private GameObject _ingredientPrefab;
     [SerializeField] private Sprite[] _ingredientSprites;
     [SerializeField] private Sprite[] _backgroundPrepSprites;
+    private readonly int _defaultMax = 1000;
 
     public bool IsAnimatedIngredient()
     {
@@ -24,6 +25,15 @@ public class ScriptableIngredient : ScriptableObject
     public string GetName()
     {
         return _ingredientName;
+    }
+
+    public int GetMaxIngredientScore()
+    {
+        if (_ingredientPrefab == null)
+            return _defaultMax;
+
+        int notes = _ingredientPrefab.GetComponent<IngredientObject>().GetNoteCount();
+        return notes * NoteManager.Instance.PerfectNotePoints;
     }
 
     public Sprite getSprite(int index)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 
@@ -11,9 +12,15 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Transform _flatTopSpawn;
     [SerializeField] private Transform _fridgeSpawn;
     [SerializeField] private InputAction _playerControls;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Sprite _frontSprite;
+    [SerializeField] private Sprite _backSprite;
+    [SerializeField] private Sprite _sideSprite;
     private readonly float _moveSpeed = 5f;
-    private Vector2 _moveTowards;
+    private Vector3 _moveTowards;
     private Dictionary<Vector2, Transform> _spawnMap;
+    private Dictionary<Vector2, Sprite> _spriteMap;
+    public UnityEvent SameStationAgain = new UnityEvent();
 
     private void Start()
     {
@@ -26,9 +33,18 @@ public class PlayerManager : MonoBehaviour
             {new Vector2(0, -1), _prepSpawn }
         };
 
+        _spriteMap = new Dictionary<Vector2, Sprite>()
+        {
+            {new Vector2(1, 0), _sideSprite },
+            {new Vector2(-1, 0), _sideSprite },
+            {new Vector2(0, 1), _backSprite },
+            {new Vector2(0, -1), _frontSprite }
+        };
+
         _playerControls.started += (context) => {
             var direction = context.ReadValue<Vector2>();
             MoveTowards(_spawnMap[direction]);
+            SetSprite(direction);
         };
     }
 
@@ -44,8 +60,25 @@ public class PlayerManager : MonoBehaviour
 
     private void MoveTowards(Transform moveTowards)
     {
-        if (!KitchenCanvasController.IsRhythmSection && !RecipeManager.Instance.RecipeCompleted)
+        if (KitchenCanvasController.IsRhythmSection || RecipeManager.Instance.RecipeCompleted)
+            return;
+
+        if (_moveTowards == moveTowards.position)
+        {
+            SameStationAgain.Invoke();
+        }
+        else
+        {
             _moveTowards = moveTowards.position;
+        }
+    }
+
+    private void SetSprite(Vector2 direction) {
+        _spriteRenderer.sprite = _spriteMap[direction];
+        if (direction == Vector2.right)
+            _spriteRenderer.flipX = true;
+        else
+            _spriteRenderer.flipX = false;
     }
 
     // Update is called once per frame

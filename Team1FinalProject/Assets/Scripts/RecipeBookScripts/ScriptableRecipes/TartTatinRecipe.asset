@@ -13,9 +13,24 @@ MonoBehaviour:
   m_Name: TartTatinRecipe
   m_EditorClassIdentifier: 
   _recipeName: Tart Tatin
-  _threeStarScore: 1000
-  _unlockRequirement: 24
-  _recipeSteps: []
+  _successMessage: 'Better than an apple pie! '
+  _motivationMessage: 'Not very presentable, but maybe it will taste okay? '
+  _threeStarPercent: 0.9
+  _unlockRequirement: 17
+  _recipeSteps:
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 370207a4d3e2cdc4d939c24068028713, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 2a3068db0e286f94186242d87da811c3, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: fbbf11d38603a144e920485f1bfbd418, type: 2}
+  - Station: 1
+    Ingredient: {fileID: 11400000, guid: e0a24d521e90ad349bb1c60006a317d8, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: d210b3fc0e5960b45bd3082007fdd6cb, type: 2}
   _recipeSprite: {fileID: 21300000, guid: 032e123e15d29724cabfc254598babce, type: 3}
-  _backingTrack: {fileID: 0}
-  _bpm: 0
+  _recipeVictorySprite: {fileID: 21300000, guid: be404d6eb36663b43a63a6ef9dc57ef2, type: 3}
+  _backingTrack: {fileID: 8300000, guid: 193fd0e875a6020489479545f4be4353, type: 3}
+  _bpm: 120
+  _doubleTime: 0
+  _isPlaceholder: 0

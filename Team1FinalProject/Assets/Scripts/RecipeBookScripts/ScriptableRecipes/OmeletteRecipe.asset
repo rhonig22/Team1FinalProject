@@ -13,22 +13,26 @@ MonoBehaviour:
   m_Name: OmeletteRecipe
   m_EditorClassIdentifier: 
   _recipeName: Omelette
-  _threeStarScore: 1000
-  _unlockRequirement: 0
+  _successMessage: 'This is eggcellent work! '
+  _motivationMessage: 'Gotta break some eggs... '
+  _threeStarPercent: 0.9
+  _unlockRequirement: 2
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 5e58576e89c9c6445b69d92ff5bff4f3, type: 2}
   - Station: 0
     Ingredient: {fileID: 11400000, guid: af5b3debaf432084a9623b7c0aaaed7f, type: 2}
-  - Station: 2
-    Ingredient: {fileID: 11400000, guid: aa024542013ce634b818ff9459ae3f48, type: 2}
-  - Station: 2
-    Ingredient: {fileID: 11400000, guid: aa024542013ce634b818ff9459ae3f48, type: 2}
-  - Station: 2
-    Ingredient: {fileID: 11400000, guid: aa024542013ce634b818ff9459ae3f48, type: 2}
-  - Station: 2
-    Ingredient: {fileID: 11400000, guid: aa024542013ce634b818ff9459ae3f48, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 1d71d245d4703424cbb2574bea58c77c, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 9f2caf364048f37458e9f9af9df85d65, type: 2}
+  - Station: 1
+    Ingredient: {fileID: 11400000, guid: 6c8ba8186520b3d42bdf57267ce8f995, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: f58034ef3ea53c64eaa35d6dcd78ca1c, type: 2}
   _recipeSprite: {fileID: 21300000, guid: 6a850e307ab493348854024bcaa57bb0, type: 3}
   _recipeVictorySprite: {fileID: 21300000, guid: 4aa6366f3115b044aa10b60cbe0d472e, type: 3}
-  _backingTrack: {fileID: 8300000, guid: 80316353d30d64f47b7cd96593b3269a, type: 3}
+  _backingTrack: {fileID: 8300000, guid: c9664c5798a723144805df944ef0b1b3, type: 3}
   _bpm: 88
+  _doubleTime: 0
+  _isPlaceholder: 0

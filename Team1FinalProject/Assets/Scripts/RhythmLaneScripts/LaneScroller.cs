@@ -11,10 +11,12 @@ public class LaneScroller : MonoBehaviour
     private float _currentTop = 4f;
     private int _measureCount = 0;
     private float _timeToNextMeasure = 0;
-    private readonly float _measureSize = 4f;
+    private  float _measureSize = 4f;
     private readonly float _secondsPerMinute = 60f;
     private List<NoteScrollObject> _notes = new List<NoteScrollObject>();
     private List<GameObject> _ingredientQueue = new List<GameObject>();
+    public static int NoteCounter { get; private set; } = 0;
+    private bool _isIngredientRunning = false;
 
     private void Awake()
     {
@@ -38,7 +40,16 @@ public class LaneScroller : MonoBehaviour
     private void FixedUpdate()
     {
         if (NoteManager.Instance.IsBeatStarted && _beatTempo == 0)
+        {
+            // initialize beat values for the song
             _beatTempo = NoteManager.Instance.BeatTempo / _secondsPerMinute;
+            if (NoteManager.Instance.IsDoubleTime)
+            {
+                _measureSize *= NoteManager.Instance.DoubleTimeFactor;
+            }
+
+            SetUpInitialRests();
+        }
 
         if (NoteManager.Instance.IsBeatStarted)
         {
@@ -64,6 +75,10 @@ public class LaneScroller : MonoBehaviour
     {
         return _notes.Count > 0 || _ingredientQueue.Count > 0;
     }
+    public bool IsIngredientRunning()
+    {
+        return _isIngredientRunning;
+    }
 
     public NoteScrollObject GetNextNote()
     {
@@ -77,16 +92,25 @@ public class LaneScroller : MonoBehaviour
     {
         var hasNotes = HasUpcomingNotes();
         _notes.Remove(note);
+        NoteCounter++;
 
         if (hasNotes && !HasUpcomingNotes())
         {
-            RecipeManager.Instance.IncrementStep();
+            StartCoroutine(DelayedStepIncrement());
         }
+    }
+
+    private IEnumerator DelayedStepIncrement()
+    {
+        yield return new WaitForSeconds(1f);
+        RecipeManager.Instance.IncrementStep();
+        _isIngredientRunning = false;
     }
 
     public void AddToIngredientQueue(GameObject ingredientPrefab)
     {
         _ingredientQueue.Add(ingredientPrefab);
+        _isIngredientRunning = true;
     }
 
     public GameObject PopIngredientQueue()
@@ -104,8 +128,39 @@ public class LaneScroller : MonoBehaviour
     private void GetNextIngredient()
     {
         var nextIngredientPrefab = PopIngredientQueue();
+        NoteCounter = 1;
         var ingredient = Instantiate(nextIngredientPrefab, new Vector3(transform.position.x, transform.position.y + _currentTop, 0f), transform.rotation);
         ingredient.transform.parent = transform;
-        _notes.AddRange(ingredient.GetComponentsInChildren<NoteScrollObject>());
+        var ingredientNotes = ingredient.GetComponentsInChildren<NoteScrollObject>();
+        if (NoteManager.Instance.IsDoubleTime)
+        {
+            foreach (NoteScrollObject note in ingredientNotes)
+                note.transform.localPosition *= NoteManager.Instance.DoubleTimeFactor;
+
+            var rests = ingredient.GetComponentsInChildren<PulseDot>();
+            foreach (PulseDot rest in rests)
+                rest.transform.localPosition *= NoteManager.Instance.DoubleTimeFactor;
+
+            var ghostNote = ingredient.GetComponentInChildren<GhostNote>();
+            if (ghostNote != null)
+                ghostNote.transform.localPosition *= NoteManager.Instance.DoubleTimeFactor;
+        }
+
+        _notes.AddRange(ingredientNotes);
+    }
+
+    private void SetUpInitialRests()
+    {
+        for (var i = 0; i < 3; i++)
+        {
+            var ingredient = Instantiate(_emptyIngredientPrefab, new Vector3(transform.position.x, _currentTop - i * _measureSize, 0f), transform.rotation);
+            ingredient.transform.parent = transform;
+            if (NoteManager.Instance.IsDoubleTime)
+            {
+                var rests = ingredient.GetComponentsInChildren<PulseDot>();
+                foreach (PulseDot rest in rests)
+                    rest.transform.localPosition *= NoteManager.Instance.DoubleTimeFactor;
+            }
+        }
     }
 }

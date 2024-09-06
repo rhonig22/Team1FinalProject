@@ -11,20 +11,34 @@ public class KitchenCanvasController : MonoBehaviour
     [SerializeField] private Image _ingredientImage;
     [SerializeField] private Image _backgroundPrepImage;
     [SerializeField] private Animator _ingredientAnimator;
-
+    [SerializeField] private AnimatorDone _animationDone;
+    private bool _showRecipeCompleted = false;
+    private bool _canStartAnimationFlag = false;
+    private float _waitToComplete = 1.5f;
+    private Coroutine _completedCoroutine;
     public static bool IsRhythmSection = false;
 
     private void Update()
     {
-        var hasNotes = LaneScroller.Instance.HasUpcomingNotes();
+        var hasNotes = LaneScroller.Instance.IsIngredientRunning();
+        if (hasNotes && !IsRhythmSection)
+        {
+            _canStartAnimationFlag = true;
+            _animationDone.AnimatorDoneFlag = false;
+        }
+
         IsRhythmSection = hasNotes;
         _kitchenDimmer.SetActive(hasNotes);
         if (hasNotes)
         {
-            if (RecipeManager.Instance.IsCurrentIngredientAnimated())
+            if (RecipeManager.Instance.IsCurrentIngredientAnimated() && !_animationDone.AnimatorDoneFlag)
             {
-                _ingredientAnimator.enabled = true;
-                _ingredientAnimator.SetTrigger(RecipeManager.Instance.GetAnimationTrigger());
+                if (_canStartAnimationFlag)
+                {
+                    _ingredientAnimator.enabled = true;
+                    _ingredientAnimator.SetTrigger(RecipeManager.Instance.GetAnimationTrigger());
+                    _canStartAnimationFlag = false;
+                }
             }
             else
             {
@@ -34,7 +48,18 @@ public class KitchenCanvasController : MonoBehaviour
 
             _backgroundPrepImage.sprite = RecipeManager.Instance.GetCurrentBackgroundPrepSprite();
         }
-        _recipeCompletionPanel.SetActive(RecipeManager.Instance.RecipeCompleted);
+
+        _recipeCompletionPanel.SetActive(_showRecipeCompleted);
+        if (!_showRecipeCompleted && RecipeManager.Instance.RecipeCompleted && _completedCoroutine == null)
+        {
+            _completedCoroutine = StartCoroutine(RecipeComplete());
+        }
+    }
+
+    IEnumerator RecipeComplete()
+    {
+        yield return new WaitForSeconds(_waitToComplete);
+        _showRecipeCompleted = true;
     }
 
     public void RecipeBookClicked()

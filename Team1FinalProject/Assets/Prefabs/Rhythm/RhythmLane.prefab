@@ -406,9 +406,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 684694947
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: 598905317
+  m_SortingLayer: 2
+  m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -468,7 +468,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _emptyIngredientPrefab: {fileID: 316161610368572042, guid: fa88c5ce566e67349b2a2c21295120f7, type: 3}
-  _onionIngredientPrefab: {fileID: 2513051249930926630, guid: 33c8b3ba517470145b6d27593df1cca5, type: 3}
 --- !u!1001 &2350021620504946577
 PrefabInstance:
   m_ObjectHideFlags: 0

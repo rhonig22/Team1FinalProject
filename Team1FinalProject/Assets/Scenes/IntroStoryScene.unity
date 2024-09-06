@@ -431,7 +431,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 48a0fa9a512718d4c8d00b51b3c5256b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a5ee4ad3fbe88f46b517c18e1f2de6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -451,7 +451,7 @@ Transform:
   m_GameObject: {fileID: 326167501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.25, y: -2.75, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -611,6 +611,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 357130053131213843, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 408233360776562967, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -670,6 +674,14 @@ PrefabInstance:
     - target: {fileID: 6074845682979910834, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649901658606567728, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878096936653342485, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -908,6 +920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introConvo: {fileID: 11400000, guid: 1ffbb5c871e746341b53dc9a203fbb72, type: 2}
+  welcomeBackConvo: {fileID: 11400000, guid: 0e7b5caacae31ad48a2a1495f21a31ce, type: 2}
 --- !u!1 &590126280
 GameObject:
   m_ObjectHideFlags: 0

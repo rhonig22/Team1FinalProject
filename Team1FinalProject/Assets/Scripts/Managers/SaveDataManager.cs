@@ -133,7 +133,7 @@ public class SaveDataManager : MonoBehaviour
             FaceChoice = 0,
             SoundFxVolume = 1,
             MusicVolume = 1,
-            PlayerName = "",
+            PlayerName = "chef" + Random.Range(1000, 10000),
             Prep = Aesthetic.Modest,
             Flattop = Aesthetic.Modest,
             Stovetop = Aesthetic.Modest,
@@ -143,6 +143,18 @@ public class SaveDataManager : MonoBehaviour
         };
         SetPlayerData(playerData);
         _playerData = playerData;
+    }
+
+    public void SetPlayerName(string name)
+    {
+        _playerData.PlayerName = name;
+        SetPlayerData(_playerData);
+    }
+
+    public void SetPlayerId(string id)
+    {
+        _playerData.PlayerId = id;
+        SetPlayerData(_playerData);
     }
 
     public void InitializeRecipeData()
@@ -171,7 +183,7 @@ public class SaveDataManager : MonoBehaviour
 
     public void SetUnlockablesData()
     {
-        PlayerPrefs.SetString(_unlockablesKey, JsonUtility.ToJson(_unlockableMap));
+        PlayerPrefs.SetString(_unlockablesKey, JsonUtility.ToJson(_unlockables));
         PlayerPrefs.Save();
     }
 
@@ -196,6 +208,7 @@ public class SaveDataManager : MonoBehaviour
 
         _unlockables.UnlockablesList.Add(unlocked);
         _unlockableMap[unlockable] = true;
+        SetUnlockablesData();
     }
 
     public bool IsUnlocked(string unlockable)
@@ -217,6 +230,12 @@ public class SaveDataManager : MonoBehaviour
     public void ClearData()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        _playerData = null;
+        _unlockables = null;
+        _recipeData = null;
+        _unlockableMap = new Dictionary<string, bool>();
         SetUpDataManager();
+        CustomizationManager.Instance.ResetCustomizations();
     }
 }

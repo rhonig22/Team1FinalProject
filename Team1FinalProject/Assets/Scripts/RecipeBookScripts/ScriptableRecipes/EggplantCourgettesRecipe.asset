@@ -13,9 +13,30 @@ MonoBehaviour:
   m_Name: EggplantCourgettesRecipe
   m_EditorClassIdentifier: 
   _recipeName: Aubergines and Courgettes
-  _threeStarScore: 1000
-  _unlockRequirement: 21
-  _recipeSteps: []
+  _successMessage: 'Cooked to perfection! Just right for a Little Chef! '
+  _motivationMessage: Not even a rat would accept this...
+  _threeStarPercent: 0.9
+  _unlockRequirement: 11
+  _recipeSteps:
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 825c08ca5232c564ab2bc855d85d1bcb, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: c3d5efeae5d944a439183e66729bf711, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 58c4dbbd876ae9b44930aedecb545bca, type: 2}
+  - Station: 0
+    Ingredient: {fileID: 11400000, guid: 3251a9c4ce8c19f4198616a17806047d, type: 2}
+  - Station: 1
+    Ingredient: {fileID: 11400000, guid: ef0f70bf7e259e44cbb9e88db9793422, type: 2}
+  - Station: 1
+    Ingredient: {fileID: 11400000, guid: 7261fc551299fb34db9af5e1ba490a21, type: 2}
+  - Station: 1
+    Ingredient: {fileID: 11400000, guid: 45001e314a0688943bf9455d6763841c, type: 2}
+  - Station: 1
+    Ingredient: {fileID: 11400000, guid: ea2976544f1db64489031f35c275e810, type: 2}
   _recipeSprite: {fileID: 21300000, guid: 1b71272cfec1f124fb3ee6950b8a6a30, type: 3}
-  _backingTrack: {fileID: 0}
-  _bpm: 0
+  _recipeVictorySprite: {fileID: 0}
+  _backingTrack: {fileID: 8300000, guid: ade0cf2a7a52c6c418736225a11c59cd, type: 3}
+  _bpm: 56
+  _doubleTime: 1
+  _isPlaceholder: 0

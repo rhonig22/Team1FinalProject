@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: BaseStovetop
   m_EditorClassIdentifier: 
   _customizationName: Modest Stovetop
-  _customizationSprite: {fileID: 21300000, guid: e8a1b6774942a23468a97acf42ce5b0a, type: 3}
+  _customizationSprite: {fileID: 21300000, guid: 52d267fcec994684c939d8c5b9a17306, type: 3}
   _aesthetic: 0
   _itemType: 2
+  _requirement:
+    RequirementType: 0
+    MinValue: 0
+    Recipes: []
+  _isBase: 1

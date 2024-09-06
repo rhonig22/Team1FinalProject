@@ -21,7 +21,21 @@ public class CustomizationManager : MonoBehaviour
 
     private void Start()
     {
+        ResetCustomizations();
+    }
+
+    public void ResetCustomizations()
+    {
+        SetInitialUnlocks();
         GetCurrentCustomizations();
+    }
+
+    private void SetInitialUnlocks()
+    {
+        foreach (var customization in _allCustomizations)
+        {
+            customization.GetInitialUnlock();
+        }
     }
 
     private void GetCurrentCustomizations()
@@ -35,9 +49,54 @@ public class CustomizationManager : MonoBehaviour
         _currentItemTypes[ItemType.Stovetop] = data.Stovetop;
     }
 
+    public void SetCurrentCustomization(ItemType type, Aesthetic aesthetic)
+    {
+        _currentItemTypes[type] = aesthetic;
+        var data = SaveDataManager.Instance.GetPlayerData();
+        switch (type) {
+            case ItemType.Flattop:
+                data.Flattop = aesthetic;
+                break;
+            case ItemType.Floor:
+                data.Floor = aesthetic;
+                break;
+            case ItemType.Wall:
+                data.Wall = aesthetic;
+                break;
+            case ItemType.Prep:
+                data.Prep = aesthetic;
+                break;
+            case ItemType.Fridge:
+                data.Fridge = aesthetic;
+                break;
+            case ItemType.Stovetop:
+                data.Stovetop = aesthetic;
+                break;
+        }
+
+        SaveDataManager.Instance.SetPlayerData(data);
+    }
+
+    public List<ScriptableCustomization> CheckUnlocks()
+    {
+        var newUnlocks = new List<ScriptableCustomization>();
+        foreach (var customization in _allCustomizations)
+        {
+            if (customization.CheckUnlockRequirement())
+                newUnlocks.Add(customization);
+        }
+
+        return newUnlocks;
+    }
+
     public ScriptableCustomization GetCurrentItem(ItemType itemType)
     {
         return _allCustomizations.Find((ScriptableCustomization x) => x.GetAesthetic() == _currentItemTypes[itemType] && x.GetItemType() == itemType);
+    }
+
+    public List<ScriptableCustomization> GetUnlockedItems(ItemType itemType)
+    {
+        return _allCustomizations.FindAll((ScriptableCustomization x) => x.IsUnlocked() && x.GetItemType() == itemType);
     }
 
 }

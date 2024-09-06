@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Tomato-Diced
   m_EditorClassIdentifier: 
   _ingredientName: No Skin Diced Tomato
+  _hasAnimation: 1
+  _animationTrigger: DicedTomato
   _ingredientPrefab: {fileID: 4013419605963424100, guid: 43e64b2a1ea27e8408ed17ca6349acbc, type: 3}
   _ingredientSprites:
   - {fileID: 21300000, guid: 821f8fb8c4f41fb4ca2c584ff2178be9, type: 3}

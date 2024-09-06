@@ -64,6 +64,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5015207566853892474, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
+      propertyPath: m_text
+      value: Good
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015207566853892474, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015207566853892474, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015207566853892474, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294901786
+      objectReference: {fileID: 0}
     - target: {fileID: 5882196571918455441, guid: 356a8bc15d8314b44b017ec02fb4f04c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -163,7 +179,7 @@ Animator:
   m_GameObject: {fileID: 2795249607756354496}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e492c1ede13ca249a373f246d3b74e0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 37c91b1f371fc6c4f89acebddd694bda, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

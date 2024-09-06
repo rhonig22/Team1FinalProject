@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: PastaRecipe
   m_EditorClassIdentifier: 
   _recipeName: Pasta
-  _threeStarScore: 5000
-  _unlockRequirement: 0
+  _successMessage: 'Al dente! '
+  _motivationMessage: Overcooked and underseasoned!
+  _threeStarPercent: 0.9
+  _unlockRequirement: 7
   _recipeSteps:
   - Station: 0
     Ingredient: {fileID: 11400000, guid: 57865c0f778075946a84498482a9e267, type: 2}
@@ -32,3 +34,5 @@ MonoBehaviour:
   _recipeVictorySprite: {fileID: 21300000, guid: 20cef81774ec5d14cad8fec8098e0b72, type: 3}
   _backingTrack: {fileID: 8300000, guid: 1d2e8553fe796b94c8a0b816e1fdcb06, type: 3}
   _bpm: 104
+  _doubleTime: 0
+  _isPlaceholder: 0

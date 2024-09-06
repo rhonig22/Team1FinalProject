@@ -30,7 +30,7 @@ public class RhythmController : MonoBehaviour
 
             if (note.CanBePressed)
             {
-                NoteManager.Instance.NoteHit(note.HitType);
+                NoteManager.Instance.NoteHit(note);
                 note.PlayNote();
                 //particle effect?
                 note.SetInactive();

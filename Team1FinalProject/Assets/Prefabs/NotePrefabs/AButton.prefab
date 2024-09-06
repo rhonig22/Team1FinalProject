@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7310177467960135483}
   - component: {fileID: 772677787050595575}
   - component: {fileID: 882999211364872318}
+  - component: {fileID: 610365151807063953}
   m_Layer: 0
   m_Name: AButton
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6965275212855768332}
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 598905317
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 39e3125e78c8b114cac752d3d87076cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: faabf150a133cb349b9f1d1242480b04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,9 +101,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buttonName: AButton
   _spriteRenderer: {fileID: 772677787050595575}
-  _inactiveSprite: {fileID: 21300000, guid: 893682262b76a414b85ae8d4c1df1b36, type: 3}
-  _missedSprite: {fileID: 21300000, guid: cb8a74536f026844782898bd924a03c5, type: 3}
+  _activeSprite: {fileID: 21300000, guid: faabf150a133cb349b9f1d1242480b04, type: 3}
+  _inactiveSprite: {fileID: 21300000, guid: 63266afc5659b05478476b18ab06d212, type: 3}
+  _missedSprite: {fileID: 21300000, guid: 2c9d15c9b8a43d44ea597251324e243c, type: 3}
+  _activeSpriteKeyboard: {fileID: 21300000, guid: dd6c5ca84f6cbe947a88d8e6e4ffb523, type: 3}
+  _inactiveSpriteKeyboard: {fileID: 21300000, guid: 83b064ca65e7c8d438453dcc9bc6260d, type: 3}
+  _missedSpriteKeyboard: {fileID: 21300000, guid: 5888296dfb85cb0439cb12f9b1da2628, type: 3}
   _noteClip: {fileID: 0}
+  _animator: {fileID: 610365151807063953}
+--- !u!95 &610365151807063953
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325119394969636372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d1970053096647478742adc7b495048, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5915678233655188219
 GameObject:
   m_ObjectHideFlags: 0

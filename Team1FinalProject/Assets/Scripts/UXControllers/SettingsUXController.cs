@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SettingsUXController : MonoBehaviour
@@ -8,6 +9,8 @@ public class SettingsUXController : MonoBehaviour
     [SerializeField] Slider _musicSlider;
     [SerializeField] Slider _soundSlider;
     [SerializeField] GameObject _confirmationMessage;
+    [SerializeField] GameObject _noButton;
+    [SerializeField] GameObject _menuButton;
 
     private void Start()
     {
@@ -18,6 +21,11 @@ public class SettingsUXController : MonoBehaviour
     public void MainMenuClicked()
     {
         GameManager.Instance.LoadTitleScreen();
+    }
+
+    public void ControlsClicked()
+    {
+        GameManager.Instance.LoadControls();
     }
 
     public void SetMusicVolume()
@@ -36,16 +44,19 @@ public class SettingsUXController : MonoBehaviour
     public void ClearDataButtonClicked()
     {
         _confirmationMessage.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(_noButton);
     }
 
     public void ConfirmClearData()
     {
         SaveDataManager.Instance.ClearData();
         _confirmationMessage.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(_menuButton);
     }
 
     public void CancelClearData()
     {
         _confirmationMessage.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(_menuButton);
     }
 }
