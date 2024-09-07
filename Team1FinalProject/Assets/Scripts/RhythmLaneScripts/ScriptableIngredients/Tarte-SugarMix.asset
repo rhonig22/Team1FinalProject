@@ -16,5 +16,15 @@ MonoBehaviour:
   _hasAnimation: 0
   _animationTrigger: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: aa3370abb0f05354a8e4ddffd1c58c01, type: 3}
-  _ingredientSprites: []
-  _backgroundPrepSprites: []
+  _ingredientSprites:
+  - {fileID: 21300000, guid: 4c6c577c76037b74cb049a88298a9838, type: 3}
+  - {fileID: 21300000, guid: ba9f35edaa469984bb8d1163dcb9166d, type: 3}
+  - {fileID: 21300000, guid: 94ac1998a8804fb498d3dcfd2cad89ba, type: 3}
+  - {fileID: 21300000, guid: bcd5f5a34e46177429b54395b00866fd, type: 3}
+  - {fileID: 21300000, guid: bfcbd41b6749e8742a7121211710e89e, type: 3}
+  _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
