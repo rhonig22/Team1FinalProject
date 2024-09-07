@@ -93,6 +93,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -100,13 +113,13 @@ TextureImporter:
       name: Slicing All Steps_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.40670952, y: 0.46687135}
-      border: {x: 0, y: 0, z: 19, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -121,9 +134,9 @@ TextureImporter:
       name: Slicing All Steps_1
       rect:
         serializedVersion: 2
-        x: 75
+        x: 100
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -142,9 +155,9 @@ TextureImporter:
       name: Slicing All Steps_2
       rect:
         serializedVersion: 2
-        x: 170
+        x: 195
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -163,9 +176,9 @@ TextureImporter:
       name: Slicing All Steps_3
       rect:
         serializedVersion: 2
-        x: 269
+        x: 293
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -184,9 +197,9 @@ TextureImporter:
       name: Slicing All Steps_4
       rect:
         serializedVersion: 2
-        x: 361
+        x: 385
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -205,9 +218,9 @@ TextureImporter:
       name: Slicing All Steps_5
       rect:
         serializedVersion: 2
-        x: 464
+        x: 481
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -226,13 +239,13 @@ TextureImporter:
       name: Slicing All Steps_6
       rect:
         serializedVersion: 2
-        x: 574
+        x: 593
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 19, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -247,9 +260,9 @@ TextureImporter:
       name: Slicing All Steps_7
       rect:
         serializedVersion: 2
-        x: 700
+        x: 701
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -268,9 +281,9 @@ TextureImporter:
       name: Slicing All Steps_8
       rect:
         serializedVersion: 2
-        x: 800
+        x: 817
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -289,9 +302,9 @@ TextureImporter:
       name: Slicing All Steps_9
       rect:
         serializedVersion: 2
-        x: 900
+        x: 925
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -310,9 +323,9 @@ TextureImporter:
       name: Slicing All Steps_10
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 1033
         y: 0
-        width: 100
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

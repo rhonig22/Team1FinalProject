@@ -93,6 +93,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -102,7 +115,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 69
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -121,9 +134,9 @@ TextureImporter:
       name: Rolling Dough All Steps_1
       rect:
         serializedVersion: 2
-        x: 93
+        x: 95
         y: 0
-        width: 69
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -142,9 +155,9 @@ TextureImporter:
       name: Rolling Dough All Steps_2
       rect:
         serializedVersion: 2
-        x: 184
+        x: 189
         y: 0
-        width: 73
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -163,9 +176,9 @@ TextureImporter:
       name: Rolling Dough All Steps_3
       rect:
         serializedVersion: 2
-        x: 285
+        x: 289
         y: 0
-        width: 70
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -184,9 +197,9 @@ TextureImporter:
       name: Rolling Dough All Steps_4
       rect:
         serializedVersion: 2
-        x: 386
+        x: 390
         y: 0
-        width: 72
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -207,7 +220,7 @@ TextureImporter:
         serializedVersion: 2
         x: 485
         y: 0
-        width: 63
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -226,9 +239,9 @@ TextureImporter:
       name: Rolling Dough All Steps_8
       rect:
         serializedVersion: 2
-        x: 586
+        x: 589
         y: 0
-        width: 78
+        width: 64
         height: 64
       alignment: 9
       pivot: {x: 0.52205074, y: 0.4585164}
@@ -247,9 +260,9 @@ TextureImporter:
       name: Rolling Dough All Steps_6
       rect:
         serializedVersion: 2
-        x: 703
+        x: 706
         y: 0
-        width: 73
+        width: 64
         height: 64
       alignment: 9
       pivot: {x: 0.52078205, y: 0.42295906}

@@ -93,6 +93,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -100,9 +113,9 @@ TextureImporter:
       name: Sugar and Spice All Steps_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 76
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -121,9 +134,9 @@ TextureImporter:
       name: Sugar and Spice All Steps_1
       rect:
         serializedVersion: 2
-        x: 114
+        x: 117
         y: 0
-        width: 70
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -142,9 +155,9 @@ TextureImporter:
       name: Sugar and Spice All Steps_2
       rect:
         serializedVersion: 2
-        x: 219
+        x: 223
         y: 0
-        width: 72
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -163,9 +176,9 @@ TextureImporter:
       name: Sugar and Spice All Steps_3
       rect:
         serializedVersion: 2
-        x: 320
+        x: 332
         y: 0
-        width: 88
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -184,9 +197,9 @@ TextureImporter:
       name: Sugar and Spice All Steps_4
       rect:
         serializedVersion: 2
-        x: 442
+        x: 447
         y: 0
-        width: 73
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
