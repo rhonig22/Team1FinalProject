@@ -29,8 +29,6 @@ MonoBehaviour:
   - Station: 1
     Ingredient: {fileID: 11400000, guid: ef0f70bf7e259e44cbb9e88db9793422, type: 2}
   - Station: 1
-    Ingredient: {fileID: 11400000, guid: 7261fc551299fb34db9af5e1ba490a21, type: 2}
-  - Station: 1
     Ingredient: {fileID: 11400000, guid: 45001e314a0688943bf9455d6763841c, type: 2}
   - Station: 1
     Ingredient: {fileID: 11400000, guid: ea2976544f1db64489031f35c275e810, type: 2}
