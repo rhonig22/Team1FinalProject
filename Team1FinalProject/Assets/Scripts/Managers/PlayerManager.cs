@@ -60,7 +60,7 @@ public class PlayerManager : MonoBehaviour
 
     private void MoveTowards(Transform moveTowards)
     {
-        if (KitchenCanvasController.IsRhythmSection || RecipeManager.Instance.RecipeCompleted)
+        if (KitchenCanvasController.IsRhythmSection || RecipeManager.Instance.RecipeCompleted || DialogueManager.Instance.DialogueOn)
             return;
 
         if (_moveTowards == moveTowards.position)
@@ -74,6 +74,9 @@ public class PlayerManager : MonoBehaviour
     }
 
     private void SetSprite(Vector2 direction) {
+        if (KitchenCanvasController.IsRhythmSection || RecipeManager.Instance.RecipeCompleted || DialogueManager.Instance.DialogueOn)
+            return;
+
         _spriteRenderer.sprite = _spriteMap[direction];
         if (direction == Vector2.right)
             _spriteRenderer.flipX = true;

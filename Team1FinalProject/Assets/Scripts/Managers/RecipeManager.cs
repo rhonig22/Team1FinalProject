@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class RecipeManager : MonoBehaviour
 {
+    [SerializeField] private Conversation _tutorialConversation2;
     public static RecipeManager Instance;
     public bool RecipeCompleted { get; private set; } = false;
     private readonly int _successMessageThreshold = 2;
     private ScriptableRecipe _currentRecipe;
     private int _currentStepIndex;
     private int _currentIngredientSpriteIndex = 0;
+    private readonly string _secondTutorialKey = "SecondTutorial";
 
     private void Awake()
     {
@@ -133,6 +135,16 @@ public class RecipeManager : MonoBehaviour
         _currentIngredientSpriteIndex = 0;
         if (_currentStepIndex >= _currentRecipe.GetStepCount())
             RecipeCompleted = true;
+
+        if (!SaveDataManager.Instance.IsUnlocked(_secondTutorialKey))
+            Tutorial2Dialogue();
     }
 
+    private void Tutorial2Dialogue()
+    {
+        DialogueManager.Instance.DialogueFinished.AddListener(() => {
+            SaveDataManager.Instance.UnlockedSomething(_secondTutorialKey);
+        });
+        DialogueManager.Instance.StartConversation(_tutorialConversation2);
+    }
 }

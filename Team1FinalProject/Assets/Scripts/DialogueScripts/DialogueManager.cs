@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject _button;
 
     public UnityEvent DialogueFinished {  get; private set; } = new UnityEvent();
+    public bool DialogueOn { get; private set; } = false;
 
     private int _currentIndex;
     private Conversation _currentConvo;
@@ -39,6 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EnableDialogBox(bool enable)
     {
+        DialogueOn = enable;
         _dialogBox.SetActive(enable);
         _anim.SetBool("isOpen", enable);
     }

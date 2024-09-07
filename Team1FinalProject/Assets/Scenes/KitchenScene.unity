@@ -2264,6 +2264,8 @@ MonoBehaviour:
   _backgroundPrepImage: {fileID: 1501293985}
   _ingredientAnimator: {fileID: 312763756}
   _animationDone: {fileID: 312763757}
+  _tutorial1Keyboard: {fileID: 11400000, guid: ecae2e32a42c5e145b84ca530a6289a5, type: 2}
+  _tutorial1Controller: {fileID: 11400000, guid: 39a0fc40783414844a7bcd5a90aedcd2, type: 2}
 --- !u!1 &496101877
 GameObject:
   m_ObjectHideFlags: 0

@@ -920,6 +920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introConvo: {fileID: 11400000, guid: 1ffbb5c871e746341b53dc9a203fbb72, type: 2}
+  _grannyConvo: {fileID: 11400000, guid: 338caef51c049d541adbd5bda02114ef, type: 2}
   welcomeBackConvo: {fileID: 11400000, guid: 0e7b5caacae31ad48a2a1495f21a31ce, type: 2}
 --- !u!1 &590126280
 GameObject:
@@ -1218,7 +1219,7 @@ PrefabInstance:
     - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 928216714}
+      objectReference: {fileID: 0}
     - target: {fileID: 9177162032331980491, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenuClicked
@@ -1243,11 +1244,6 @@ PrefabInstance:
 --- !u!224 &928216713 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6760448925507269261, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
-  m_PrefabInstance: {fileID: 928216712}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &928216714 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2747155550972169334, guid: 8a1fb974a503fe241b88c2cab14f3da3, type: 3}
   m_PrefabInstance: {fileID: 928216712}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &928216715 stripped
