@@ -15,7 +15,7 @@ MonoBehaviour:
   _ingredientName: Tofu
   _hasAnimation: 1
   _animationTrigger: SlicedTofu
-  _ingredientPrefab: {fileID: 4153989815781522872, guid: 365669298e0c8c24897e50b9f7208303, type: 3}
+  _ingredientPrefab: {fileID: 316161610368572042, guid: 0e141d08e6bca25438a596cabee9bff2, type: 3}
   _ingredientSprites:
   - {fileID: 205379224, guid: 12f721ef9abd32a4f9a123c4cee66812, type: 3}
   - {fileID: -1349799121, guid: 12f721ef9abd32a4f9a123c4cee66812, type: 3}

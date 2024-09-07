@@ -15,7 +15,7 @@ MonoBehaviour:
   _ingredientName: Rolling Beefwellington
   _hasAnimation: 1
   _animationTrigger: RollingPastry
-  _ingredientPrefab: {fileID: 4153989815781522872, guid: 365669298e0c8c24897e50b9f7208303, type: 3}
+  _ingredientPrefab: {fileID: 316161610368572042, guid: 0c6f7afa59e28bd4b87f6598d68b23b6, type: 3}
   _ingredientSprites:
   - {fileID: 531217210, guid: d58a7d858e6dc914fa3e26376161157d, type: 3}
   - {fileID: 958866959, guid: d58a7d858e6dc914fa3e26376161157d, type: 3}
