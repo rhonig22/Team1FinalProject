@@ -12,9 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: BakeCourgette
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: Courgettes
   _hasAnimation: 0
   _animationTrigger: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: ec4fcb0875aa85e4e81c49ff7e8e13bf, type: 3}
-  _ingredientSprites: []
-  _backgroundPrepSprites: []
+  _ingredientSprites:
+  - {fileID: 1905153708, guid: cabd82409f84aeb42b3c7c257e8797a3, type: 3}
+  - {fileID: -1828402219, guid: 3f5da990abc95fe41a79e91150b249fa, type: 3}
+  - {fileID: -825717800, guid: 3f5da990abc95fe41a79e91150b249fa, type: 3}
+  - {fileID: 1364016646, guid: 3f5da990abc95fe41a79e91150b249fa, type: 3}
+  - {fileID: -1916483368, guid: 3f5da990abc95fe41a79e91150b249fa, type: 3}
+  - {fileID: 213160602, guid: 3f5da990abc95fe41a79e91150b249fa, type: 3}
+  - {fileID: -254295492, guid: 3f5da990abc95fe41a79e91150b249fa, type: 3}
+  - {fileID: 2060822192, guid: 3f5da990abc95fe41a79e91150b249fa, type: 3}
+  - {fileID: -2010321061, guid: 3f5da990abc95fe41a79e91150b249fa, type: 3}
+  - {fileID: 936678485, guid: 3f5da990abc95fe41a79e91150b249fa, type: 3}
+  _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
+  - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
+  - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
+  - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
+  - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
+  - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
+  - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
+  - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
