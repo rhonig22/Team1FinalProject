@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: EggplantCourgettesRecipe
   m_EditorClassIdentifier: 
   _recipeName: Aubergines and Courgettes
-  _successMessage: 'Cooked to perfection! Just right for a Little Chef! '
+  _successMessage: 'Cooked to perfection! Just right for a little Chef! '
   _motivationMessage: Not even a rat would accept this...
-  _threeStarPercent: 0.9
+  _threeStarPercent: 0.85
   _unlockRequirement: 11
   _recipeSteps:
   - Station: 0

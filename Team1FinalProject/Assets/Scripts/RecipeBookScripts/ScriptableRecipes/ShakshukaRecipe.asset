@@ -15,7 +15,7 @@ MonoBehaviour:
   _recipeName: Shakshuka
   _successMessage: 'Perfectly poached! '
   _motivationMessage: There might have been some eggshell in that...
-  _threeStarPercent: 0.9
+  _threeStarPercent: 0.85
   _unlockRequirement: 22
   _recipeSteps:
   - Station: 0

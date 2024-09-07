@@ -15,7 +15,7 @@ MonoBehaviour:
   _recipeName: Tart Tatin
   _successMessage: 'Better than an apple pie! '
   _motivationMessage: 'Not very presentable, but maybe it will taste okay? '
-  _threeStarPercent: 0.9
+  _threeStarPercent: 0.85
   _unlockRequirement: 17
   _recipeSteps:
   - Station: 0

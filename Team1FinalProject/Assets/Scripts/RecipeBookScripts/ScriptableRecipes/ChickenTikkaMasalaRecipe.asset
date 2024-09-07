@@ -15,7 +15,7 @@ MonoBehaviour:
   _recipeName: Chicken Tikka Masala
   _successMessage: 
   _motivationMessage: 
-  _threeStarPercent: 0.9
+  _threeStarPercent: 0.85
   _unlockRequirement: 25
   _recipeSteps: []
   _recipeSprite: {fileID: 21300000, guid: 73c2cbf709ff4074390f9feb5fcff324, type: 3}
