@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8ec1619f57766ce4487b1973412c6625
+guid: 4463ec88e0da85c40be1621e4930f9ab
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -51,7 +51,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 0
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -110,106 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sugar and Spice All Steps_0
+      name: Plating Tart-Sheet_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71614a45701ca8642bbd549b4198f963
-      internalID: 1355037602
+      spriteID: 381fbeb623957cc42b1dbf900bc96fc9
+      internalID: 970567415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sugar and Spice All Steps_1
+      name: Plating Tart-Sheet_1
       rect:
         serializedVersion: 2
-        x: 117
+        x: 64
         y: 0
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 100f0d0c1cd71c144afa59cce1e0c8c8
-      internalID: -217534970
+      spriteID: ecf9a1bf4ff080842b7002f7e44889fe
+      internalID: 1134230342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sugar and Spice All Steps_2
+      name: Plating Tart-Sheet_2
       rect:
         serializedVersion: 2
-        x: 223
+        x: 128
         y: 0
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffbd12c267bb80a479979b83e3e00c80
-      internalID: -1227689888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sugar and Spice All Steps_3
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ed39cbc6f06afe448df84abcdfca9c3
-      internalID: 1305839802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sugar and Spice All Steps_4
-      rect:
-        serializedVersion: 2
-        x: 447
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4868c2286de914428c930f3fccdbab0
-      internalID: 1143822971
+      spriteID: f824a7c23b8c23746a4524e278228061
+      internalID: -1630460775
       vertices: []
       indices: 
       edges: []
@@ -225,11 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sugar and Spice All Steps_0: 1355037602
-      Sugar and Spice All Steps_1: -217534970
-      Sugar and Spice All Steps_2: -1227689888
-      Sugar and Spice All Steps_3: 1305839802
-      Sugar and Spice All Steps_4: 1143822971
+      Plating Tart-Sheet_0: 970567415
+      Plating Tart-Sheet_1: 1134230342
+      Plating Tart-Sheet_2: -1630460775
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

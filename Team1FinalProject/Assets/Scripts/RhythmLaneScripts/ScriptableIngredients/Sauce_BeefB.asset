@@ -16,5 +16,21 @@ MonoBehaviour:
   _hasAnimation: 0
   _animationTrigger: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: 6ca0b405f17a02441a34eb25f35ee0c4, type: 3}
-  _ingredientSprites: []
-  _backgroundPrepSprites: []
+  _ingredientSprites:
+  - {fileID: 21300000, guid: 6c2ed9217f96dde48a8d7b5c92179a10, type: 3}
+  - {fileID: 21300000, guid: 5cd92ac596f63db4782ffd85d343db57, type: 3}
+  - {fileID: 21300000, guid: 7a760ad38dfa2c342ac23262657393a9, type: 3}
+  - {fileID: 21300000, guid: ac0f1f5145871f94795c1c69195051ae, type: 3}
+  - {fileID: 21300000, guid: f5690d479e929ae4ca8d49551f155219, type: 3}
+  - {fileID: 21300000, guid: 3058b64d05a130d448422aa6c8b565bf, type: 3}
+  - {fileID: 21300000, guid: abfa9a3247658414f85923e8a1f16371, type: 3}
+  - {fileID: 21300000, guid: a69728d625073a34dbf2e32e046b8e93, type: 3}
+  _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
+  - {fileID: 21300000, guid: 54d461cc8ad789f4386d7eb866b519f8, type: 3}
