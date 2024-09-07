@@ -43,10 +43,17 @@ public class RecipeCompletedUXController : MonoBehaviour
 
         if (NoteManager.Instance.Score > recipeEntry.HighScore)
         {
+            if (recipeEntry.HighScore > 0)
+                RecipeManager.Instance.SetImprovedMessage();
+
             recipeEntry.Stars = starCount;
             recipeEntry.HighScore = NoteManager.Instance.Score;
             SaveDataManager.Instance.SetRecipeEntryData(recipeEntry);
             LeaderboardManager.Instance.SubmitLootLockerScore(SaveDataManager.Instance.GetStarCount());
+        }
+        else
+        {
+            RecipeManager.Instance.SetNotAsGoodMessage();
         }
 
         var props = new Value();

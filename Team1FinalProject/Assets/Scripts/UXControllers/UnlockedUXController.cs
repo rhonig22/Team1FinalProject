@@ -9,6 +9,8 @@ public class UnlockedUXController : MonoBehaviour
 
     private void OnEnable()
     {
-        EventSystem.current.SetSelectedGameObject(_doneButton);
+        SelectDoneButton();
     }
+
+    public void SelectDoneButton() { EventSystem.current.SetSelectedGameObject(_doneButton); }
 }

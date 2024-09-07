@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class IntroStoryUXController : MonoBehaviour
 {
-    [SerializeField] private Conversation introConvo;
     [SerializeField] private Conversation _grannyConvo;
     [SerializeField] private Conversation welcomeBackConvo;
     private readonly string _firstTimeKey = "FirstTimeConvo";
@@ -24,13 +23,10 @@ public class IntroStoryUXController : MonoBehaviour
     {
         yield return new WaitForSeconds(_dialogueStartTime);
         DialogueManager.Instance.DialogueFinished.AddListener(() => {
-            DialogueManager.Instance.DialogueFinished.AddListener(() => {
-                SaveDataManager.Instance.UnlockedSomething(_firstTimeKey);
-                GameManager.Instance.LoadHubScene();
-            });
-            DialogueManager.Instance.StartConversation(_grannyConvo);
+            SaveDataManager.Instance.UnlockedSomething(_firstTimeKey);
+            GameManager.Instance.LoadHubScene();
         });
-        DialogueManager.Instance.StartConversation(introConvo);
+        DialogueManager.Instance.StartConversation(_grannyConvo);
     }
     private IEnumerator BeginWelcomeBackDialogue()
     {

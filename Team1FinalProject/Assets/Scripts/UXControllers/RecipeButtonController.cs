@@ -16,6 +16,7 @@ public class RecipeButtonController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _unlockRequirement;
     [SerializeField] private Button _button;
     [SerializeField] private AudioClip _buttonClick;
+    public bool IsUnlocked { get; private set; } = false;
 
     public void RecipeClicked()
     {
@@ -32,11 +33,11 @@ public class RecipeButtonController : MonoBehaviour
         _recipe = recipe;
         _recipeNameText.text = recipe.GetName();
         _recipeImage.sprite = recipe.getSprite();
-        bool unlocked = recipe.GetUnlockRequirement() <= SaveDataManager.Instance.GetStarCount() || GameManager.IsUnlockedMode;
-        _unlockedArea.SetActive(unlocked);
-        _lockedArea.SetActive(!unlocked);
+        IsUnlocked = recipe.GetUnlockRequirement() <= SaveDataManager.Instance.GetStarCount() || GameManager.IsUnlockedMode;
+        _unlockedArea.SetActive(IsUnlocked);
+        _lockedArea.SetActive(!IsUnlocked);
         _unlockRequirement.text = "" + recipe.GetUnlockRequirement();
-        if (!unlocked || recipe.IsPlaceholder())
+        if (!IsUnlocked || recipe.IsPlaceholder())
             _button.enabled = false;
 
         if (recipe.IsPlaceholder())
