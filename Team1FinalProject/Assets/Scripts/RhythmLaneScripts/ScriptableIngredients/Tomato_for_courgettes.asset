@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Tomato_for_courgettes
   m_EditorClassIdentifier: 
   _ingredientName: tomato
-  _hasAnimation: 0
-  _animationTrigger: 
+  _hasAnimation: 1
+  _animationTrigger: SlicedTomato
   _ingredientPrefab: {fileID: 316161610368572042, guid: 7ef084904762e4d4f9e32dc32ae3400e, type: 3}
-  _ingredientSprites: []
-  _backgroundPrepSprites: []
+  _ingredientSprites:
+  - {fileID: 21300000, guid: bc89ff52094be6c429f348e033a04f1c, type: 3}
+  - {fileID: 21300000, guid: 6b86775155b224d45a914cc833d871cf, type: 3}
+  _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
