@@ -946,6 +946,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tutorialConversation2: {fileID: 11400000, guid: ccddf67440f699f4698d6d3bba65cd93, type: 2}
+  _improvedMessage: {fileID: 11400000, guid: 70a49087bff19a249af22e4d347fdfc9, type: 2}
+  _notAsGoodMessage: {fileID: 11400000, guid: dcce6275ac0e3004e9e9b3e8ace0bbfd, type: 2}
 --- !u!1001 &3956679693649959541
 PrefabInstance:
   m_ObjectHideFlags: 0

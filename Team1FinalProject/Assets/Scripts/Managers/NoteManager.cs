@@ -95,6 +95,7 @@ public class NoteManager : MonoBehaviour
     public void StopBeats()
     {
         GameManager.Instance.PlayBackingTrack();
+        BeatEvent.RemoveAllListeners();
         IsBeatStarted = false;
         Score = 0;
     }

@@ -20,6 +20,8 @@ public class RecipeBookController : MonoBehaviour
     private float _currentOffset = 200f;
     private int _currentPage = 0;
     private List<GameObject> _pages = new List<GameObject>();
+    public bool NeedToRetry { get; private set; } = false;
+    private static int _unlockCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,8 @@ public class RecipeBookController : MonoBehaviour
 
     private void GenerateRecipeList()
     {
+        var prevUnlockCount = _unlockCount;
+        _unlockCount = 0;
         for (int i = 0; i < _recipesList.Length; i++)
         {
             var recipe = _recipesList[i];
@@ -58,6 +62,9 @@ public class RecipeBookController : MonoBehaviour
             stars.transform.localPosition = new Vector3(0, _currentOffset, 0);
             _currentOffset -= _yOffset;
         }
+
+        if (prevUnlockCount == _unlockCount)
+            NeedToRetry = true;
 
         SetPageButtonStates(false);
     }
@@ -115,7 +122,11 @@ public class RecipeBookController : MonoBehaviour
     private GameObject GenerateRecipeButton(ScriptableRecipe recipe)
     {
         var button = Instantiate(_recipeButtonPrefab, _recipeListArea);
-        button.GetComponent<RecipeButtonController>().SetRecipe(recipe);
+        var buttonController = button.GetComponent<RecipeButtonController>();
+        buttonController.SetRecipe(recipe);
+        if (buttonController.IsUnlocked)
+            _unlockCount++;
+
         return button;
     }
 

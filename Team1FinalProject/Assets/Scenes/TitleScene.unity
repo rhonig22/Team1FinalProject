@@ -324,6 +324,14 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6410332031301065485, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
+      propertyPath: _improvedMessage
+      value: 
+      objectReference: {fileID: 11400000, guid: 70a49087bff19a249af22e4d347fdfc9, type: 2}
+    - target: {fileID: 6410332031301065485, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
+      propertyPath: _notAsGoodMessage
+      value: 
+      objectReference: {fileID: 11400000, guid: dcce6275ac0e3004e9e9b3e8ace0bbfd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

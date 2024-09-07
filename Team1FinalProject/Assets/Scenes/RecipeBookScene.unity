@@ -912,6 +912,10 @@ PrefabInstance:
       propertyPath: m_DefaultVelocity.y
       value: -0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5279501348371543562, guid: 41fcd1d625f18f3468e2f006d557ba5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1043,6 +1047,7 @@ MonoBehaviour:
   _starCount: {fileID: 633305854}
   _unlockImage: {fileID: 1994338942}
   _recipeBook: {fileID: 670679333}
+  _needToRetryMessage: {fileID: 11400000, guid: 804e3eadf392d0f44a4ca76b8b4275dd, type: 2}
 --- !u!224 &553024383 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8779053212087363953, guid: 25e8b3ff7352d244dbccde83f7371230, type: 3}

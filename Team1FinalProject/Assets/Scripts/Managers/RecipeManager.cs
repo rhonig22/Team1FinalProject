@@ -5,8 +5,11 @@ using UnityEngine;
 public class RecipeManager : MonoBehaviour
 {
     [SerializeField] private Conversation _tutorialConversation2;
+    [SerializeField] Conversation _improvedMessage;
+    [SerializeField] Conversation _notAsGoodMessage;
     public static RecipeManager Instance;
     public bool RecipeCompleted { get; private set; } = false;
+    public Conversation RecipeConversation { get; private set; } = null;
     private readonly int _successMessageThreshold = 2;
     private ScriptableRecipe _currentRecipe;
     private int _currentStepIndex;
@@ -29,6 +32,7 @@ public class RecipeManager : MonoBehaviour
         _currentRecipe = recipe;
         _currentStepIndex = 0;
         RecipeCompleted = false;
+        RecipeConversation = null;
     }
 
     public int GetMaxScore()
@@ -128,6 +132,16 @@ public class RecipeManager : MonoBehaviour
     public AudioClip GetBackingTrack()
     {
         return _currentRecipe.GetBackingTrack();
+    }
+
+    public void SetNotAsGoodMessage()
+    {
+        RecipeConversation = _notAsGoodMessage;
+    }
+
+    public void SetImprovedMessage()
+    {
+        RecipeConversation = _improvedMessage;
     }
 
     public void IncrementStep() { 

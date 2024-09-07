@@ -12,8 +12,11 @@ public class RecipeUXController : MonoBehaviour
     [SerializeField] TextMeshProUGUI _starCount;
     [SerializeField] Image _unlockImage;
     [SerializeField] RecipeBookController _recipeBook;
+    [SerializeField] Conversation _needToRetryMessage;
+    private readonly float _dialogueStartTime = .5f;
     public static bool DontSelectRecipe = false;
     private List<ScriptableCustomization> _unlocks;
+    private bool _isUnlockOpen = false;
 
     private void Start()
     {
@@ -33,11 +36,14 @@ public class RecipeUXController : MonoBehaviour
             _unlockImage.rectTransform.sizeDelta = new Vector2(unlockSprite.rect.width, unlockSprite.rect.height);
             _unlockText.text = newText;
             _unlockScreen.SetActive(true);
+            _isUnlockOpen = true;
         }
         else
         {
             DontSelectRecipe = false;
         }
+
+        StartCoroutine(CheckForDialogue());
     }
 
     public void MainMenuClicked()
@@ -48,6 +54,7 @@ public class RecipeUXController : MonoBehaviour
     public void CloseUnlockScreen()
     {
         _unlockScreen.SetActive(false);
+        _isUnlockOpen = false;
         _recipeBook.SelectCurrentPageButton();
     }
 
@@ -60,6 +67,31 @@ public class RecipeUXController : MonoBehaviour
         }
 
         _unlockScreen.SetActive(false);
+        _isUnlockOpen = false;
         _recipeBook.SelectCurrentPageButton();
+    }
+
+    private IEnumerator CheckForDialogue()
+    {
+        yield return new WaitForSeconds(_dialogueStartTime);
+        var conversation = RecipeManager.Instance.RecipeConversation;
+        if (conversation == null && _recipeBook.NeedToRetry)
+            conversation = _needToRetryMessage;
+
+        if (conversation != null)
+        {
+            ShowDialogue(conversation);
+        }
+    }
+
+    private void ShowDialogue(Conversation conversation)
+    {
+        DialogueManager.Instance.DialogueFinished.AddListener(() => {
+            if (_isUnlockOpen)
+                _unlockScreen.GetComponentInChildren<UnlockedUXController>().SelectDoneButton();
+            else
+                _recipeBook.SelectCurrentPageButton();
+        });
+        DialogueManager.Instance.StartConversation(conversation);
     }
 }
