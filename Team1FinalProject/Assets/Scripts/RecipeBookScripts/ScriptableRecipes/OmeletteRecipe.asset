@@ -15,7 +15,7 @@ MonoBehaviour:
   _recipeName: Omelette
   _successMessage: 'This is eggcellent work! '
   _motivationMessage: 'Gotta break some eggs... '
-  _threeStarPercent: 0.9
+  _threeStarPercent: 0.85
   _unlockRequirement: 2
   _recipeSteps:
   - Station: 0

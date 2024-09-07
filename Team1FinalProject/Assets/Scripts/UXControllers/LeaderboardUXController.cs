@@ -12,6 +12,7 @@ public class LeaderboardUXController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] _scoreTexts;
     [SerializeField] private Button _leftButton;
     [SerializeField] private Button _rightButton;
+    [SerializeField] private Color32 _highlightColor;
     private int _firstResult = 0;
     private int _lastResult = 10;
     private int _totalResults = 10;
@@ -31,6 +32,7 @@ public class LeaderboardUXController : MonoBehaviour
     public void GenerateLists(LootLockerLeaderboardMember[] results, int total)
     {
         _totalResults = total;
+        var playerName = SaveDataManager.Instance.GetPlayerData().PlayerName;
         for (int i = 0; i < _amount; i++)
         {
             if (i < results.Length)
@@ -38,6 +40,11 @@ public class LeaderboardUXController : MonoBehaviour
                 var result = results[i];
                 _nameTexts[i].text = "" + result.rank + ".  " + result.player.name;
                 _scoreTexts[i].text = "" + result.score + " Stars!";
+                if (result.player.name == playerName)
+                {
+                    _nameTexts[i].color = _highlightColor;
+                    _nameTexts[i].fontStyle = FontStyles.Bold;
+                }
             }
             else
             {
@@ -45,6 +52,8 @@ public class LeaderboardUXController : MonoBehaviour
                 _scoreTexts[i].text = "";
             }
         }
+
+        SetPageButtonStates();
     }
 
     public void PageLeft()
