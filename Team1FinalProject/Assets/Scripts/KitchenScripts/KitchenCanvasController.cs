@@ -12,11 +12,21 @@ public class KitchenCanvasController : MonoBehaviour
     [SerializeField] private Image _backgroundPrepImage;
     [SerializeField] private Animator _ingredientAnimator;
     [SerializeField] private AnimatorDone _animationDone;
+    [SerializeField] private Conversation _tutorial1Keyboard;
+    [SerializeField] private Conversation _tutorial1Controller;
     private bool _showRecipeCompleted = false;
     private bool _canStartAnimationFlag = false;
     private float _waitToComplete = 1.5f;
     private Coroutine _completedCoroutine;
     public static bool IsRhythmSection = false;
+    private readonly string _firstTutorialKey = "FirstTutorial";
+    private float _dialogueStartTime = .5f;
+
+    private void Start()
+    {
+        if (!SaveDataManager.Instance.IsUnlocked(_firstTutorialKey))
+            StartCoroutine(Tutorial1Dialogue());
+    }
 
     private void Update()
     {
@@ -67,5 +77,14 @@ public class KitchenCanvasController : MonoBehaviour
         NoteManager.Instance.StopBeats();
         GameManager.Instance.PopBack();
         GameManager.Instance.LoadRecipeBook(false);
+    }
+
+    private IEnumerator Tutorial1Dialogue()
+    {
+        yield return new WaitForSeconds(_dialogueStartTime);
+        DialogueManager.Instance.DialogueFinished.AddListener(() => {
+            SaveDataManager.Instance.UnlockedSomething(_firstTutorialKey);
+        });
+        DialogueManager.Instance.StartConversation(GameManager.IsController ? _tutorial1Controller : _tutorial1Keyboard);
     }
 }
