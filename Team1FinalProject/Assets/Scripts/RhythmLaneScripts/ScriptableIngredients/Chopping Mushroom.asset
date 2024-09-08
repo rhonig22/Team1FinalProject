@@ -18,9 +18,11 @@ MonoBehaviour:
   _ingredientPrefab: {fileID: 316161610368572042, guid: ce9b1d6eac8987f45ab2475996e6912f, type: 3}
   _ingredientSprites:
   - {fileID: 553743638, guid: cd43af172e6443243918e307530eba3c, type: 3}
+  - {fileID: 553743638, guid: cd43af172e6443243918e307530eba3c, type: 3}
   - {fileID: 1306553097, guid: cd43af172e6443243918e307530eba3c, type: 3}
   - {fileID: 2094049936, guid: cd43af172e6443243918e307530eba3c, type: 3}
   - {fileID: 1989417450, guid: cd43af172e6443243918e307530eba3c, type: 3}
+  - {fileID: 553743638, guid: cd43af172e6443243918e307530eba3c, type: 3}
   - {fileID: 553743638, guid: cd43af172e6443243918e307530eba3c, type: 3}
   - {fileID: 1306553097, guid: cd43af172e6443243918e307530eba3c, type: 3}
   - {fileID: 2094049936, guid: cd43af172e6443243918e307530eba3c, type: 3}

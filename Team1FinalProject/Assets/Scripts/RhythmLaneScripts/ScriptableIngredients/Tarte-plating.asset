@@ -18,9 +18,19 @@ MonoBehaviour:
   _ingredientPrefab: {fileID: 316161610368572042, guid: 2d48b7768f4694e4d97836d60053ffbd, type: 3}
   _ingredientSprites:
   - {fileID: -1205062629, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
+  - {fileID: -1205062629, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
+  - {fileID: -1205062629, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
+  - {fileID: 970567415, guid: 4463ec88e0da85c40be1621e4930f9ab, type: 3}
+  - {fileID: 970567415, guid: 4463ec88e0da85c40be1621e4930f9ab, type: 3}
   - {fileID: 970567415, guid: 4463ec88e0da85c40be1621e4930f9ab, type: 3}
   - {fileID: 1134230342, guid: 4463ec88e0da85c40be1621e4930f9ab, type: 3}
+  - {fileID: 1134230342, guid: 4463ec88e0da85c40be1621e4930f9ab, type: 3}
+  - {fileID: 1134230342, guid: 4463ec88e0da85c40be1621e4930f9ab, type: 3}
   - {fileID: 21300000, guid: b116d4c0f76a6bf40940105662f008ee, type: 3}
+  - {fileID: 21300000, guid: b116d4c0f76a6bf40940105662f008ee, type: 3}
+  - {fileID: 21300000, guid: b116d4c0f76a6bf40940105662f008ee, type: 3}
+  - {fileID: -1630460775, guid: 4463ec88e0da85c40be1621e4930f9ab, type: 3}
+  - {fileID: -1630460775, guid: 4463ec88e0da85c40be1621e4930f9ab, type: 3}
   - {fileID: -1630460775, guid: 4463ec88e0da85c40be1621e4930f9ab, type: 3}
   _backgroundPrepSprites:
   - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
