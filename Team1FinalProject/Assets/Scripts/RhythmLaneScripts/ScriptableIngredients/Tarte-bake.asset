@@ -23,12 +23,16 @@ MonoBehaviour:
   - {fileID: -2073883570, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
   - {fileID: 1441957685, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
   - {fileID: 857151134, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
+  - {fileID: 857151134, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
+  - {fileID: 1652452452, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
   - {fileID: 1652452452, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
   - {fileID: 85645663, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
   - {fileID: 639911810, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
   - {fileID: -1205062629, guid: 7e80fd4eff535e242b7552367c79ee91, type: 3}
   _backgroundPrepSprites:
   - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
+  - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
+  - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
   - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
   - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
   - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}

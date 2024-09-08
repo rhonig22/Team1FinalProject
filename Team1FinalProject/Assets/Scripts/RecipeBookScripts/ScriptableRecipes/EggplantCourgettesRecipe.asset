@@ -29,9 +29,9 @@ MonoBehaviour:
   - Station: 1
     Ingredient: {fileID: 11400000, guid: ef0f70bf7e259e44cbb9e88db9793422, type: 2}
   - Station: 1
-    Ingredient: {fileID: 11400000, guid: 45001e314a0688943bf9455d6763841c, type: 2}
-  - Station: 1
     Ingredient: {fileID: 11400000, guid: ea2976544f1db64489031f35c275e810, type: 2}
+  - Station: 1
+    Ingredient: {fileID: 11400000, guid: 609dd37bd3c275549b04ab770a81e569, type: 2}
   _recipeSprite: {fileID: 21300000, guid: 1b71272cfec1f124fb3ee6950b8a6a30, type: 3}
   _recipeVictorySprite: {fileID: 21300000, guid: 3278fe310b5c5b04e814d6ee7f37cd3a, type: 3}
   _backingTrack: {fileID: 8300000, guid: ade0cf2a7a52c6c418736225a11c59cd, type: 3}

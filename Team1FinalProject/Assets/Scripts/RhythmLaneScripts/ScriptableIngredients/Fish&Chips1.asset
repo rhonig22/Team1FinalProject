@@ -17,10 +17,26 @@ MonoBehaviour:
   _animationTrigger: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: db835ba97b5a13248b43262fab4b25d3, type: 3}
   _ingredientSprites:
-  - {fileID: 21300000, guid: 7ae3d60a3430839488b9fc8eec86ec45, type: 3}
-  - {fileID: 21300000, guid: d76770ca7675ef34b862df8a7cfcb3c2, type: 3}
-  - {fileID: 21300000, guid: 495fa45363411a648a368d74c22d4a57, type: 3}
+  - {fileID: -422881013, guid: 9fc19a25512664d46830011f6de1252d, type: 3}
+  - {fileID: -422881013, guid: 9fc19a25512664d46830011f6de1252d, type: 3}
+  - {fileID: -1642628828, guid: 9fc19a25512664d46830011f6de1252d, type: 3}
+  - {fileID: -1642628828, guid: 9fc19a25512664d46830011f6de1252d, type: 3}
+  - {fileID: -1668657251, guid: 9fc19a25512664d46830011f6de1252d, type: 3}
+  - {fileID: -1668657251, guid: 9fc19a25512664d46830011f6de1252d, type: 3}
+  - {fileID: -1169942294, guid: 9fc19a25512664d46830011f6de1252d, type: 3}
+  - {fileID: -1169942294, guid: 9fc19a25512664d46830011f6de1252d, type: 3}
+  - {fileID: -1171479861, guid: 348400989dc5c45b5accdf379bcf674b, type: 3}
+  - {fileID: -84971994, guid: 348400989dc5c45b5accdf379bcf674b, type: 3}
+  - {fileID: 2088356580, guid: 348400989dc5c45b5accdf379bcf674b, type: 3}
+  - {fileID: 800378433, guid: 348400989dc5c45b5accdf379bcf674b, type: 3}
+  - {fileID: 472844618, guid: 348400989dc5c45b5accdf379bcf674b, type: 3}
+  - {fileID: 32313316, guid: 348400989dc5c45b5accdf379bcf674b, type: 3}
+  - {fileID: 198212182, guid: 348400989dc5c45b5accdf379bcf674b, type: 3}
+  - {fileID: -2005821291, guid: 348400989dc5c45b5accdf379bcf674b, type: 3}
+  - {fileID: -1459245113, guid: 348400989dc5c45b5accdf379bcf674b, type: 3}
+  - {fileID: 1913695084, guid: 348400989dc5c45b5accdf379bcf674b, type: 3}
   _backgroundPrepSprites:
+  - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
   - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
   - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}
   - {fileID: 21300000, guid: 67edb86b4acb23e4e9bbe04b56147a24, type: 3}

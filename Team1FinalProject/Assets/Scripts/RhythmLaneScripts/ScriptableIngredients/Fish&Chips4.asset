@@ -19,9 +19,14 @@ MonoBehaviour:
   _ingredientSprites:
   - {fileID: 21300000, guid: ab73b03a042706c47965611e00dba487, type: 3}
   - {fileID: -1881786344, guid: 9b90f632b5ddb7f4da700f995b4930de, type: 3}
+  - {fileID: -1881786344, guid: 9b90f632b5ddb7f4da700f995b4930de, type: 3}
+  - {fileID: -1276829959, guid: 9b90f632b5ddb7f4da700f995b4930de, type: 3}
   - {fileID: -1276829959, guid: 9b90f632b5ddb7f4da700f995b4930de, type: 3}
   - {fileID: -642930829, guid: 9b90f632b5ddb7f4da700f995b4930de, type: 3}
+  - {fileID: -642930829, guid: 9b90f632b5ddb7f4da700f995b4930de, type: 3}
   - {fileID: -107996551, guid: 9b90f632b5ddb7f4da700f995b4930de, type: 3}
+  - {fileID: -107996551, guid: 9b90f632b5ddb7f4da700f995b4930de, type: 3}
+  - {fileID: 2136027964, guid: 9b90f632b5ddb7f4da700f995b4930de, type: 3}
   - {fileID: 2136027964, guid: 9b90f632b5ddb7f4da700f995b4930de, type: 3}
   _backgroundPrepSprites:
   - {fileID: 21300000, guid: 8bff3d3a69031e948841ece0c47fdabb, type: 3}
