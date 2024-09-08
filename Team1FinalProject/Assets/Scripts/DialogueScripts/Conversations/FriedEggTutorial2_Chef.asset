@@ -17,5 +17,5 @@ MonoBehaviour:
     dialogue: Now that I've completed my task at this station let's move on to the
       next.
   - speaker: {fileID: 11400000, guid: eb29e5629de62b34fa8039b477bc261a, type: 2}
-    dialogue: If the station you are on is still moving, check back in to it as there
-      is still more work to be done.
+    dialogue: Sometimes there might be another task at your current station, press
+      that direction again to continue working.

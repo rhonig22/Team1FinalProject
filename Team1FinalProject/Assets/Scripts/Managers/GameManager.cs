@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     private readonly string _titleScene = "TitleScene";
     private readonly string _kitchenScene = "KitchenScene";
     private readonly string _settingsScene = "SettingsScene";
-    private readonly string _demoScene = "DemoQTE";
     private readonly string _introStoryScene = "IntroStoryScene";
     private readonly string _recipeBookScene = "RecipeBookScene";
     private readonly string _controlsScene = "ControlsScene";
@@ -55,12 +54,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadDemo()
-    {
-        AddToBackstack(SceneManager.GetActiveScene().name);
-        LoadScene(_demoScene);
-    }
-
     public void LoadSettings()
     {
         AddToBackstack(SceneManager.GetActiveScene().name);
@@ -88,6 +81,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadHubScene()
     {
+        RecipeBookController.ClearRetryMessage();
         AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_hubScene);
     }

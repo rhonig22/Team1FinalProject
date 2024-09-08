@@ -7,6 +7,7 @@ public class RecipeManager : MonoBehaviour
     [SerializeField] private Conversation _tutorialConversation2;
     [SerializeField] Conversation _improvedMessage;
     [SerializeField] Conversation _notAsGoodMessage;
+    [SerializeField] Conversation _finalConversation;
     public static RecipeManager Instance;
     public bool RecipeCompleted { get; private set; } = false;
     public Conversation RecipeConversation { get; private set; } = null;
@@ -142,6 +143,11 @@ public class RecipeManager : MonoBehaviour
     public void SetImprovedMessage()
     {
         RecipeConversation = _improvedMessage;
+    }
+
+    public void SetFinalMessage()
+    {
+        RecipeConversation = _finalConversation;
     }
 
     public void IncrementStep() { 

@@ -63,7 +63,7 @@ public class RecipeBookController : MonoBehaviour
             _currentOffset -= _yOffset;
         }
 
-        if (prevUnlockCount == _unlockCount)
+        if (prevUnlockCount == _unlockCount && _unlockCount != _recipesList.Length)
             NeedToRetry = true;
 
         SetPageButtonStates(false);
@@ -115,8 +115,16 @@ public class RecipeBookController : MonoBehaviour
 
     public void SelectCurrentPageButton()
     {
-        var button = _pages[_currentPage].GetComponentInChildren<Button>();
-        EventSystem.current.SetSelectedGameObject(button.gameObject);
+        var recipe = _pages[_currentPage].GetComponentInChildren<RecipeButtonController>();
+        if (recipe != null && recipe.IsUnlocked)
+        {
+            var button = _pages[_currentPage].GetComponentInChildren<Button>();
+            EventSystem.current.SetSelectedGameObject(button.gameObject);
+        }
+        else
+        {
+            EventSystem.current.SetSelectedGameObject(_leftButton.gameObject);
+        }
     }
 
     private GameObject GenerateRecipeButton(ScriptableRecipe recipe)
@@ -137,5 +145,10 @@ public class RecipeBookController : MonoBehaviour
         starController.SetMaxScore(maxScore);
         starController.SetScore(entry.HighScore);
         return stars;
+    }
+
+    public static void ClearRetryMessage()
+    {
+        _unlockCount = 0;
     }
 }
