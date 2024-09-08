@@ -81,7 +81,6 @@ public class GameManager : MonoBehaviour
 
     public void LoadHubScene()
     {
-        RecipeBookController.ClearRetryMessage();
         AddToBackstack(SceneManager.GetActiveScene().name);
         LoadScene(_hubScene);
     }
@@ -132,6 +131,9 @@ public class GameManager : MonoBehaviour
     }
     private void LoadScene(string sceneName)
     {
+        if (sceneName == _hubScene)
+            RecipeBookController.ClearRetryMessage();
+
         UnityAction loadNextBoss = () => { SceneManager.LoadScene(sceneName); };
         TransitionManager.Instance.FadeOut(loadNextBoss);
     }

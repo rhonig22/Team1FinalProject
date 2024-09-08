@@ -45,6 +45,11 @@ public class LeaderboardUXController : MonoBehaviour
                     _nameTexts[i].color = _highlightColor;
                     _nameTexts[i].fontStyle = FontStyles.Bold;
                 }
+                else
+                {
+                    _nameTexts[i].color = Color.black;
+                    _nameTexts[i].fontStyle = FontStyles.Normal;
+                }
             }
             else
             {
