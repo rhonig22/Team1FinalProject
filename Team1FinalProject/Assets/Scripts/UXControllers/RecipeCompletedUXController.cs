@@ -18,6 +18,7 @@ public class RecipeCompletedUXController : MonoBehaviour
     [SerializeField] private AudioClip _victorySound;
     private List<ParticleSystem> _particleSystems = new List<ParticleSystem>();
     private readonly float _waitBetweenParticles = .1f;
+    private readonly string _finalRecipeName = "Shakshuka";
 
     private void OnEnable()
     {
@@ -43,7 +44,7 @@ public class RecipeCompletedUXController : MonoBehaviour
 
         if (NoteManager.Instance.Score > recipeEntry.HighScore)
         {
-            if (recipeEntry.HighScore > 0)
+            if (starCount > recipeEntry.Stars && recipeEntry.HighScore > 0)
                 RecipeManager.Instance.SetImprovedMessage();
 
             recipeEntry.Stars = starCount;
@@ -64,6 +65,9 @@ public class RecipeCompletedUXController : MonoBehaviour
         NoteManager.Instance.BeatEvent.AddListener((int beat) => { ParticleBurst(starCount, beat); });
         if (starCount > 2)
             SoundManager.Instance.PlaySound(_victorySound, transform.position);
+
+        if (recipeName == _finalRecipeName)
+            RecipeManager.Instance.SetFinalMessage();
     }
 
     private void ParticleBurst(int count, int beat)

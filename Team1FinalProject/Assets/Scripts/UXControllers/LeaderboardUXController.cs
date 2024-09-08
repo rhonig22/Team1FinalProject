@@ -82,5 +82,9 @@ public class LeaderboardUXController : MonoBehaviour
         _leftButton.interactable = isLeftEnabled;
         bool isRightEnabled = _lastResult < _totalResults;
         _rightButton.interactable = isRightEnabled;
+        if (isLeftEnabled)
+            EventSystem.current.SetSelectedGameObject(_leftButton.gameObject);
+        else if (isRightEnabled)
+            EventSystem.current.SetSelectedGameObject(_rightButton.gameObject);
     }
 }

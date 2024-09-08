@@ -13,7 +13,9 @@ public class RecipeUXController : MonoBehaviour
     [SerializeField] Image _unlockImage;
     [SerializeField] RecipeBookController _recipeBook;
     [SerializeField] Conversation _needToRetryMessage;
+    [SerializeField] Conversation _redecorateMessage;
     private readonly float _dialogueStartTime = .5f;
+    private readonly string _redecorateMessageKey = "firstDecoration";
     public static bool DontSelectRecipe = false;
     private List<ScriptableCustomization> _unlocks;
     private bool _isUnlockOpen = false;
@@ -69,6 +71,9 @@ public class RecipeUXController : MonoBehaviour
         _unlockScreen.SetActive(false);
         _isUnlockOpen = false;
         _recipeBook.SelectCurrentPageButton();
+
+        if (!SaveDataManager.Instance.IsUnlocked(_redecorateMessageKey))
+            ShowDialogue(_redecorateMessage);
     }
 
     private IEnumerator CheckForDialogue()
@@ -76,7 +81,10 @@ public class RecipeUXController : MonoBehaviour
         yield return new WaitForSeconds(_dialogueStartTime);
         var conversation = RecipeManager.Instance.RecipeConversation;
         if (conversation == null && _recipeBook.NeedToRetry)
+        {
             conversation = _needToRetryMessage;
+            RecipeBookController.ClearRetryMessage();
+        }
 
         if (conversation != null)
         {
@@ -91,6 +99,9 @@ public class RecipeUXController : MonoBehaviour
                 _unlockScreen.GetComponentInChildren<UnlockedUXController>().SelectDoneButton();
             else
                 _recipeBook.SelectCurrentPageButton();
+
+            if (conversation == _redecorateMessage)
+                SaveDataManager.Instance.UnlockedSomething(_redecorateMessageKey);
         });
         DialogueManager.Instance.StartConversation(conversation);
     }

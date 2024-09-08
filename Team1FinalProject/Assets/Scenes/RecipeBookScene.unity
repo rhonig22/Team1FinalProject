@@ -1048,6 +1048,7 @@ MonoBehaviour:
   _unlockImage: {fileID: 1994338942}
   _recipeBook: {fileID: 670679333}
   _needToRetryMessage: {fileID: 11400000, guid: 804e3eadf392d0f44a4ca76b8b4275dd, type: 2}
+  _redecorateMessage: {fileID: 11400000, guid: 57383ba6fa4d0544cacfa3f5b6ea7266, type: 2}
 --- !u!224 &553024383 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8779053212087363953, guid: 25e8b3ff7352d244dbccde83f7371230, type: 3}
