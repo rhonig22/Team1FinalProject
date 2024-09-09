@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recipeName: Fried Egg
   _successMessage: 'Great job! Now let''s see what else is on the menu... '
-  _motivationMessage: Let's master this before moving on...
+  _motivationMessage: let's master this before moving on...
   _threeStarPercent: 0.85
   _unlockRequirement: 0
   _recipeSteps:

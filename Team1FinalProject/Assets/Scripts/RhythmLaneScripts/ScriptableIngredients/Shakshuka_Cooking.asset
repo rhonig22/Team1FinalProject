@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: Shakshuka_Cooking
   m_EditorClassIdentifier: 
-  _ingredientName: Shakshuka
+  _ingredientName: Shakshuka cook
   _hasAnimation: 1
   _animationTrigger: ShakshukaSauce
   _ingredientPrefab: {fileID: 316161610368572042, guid: 187f2aa0c394c764a9697a0876f4dc73, type: 3}

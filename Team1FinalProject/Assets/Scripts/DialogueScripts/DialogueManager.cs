@@ -78,7 +78,9 @@ public class DialogueManager : MonoBehaviour
 
             var currentLine = _currentConvo.getLineByIndex(_currentIndex);
             _speakerName.text = currentLine.speaker.GetName();
-            _speakerSprite.sprite = currentLine.speaker.getSprite();
+            var speakerSprite = currentLine.speaker.getSprite();
+            _speakerSprite.sprite = speakerSprite;
+            _speakerSprite.rectTransform.sizeDelta = new Vector2(speakerSprite.rect.width, speakerSprite.rect.height);
             _typing = StartCoroutine(TypeText(currentLine.dialogue));
             _currentIndex++;
         }

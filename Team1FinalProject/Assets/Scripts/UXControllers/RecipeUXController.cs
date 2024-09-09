@@ -89,6 +89,7 @@ public class RecipeUXController : MonoBehaviour
         if (conversation != null)
         {
             ShowDialogue(conversation);
+            RecipeManager.Instance.ClearMessage();
         }
     }
 

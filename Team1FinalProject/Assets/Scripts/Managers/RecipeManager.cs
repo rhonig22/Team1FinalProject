@@ -134,6 +134,10 @@ public class RecipeManager : MonoBehaviour
     {
         return _currentRecipe.GetBackingTrack();
     }
+    public void ClearMessage()
+    {
+        RecipeConversation = null;
+    }
 
     public void SetNotAsGoodMessage()
     {

@@ -14,18 +14,23 @@ public class KitchenCanvasController : MonoBehaviour
     [SerializeField] private AnimatorDone _animationDone;
     [SerializeField] private Conversation _tutorial1Keyboard;
     [SerializeField] private Conversation _tutorial1Controller;
+    [SerializeField] private Conversation _shakshukaMessage;
     private bool _showRecipeCompleted = false;
     private bool _canStartAnimationFlag = false;
     private float _waitToComplete = 1.5f;
     private Coroutine _completedCoroutine;
     public static bool IsRhythmSection = false;
     private readonly string _firstTutorialKey = "FirstTutorial";
+    private readonly string _shakshukaKey = "ShakeShakshuka";
+    private readonly string _finalRecipeName = "Shakshuka";
     private float _dialogueStartTime = .5f;
 
     private void Start()
     {
         if (!SaveDataManager.Instance.IsUnlocked(_firstTutorialKey))
             StartCoroutine(Tutorial1Dialogue());
+        else if (RecipeManager.Instance.GetRecipeName() == _finalRecipeName && !SaveDataManager.Instance.IsUnlocked(_shakshukaKey))
+            StartCoroutine(ShakshukaDialogue());
     }
 
     private void Update()
@@ -86,5 +91,14 @@ public class KitchenCanvasController : MonoBehaviour
             SaveDataManager.Instance.UnlockedSomething(_firstTutorialKey);
         });
         DialogueManager.Instance.StartConversation(GameManager.IsController ? _tutorial1Controller : _tutorial1Keyboard);
+    }
+
+    private IEnumerator ShakshukaDialogue()
+    {
+        yield return new WaitForSeconds(_dialogueStartTime);
+        DialogueManager.Instance.DialogueFinished.AddListener(() => {
+            SaveDataManager.Instance.UnlockedSomething(_shakshukaKey);
+        });
+        DialogueManager.Instance.StartConversation(_shakshukaMessage);
     }
 }

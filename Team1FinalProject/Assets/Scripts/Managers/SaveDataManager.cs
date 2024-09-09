@@ -119,6 +119,18 @@ public class SaveDataManager : MonoBehaviour
         return stars;
     }
 
+    public int CountPlayedRecipes()
+    {
+        int count = 0;
+        foreach (var recipe in _recipeData.RecipeList)
+        {
+            if (recipe.HighScore > 0)
+                count++;
+        }
+
+        return count;
+    }
+
     public void SetRecipeData()
     {
         PlayerPrefs.SetString(_recipeDataKey, JsonUtility.ToJson(_recipeData));
