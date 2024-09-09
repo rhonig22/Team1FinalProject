@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598c504d2b42cd48b7bfe56ed46a9fb, type: 3}
   m_Name: PLatingCourgette
   m_EditorClassIdentifier: 
-  _ingredientName: 
+  _ingredientName: Plating Courgette
   _hasAnimation: 0
   _animationTrigger: 
   _ingredientPrefab: {fileID: 316161610368572042, guid: 5cac8ce71774a7a44921215542d3b7f0, type: 3}

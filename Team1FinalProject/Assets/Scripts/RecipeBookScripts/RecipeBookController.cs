@@ -63,7 +63,7 @@ public class RecipeBookController : MonoBehaviour
             _currentOffset -= _yOffset;
         }
 
-        if (prevUnlockCount == _unlockCount && _unlockCount != _recipesList.Length)
+        if (_unlockCount < _recipesList.Length && _unlockCount == prevUnlockCount && _unlockCount == SaveDataManager.Instance.CountPlayedRecipes())
             NeedToRetry = true;
 
         SetPageButtonStates(false);

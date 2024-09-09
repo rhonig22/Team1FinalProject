@@ -223,8 +223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 160, y: -196}
-  m_SizeDelta: {x: 1000, y: 100}
+  m_AnchoredPosition: {x: 166.64001, y: -171.8276}
+  m_SizeDelta: {x: 1007.3, y: 400.3243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234129828
 MonoBehaviour:
@@ -248,15 +248,20 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Free sourced music:
 
-    a
+    We Began as Wanderers -- Cherry the penguin
 
-    b
+    Sebuah
+    kenangan -- DF_wahyumusicproduction
 
     c
 
     d
 
-    e'
+    e
+
+
+    Sound Effects
+    from Epidemic SOund'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
   m_sharedMaterial: {fileID: 5905083599740252335, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
@@ -319,7 +324,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -11.207275, y: -165.86768, z: -219.93433, w: 0}
+  m_margin: {x: -11.207275, y: 1.1419067, z: 4.210327, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1398,7 +1403,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Playtesters:
 
-    Erik Wren, Kathy house, Eileen hsu, arthur dubman'
+    Erik Wren, Kathy house, Eileen hsu, arthur dubman, Sam
+    Jeffreys'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
   m_sharedMaterial: {fileID: 5905083599740252335, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}

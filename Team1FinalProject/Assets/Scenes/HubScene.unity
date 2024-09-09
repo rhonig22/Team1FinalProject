@@ -1688,6 +1688,7 @@ MonoBehaviour:
   _customizerDoneButton: {fileID: 2113618099}
   _customizeKitchenButton: {fileID: 176803590}
   _buttonClick: {fileID: 8300000, guid: 9ab1fedd895f1f6488e04c33730641c0, type: 3}
+  _redecorateMessage: {fileID: 11400000, guid: 57383ba6fa4d0544cacfa3f5b6ea7266, type: 2}
 --- !u!1 &548327982
 GameObject:
   m_ObjectHideFlags: 0
