@@ -11,6 +11,8 @@ public class HubUXController : MonoBehaviour
     [SerializeField] private AudioClip _buttonClick;
     [SerializeField] Conversation _redecorateMessage;
     private readonly string _redecorateMessageKey = "firstDecoration";
+    private bool _customizationWasChanged = false;
+
     public void RecipeBookClicked()
     {
         SoundManager.Instance.PlaySound(_buttonClick, transform.position);
@@ -36,8 +38,11 @@ public class HubUXController : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(_customizeKitchenButton);
         SoundManager.Instance.PlaySound(_buttonClick, transform.position);
 
-        if (!SaveDataManager.Instance.IsUnlocked(_redecorateMessageKey))
+        if (!SaveDataManager.Instance.IsUnlocked(_redecorateMessageKey) && _customizationWasChanged)
+        {
             ShowDialogue(_redecorateMessage);
+            _customizationWasChanged= false;
+        }
     }
 
     private void ShowDialogue(Conversation conversation)
@@ -47,5 +52,10 @@ public class HubUXController : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(_customizeKitchenButton);
         });
         DialogueManager.Instance.StartConversation(conversation);
+    }
+
+    public void CustomizationWasSet()
+    {
+        _customizationWasChanged = true;
     }
 }
