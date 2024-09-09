@@ -29,7 +29,9 @@ public class SaveDataManager : MonoBehaviour
     {
         if (PlayerPrefs.HasKey(_playerDataKey))
         {
-            _playerData = JsonUtility.FromJson<PlayerData>(PlayerPrefs.GetString(_playerDataKey));
+            var playerDataString = PlayerPrefs.GetString(_playerDataKey);
+            _playerData = JsonUtility.FromJson<PlayerData>(playerDataString);
+            Debug.Log("playerData: " + playerDataString);
         }
         else
         {
@@ -38,7 +40,9 @@ public class SaveDataManager : MonoBehaviour
 
         if (PlayerPrefs.HasKey(_recipeDataKey))
         {
-            _recipeData = JsonUtility.FromJson<RecipeData>(PlayerPrefs.GetString(_recipeDataKey));
+            var recipeDataString = PlayerPrefs.GetString(_recipeDataKey);
+            _recipeData = JsonUtility.FromJson<RecipeData>(recipeDataString);
+            Debug.Log("recipeData: " + recipeDataString);
         }
         else
         {
@@ -47,7 +51,9 @@ public class SaveDataManager : MonoBehaviour
 
         if (PlayerPrefs.HasKey(_unlockablesKey))
         {
-            _unlockables = JsonUtility.FromJson<UnlockablesData>(PlayerPrefs.GetString(_unlockablesKey));
+            var unlockablesString = PlayerPrefs.GetString(_unlockablesKey);
+            _unlockables = JsonUtility.FromJson<UnlockablesData>(unlockablesString);
+            Debug.Log("unlockables: " + unlockablesString);
         }
         else
         {
