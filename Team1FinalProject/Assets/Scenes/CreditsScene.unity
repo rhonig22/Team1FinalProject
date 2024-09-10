@@ -223,7 +223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166.64001, y: -271}
+  m_AnchoredPosition: {x: 166.64001, y: -399}
   m_SizeDelta: {x: 1007.3, y: 400.3243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234129828
@@ -266,11 +266,19 @@ MonoBehaviour:
     we began
     as wanderers -- cherry the penguin
 
-    daydreamer by osoku
+    daydreamer -- osoku
+
+    sthlm sunset
+    - ehrling
+
+    nutville - buddy rich
+
+    don''t mean a thing electro swing remix
+    -- TeknoAXE
 
 
-    Sound Effects
-    from Epidemic SOund'
+
+    Sound Effects from Epidemic SOund'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
   m_sharedMaterial: {fileID: 5905083599740252335, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
@@ -333,7 +341,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -11.207275, y: -62.63141, z: 4.210327, w: 0}
+  m_margin: {x: -11.207275, y: -185.64316, z: 4.210327, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1387,7 +1395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 163, y: -666}
+  m_AnchoredPosition: {x: 163, y: -851}
   m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1552929816
