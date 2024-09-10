@@ -223,7 +223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166.64001, y: -171.8276}
+  m_AnchoredPosition: {x: 166.64001, y: -271}
   m_SizeDelta: {x: 1007.3, y: 400.3243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234129828
@@ -253,11 +253,20 @@ MonoBehaviour:
     Sebuah
     kenangan -- DF_wahyumusicproduction
 
-    c
+    needlessly captivating -- Giorgio Di
+    Campo
 
-    d
+    Tipsy Gypsy -- Giorgio Di Campo
 
-    e
+    Bar Jazz Piano ballad -- Giorgio
+    di campo
+
+    powerfunk fusion backing track -- slohan records
+
+    we began
+    as wanderers -- cherry the penguin
+
+    daydreamer by osoku
 
 
     Sound Effects
@@ -324,7 +333,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -11.207275, y: 1.1419067, z: 4.210327, w: 0}
+  m_margin: {x: -11.207275, y: -62.63141, z: 4.210327, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1404,7 +1413,9 @@ MonoBehaviour:
   m_text: 'Playtesters:
 
     Erik Wren, Kathy house, Eileen hsu, arthur dubman, Sam
-    Jeffreys'
+    Jeffreys
+
+    Besser House'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
   m_sharedMaterial: {fileID: 5905083599740252335, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
@@ -1617,7 +1628,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Added Unity  Packages:\nJetBrains Rider Edition\nlootlocker\nMixpanel\nCinemachine\nAseprite
-    Importer\n\nSoftware:\nAseprite\nProcreate\nMuseScore \n"
+    Importer\n\nSoftware:\nAseprite\nProCreate for iPad\nMuseScore \nCanva\nMiro\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
   m_sharedMaterial: {fileID: 5905083599740252335, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
