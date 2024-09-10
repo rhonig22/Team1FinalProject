@@ -223,8 +223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166.64001, y: -399}
-  m_SizeDelta: {x: 1007.3, y: 400.3243}
+  m_AnchoredPosition: {x: 274.1333, y: -399}
+  m_SizeDelta: {x: 1222.2866, y: 400.3243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234129828
 MonoBehaviour:
@@ -263,22 +263,24 @@ MonoBehaviour:
 
     powerfunk fusion backing track -- slohan records
 
-    we began
-    as wanderers -- cherry the penguin
+    daydreamer
+    -- osoku
 
-    daydreamer -- osoku
+    sthlm sunset - ehrling
 
-    sthlm sunset
-    - ehrling
+    nutville -- buddy rich
 
-    nutville - buddy rich
+    don''t
+    mean a thing electro swing remix -- TeknoAXE
 
-    don''t mean a thing electro swing remix
-    -- TeknoAXE
+    Smooth jazz Backing track -
+    Minor groove in A minor -- DixMusicstudio
+
+    Night Jazz Beats -- flybirdaudio
 
 
-
-    Sound Effects from Epidemic SOund'
+    Sound
+    Effects from Epidemic SOund'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
   m_sharedMaterial: {fileID: 5905083599740252335, guid: 060230c02f7f4264aa3339ca50540d37, type: 2}
