@@ -6988,8 +6988,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f799d7600a4324244bd7abd67e9a2c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buttonClick: {fileID: 0}
-  _noteCursor: {fileID: 0}
+  _buttonClick: {fileID: 8300000, guid: 9ab1fedd895f1f6488e04c33730641c0, type: 3}
+  _noteCursor: {fileID: 5289496978641250987}
+--- !u!1 &5289496978641250987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5752963229954665632, guid: 1a8cf09daa0dcb94faa9abadd37a9c1f, type: 3}
+  m_PrefabInstance: {fileID: 5289496978641250984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6610528929190180352
 PrefabInstance:
   m_ObjectHideFlags: 0
